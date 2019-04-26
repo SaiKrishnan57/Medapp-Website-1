@@ -1,0 +1,32 @@
+import React from 'react'
+import { Nav, Navbar} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import logo from './logo.png';
+
+ const Navigationbar = () =>{
+  return (
+    <Navbar bg="light" expand="lg" fixed="top" className="p-2">
+      <Navbar.Brand href="/" className="ml-5">
+      <img
+        alt="Medapp.in"
+        src={logo}
+        width="180"
+        height="50"
+        className="d-inline-block align-top"
+      />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mx-5 my-2">
+        <Link to='/' className="mx-5 my-2 text-dark">HOME</Link>
+        <Link to='/aboutus' className="mx-5 my-2 text-dark">WHO WE ARE</Link>
+        <Link to='/services' className="mx-5 my-2 text-dark">SERVICES</Link>
+        <Link to='/ourblogs' className="mx-5 my-2 text-dark">OUR BLOG</Link>
+        <Link to='/contacts' className="mx-5 my-2 text-dark">CONTACTS</Link>
+      </Nav>
+  </Navbar.Collapse>
+</Navbar>
+  )
+}
+
+export default Navigationbar;
