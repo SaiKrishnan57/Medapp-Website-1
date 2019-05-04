@@ -56,7 +56,7 @@ const Ourteam = () => {
                 </Container>
             </Jumbo>
                 <Container className="p-4">
-                 <h3 className="display-5 font-weight-normal text-center">Our Team</h3>
+                 <h1 className="display-5 font-weight-normal text-center">Our Team</h1>
                 <Row>
                     <Col sm={4} className="mt-3 p-4">
                         <Image src={niranjan} thumbnail/>

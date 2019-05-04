@@ -6,6 +6,7 @@ import bgimg from './images/bg1.jpeg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
   .jumbo {
@@ -28,12 +29,17 @@ const Styles = styled.div`
   }
 `;
 const styleimg = {
-    height: '50px'
+    height: '45px'
   };
 
 const styleimg1 = {
-    height: '250px'
+    height: '220px'
   }; 
+
+const icon = {
+    fontSize: '55px',
+    color: '#0dba86'
+    };
 
 const Home = () =>{
   const [state, toggle] = useState(true)
@@ -54,12 +60,41 @@ const Home = () =>{
                 </Container>
             </Jumbo>
             <Container>
-                <div className="mt-5 d-flex justify-content-center">
-                        <Image src={scooterweb} style={styleimg1}/>      
-                </div>    
-                <div className="d-flex justify-content-center">
-                        <Image src={medappslider} style={styleimg}/>
-                </div>
+              <Row>
+               <Col sm={4}>
+                  <div className="mt-5 d-flex justify-content-center">    
+                          <Link to='/Ourteam' className="text-center"> <i class="fas fa-users" style={icon}></i><p className="text-muted">Leadership Team</p> </Link>      
+                  </div>    
+                  <div className="mt-5 d-flex justify-content-center">
+                      <Link to='/' className="text-center"><i class="fas fa-newspaper" style={icon}></i><p className="text-muted"> News and Awards</p> </Link>
+                  </div>
+                  <div className=" mt-5 d-flex justify-content-center">
+                      <Link to='/' className="text-center"> <i class="fas fa-heartbeat" style={icon}></i><p className="text-muted">Life at MedApp</p> </Link>
+                  </div>
+                </Col>
+                <Col sm={4}>
+                  <div className="mt-5 d-flex justify-content-center">
+                          <Image src={scooterweb} style={styleimg1}/>      
+                  </div>    
+                  <div className="d-flex justify-content-center">
+                          <Image src={medappslider} style={styleimg}/>
+                  </div>
+                  <div className=" mt-5 d-flex justify-content-center">
+                      <Link to='/Presence' className="text-center"> <i class="fas fa-map-marker-alt" style={icon}></i><p className="text-muted">Our Presence</p> </Link>
+                  </div>
+                </Col>
+                <Col sm={4}>
+                  <div className="mt-5 d-flex justify-content-center">    
+                          <Link to='/services' className="text-center"> <i class="fas fa-medkit" style={icon}></i><p className="text-muted">Our Services</p> </Link>      
+                  </div>    
+                  <div className="mt-5 d-flex justify-content-center">
+                      <Link to='/aboutus' className="text-center"> <i class="fas fa-notes-medical" style={icon}></i><p className="text-muted">Who we Are</p> </Link>
+                  </div>
+                  <div className=" mt-5 d-flex justify-content-center">
+                      <Link to='/' className="text-center"> <i class="fas fa-thumbs-up" style={icon}></i><p className="text-muted">Social Impact</p> </Link>
+                  </div>
+                </Col>    
+              </Row> 
             </Container>
 
             <Container className="mt-5 p-2" >
@@ -112,33 +147,33 @@ const Home = () =>{
             </Container>
             <Container className="mt-5 p-2">
                 <Row>
-                    <Col sm={2} className="mt-2 mx-3 p-0 text-center">
-                      <p className="display-4 text-danger">
-                        <CountUp end={50000} suffix="+" duration={3} />
+                    <Col sm={2} className="mt-2 mx-3 p-0 text-center" >
+                      <p className="display-4 text-danger" style={{fontFamily: 'Ubuntu, sans-serif'}}>
+                        <CountUp end={125200} suffix="+" duration={3} />
                       </p>
-                      <p className="text-muted ">Patients Screened</p>         
+                      <p className="text-muted">Patients Screened</p>         
                     </Col>
-                    <Col sm={2} className="mt-2 mx-3 p-0 text-center">    
-                      <p className="display-4 text-danger"> 
-                        <CountUp end={200} duration={3} />
+                    <Col sm={2} className="mt-2 mx-3 p-0 text-center" >    
+                      <p className="display-4 text-danger" style={{fontFamily: 'Ubuntu, sans-serif'}}> 
+                        <CountUp end={414} duration={3} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
-                    <Col sm={2} className="mt-2 mx-3 p-0 text-center">    
-                      <p className="display-4 text-danger">
-                        <CountUp end={30} suffix="+" duration={3} />
+                    <Col sm={2} className="mt-2 mx-2 p-0 text-center">    
+                      <p className="display-4 text-danger" style={{fontFamily: 'Ubuntu, sans-serif'}}>
+                        <CountUp end={48} suffix="+" duration={3} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-3 p-0 text-center">    
-                      <p className="display-4 text-danger">
-                        <CountUp end={15} suffix="+" duration={3} />
+                      <p className="display-4 text-danger" style={{fontFamily: 'Ubuntu, sans-serif'}}>
+                        <CountUp end={19} suffix="+" duration={3} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-3 p-0 text-center">    
-                      <p className="display-4 text-danger">
-                        <CountUp end={35000} suffix="+" duration={3} />
+                      <p className="display-4 text-danger" style={{fontFamily: 'Ubuntu, sans-serif'}}>
+                        <CountUp end={72000} suffix="+" duration={3} />
                       </p>
                       <p className="text-muted text-center">Lives Impacted</p> 
                     </Col>       

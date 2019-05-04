@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () =>{
 
   return (
-    <footer className="page-footer bg-primary p-5" >
+    <footer className="page-footer bg-primary p-5" style={{fontFamily: 'Ubuntu, sans-serif'}}>
     
         <div className="container-fluid text-center text-md-left text-white">
     
@@ -13,8 +13,7 @@ const Footer = () =>{
             <div className="col-md-6 mt-md-0 mt-3">
     
               <h5 className="text-uppercase">Contact us</h5>
-              <p>701, 7th Floor, B wing, Mittal Towers, M G Road, Bengaluru, 560001.</p>
-              <p>#2953/1, 1st Floor, 2nd Cross, Saraswathipuram, Mysuru - 570006.</p>
+              <p className="mt-2" style={{fontFamily: 'Ubuntu, sans-serif'}}>701, 7th Floor, B wing, Mittal Towers, M G Road, Bengaluru, 560001.</p>
     
             </div>
     
