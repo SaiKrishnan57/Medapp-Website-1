@@ -56,12 +56,6 @@ class Contacts extends Component {
                       <p className="mt-2 text-muted" style={styletext}>
                         701, 7th Floor, B wing, Mittal Towers, M G Road, Bengaluru, 560001
                       </p>
-                      <p className="mt-4">
-                        Mysuru
-                      </p>
-                      <p className="mt-2 text-muted" style={styletext}>
-                        #2953/1, 1st Floor, 2nd Cross, Saraswathipuram, Mysuru - 570006
-                      </p>
                     </Col>
                     <Col sm={8} className="mt-3 p-4">    
                     <Form>

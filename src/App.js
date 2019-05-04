@@ -6,6 +6,8 @@ import Services from './components/Pages/Services';
 import Aboutus from './components/Pages/Aboutus';
 import OurBlogs from './components/Pages/OurBlogs';
 import Contacts from './components/Pages/Contacts';
+import Presence from './components/Pages/Presence';
+import Ourteam from './components/Pages/Ourteam';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
@@ -20,6 +22,8 @@ class App extends Component {
             <Route exact path="/Aboutus" component = {Aboutus}/>
             <Route exact path="/OurBlogs" component = {OurBlogs}/>
             <Route exact path="/Contacts" component = {Contacts}/>
+            <Route exact path="/Presence" component = {Presence}/>
+            <Route exact path="/Ourteam" component = {Ourteam}/>
             </Switch>
           <Footer/> 
         </BrowserRouter>  

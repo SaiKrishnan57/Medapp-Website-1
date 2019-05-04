@@ -6,7 +6,8 @@ import logo from './logo.png';
  const Navigationbar = () =>{
   return (
     <Navbar bg="light" expand="lg" fixed="top" className="p-2">
-      <Navbar.Brand href="/" className="ml-5">
+      <Link to='/'>
+      <Navbar.Brand className="ml-5">
       <img
         alt="Medapp.in"
         src={logo}
@@ -15,6 +16,7 @@ import logo from './logo.png';
         className="d-inline-block align-top"
       />
       </Navbar.Brand>
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-5 my-2">

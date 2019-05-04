@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Jumbotron as Jumbo, Container,Image,Row,Col } from 'react-bootstrap';
+import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import bgimg from './images/bg1.jpeg';
 import scooterweb from './images/scooter-web.png';
@@ -35,6 +36,8 @@ const styleimg1 = {
   }; 
 
 const Home = () =>{
+  const [state, toggle] = useState(true)
+  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 2000 } })
   return (
     <div>
         <Styles>
@@ -42,12 +45,12 @@ const Home = () =>{
                 <div className="overlay"></div>
                 <Container>
                     <div className="mt-5 d-flex justify-content-end animated fadeInLeft">
-                        <Image src={scooterweb} style={styleimg1}/>      
+                        <Image src={scooterweb} style={styleimg1} fluid/>      
                     </div>    
                     <div className="d-flex justify-content-end animated fadeInLeft">
-                        <Image src={medappslider} style={styleimg}/>
+                        <Image src={medappslider} style={styleimg} fluid/>
                     </div>
-                    <p className="d-flex mt-3 justify-content-end animated fadeInLeft">Touching lives,Changing lives, Saving lives.</p>
+                    <p className="d-flex mt-3 justify-content-end animated fadeInLeft" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px'}}>Touching lives,Changing lives, Saving lives.</p>
                 </Container>
             </Jumbo>
             <Container>
@@ -62,19 +65,48 @@ const Home = () =>{
             <Container className="mt-5 p-2" >
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                      <h2>Mission</h2>
-                      <p className="font-italic mt-2">
-                        "The mission of the medapp.in is to improve the health of those we serve with a commitment to excellence in 
-                        all that we do. Our goal is to offer quality care & services that set community standards, exceed patients 
-                        expectations and are provided in a caring, convenient, cost effective in a accessible manner"
-                      </p>         
+                      <div onClick={() => toggle(!state)}>
+                        <animated.div
+                          style={{
+                            opacity: x.interpolate({ output: [1, 1] }),
+                            transform: x
+                              .interpolate({
+                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                              })
+                              .interpolate(x => `scale(${x})`)
+                          }}>
+                          <div className="jumbotron">
+                            <h1 className="display-3">Mission</h1>
+                            <hr className="my-4"/>
+                            <p className="lead font-italic">"The mission of the medapp.in is to improve the health of those we serve with a commitment to excellence in 
+                            all that we do. Our goal is to offer quality care & services that set community standards, exceed patients 
+                            expectations and are provided in a caring, convenient, cost effective in a accessible manner".</p>
+                          </div>
+                        </animated.div>
+                      </div>        
                     </Col>
-                    <Col sm={6} className="mt-3 p-4">    
-                      <h2>Vision</h2>
-                      <p className="font-italic mt-2">
-                          "medapp.in will become the national model for the delivery of Preventive care and Primary health care at 
-                          the urban & rural level by Touching life, Changing life, and saving life with out barrier of geography."
-                      </p>
+                    <Col sm={6} className="mt-3 p-4">
+                    <div onClick={() => toggle(!state)}>
+                        <animated.div
+                          style={{
+                            opacity: x.interpolate({ output: [1, 1] }),
+                            transform: x
+                              .interpolate({
+                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                              })
+                              .interpolate(x => `scale(${x})`)
+                          }}>
+                          <div className="jumbotron m-4">
+                            <h1 className="display-3">Vision</h1>
+                            <hr className="my-4"/>
+                            <p className="lead font-italic mt-2">
+                              "medapp.in will become the national model for the delivery of Preventive care and Primary health care at 
+                              the urban & rural level by Touching life, Changing life, and saving life with out barrier of geography."</p>
+                          </div>
+                      </animated.div>
+                      </div>
                     </Col>    
                 </Row>
             </Container>

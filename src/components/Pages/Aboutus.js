@@ -4,10 +4,6 @@ import styled from 'styled-components';
 import bgimg from './images/bg2.jpg';
 import pic1 from './images/medapp-aboutus.jpg';
 import pic2 from './images/medapp-whoweare.jpg';
-import dummy from './images/dummy-men.jpg';
-import nabeel from './images/nabeel.jpg';
-import niranjan from './images/niranjan-swamy-N.jpg';
-import vinod from './images/vinod-singh.jpg';
 
 const Styles = styled.div`
   .jumbo {
@@ -75,28 +71,6 @@ const Aboutus = () => {
                     <Col sm={6} className="mt-3 p-4">    
                        <Image src={pic1} className="animated bounceIn" fluid/>
                     </Col>    
-                </Row>
-                </Container>
-                <Container className="p-4">
-                 <h3 className="display-5 font-weight-normal text-center">Our Team</h3>
-                <Row>
-                    <Col sm={3} className="mt-3 p-4">
-                        <Image src={niranjan} thumbnail/>
-                        <p className="text-center">Niranjan Swamy N</p>
-                    </Col>
-                    <Col sm={3} className="mt-3 p-4">    
-                        <Image src={dummy} thumbnail/>
-                        <p className="text-center">Dr Shiraz</p>                
-                    </Col>    
-                    <Col sm={3} className="mt-3 p-4">
-                        <Image src={nabeel} thumbnail/>
-                        <p className="text-center">Nabeel</p>
-                    </Col>
-                    <Col sm={3} className="mt-3 p-4">
-                        <Image src={vinod} thumbnail/>
-                        <p className="text-center">Dr. Vinod Singh</p>
-                        <p className="text-muted text-center" style={{fontSize:'12px'}}>Chief Operating Officer</p>
-                    </Col>
                 </Row>
                 </Container>
                 <Container className="p-4">
