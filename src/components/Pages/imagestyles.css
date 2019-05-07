@@ -1,0 +1,24 @@
+.image{
+    height: 200px;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.image:hover{
+    height: 250px ;
+    
+}
+
+.img-hover-zoom {
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+.img-hover-zoom .profile{
+    transition: transform .8s ease;
+  }
+  
+.img-hover-zoom:hover .profile{
+    transform: scale(1.20);
+
+}

@@ -8,6 +8,7 @@ import niranjan from './images/niranjan-swamy-N.jpg';
 import vinod from './images/vinod-singh.jpg';
 import krishna from './images/krishna.jpg';
 import dummywo from './images/dummy-women.jpg';
+import './imagestyles.css';
 
 const Styles = styled.div`
   .jumbo {
@@ -58,32 +59,44 @@ const Ourteam = () => {
                 <Container className="p-4">
                  <h1 className="display-5 font-weight-normal text-center">Our Team</h1>
                 <Row>
-                    <Col sm={4} className="mt-3 p-4">
-                        <Image src={niranjan} thumbnail/>
+                    <Col sm={4} className="mt-3 p-4" >
+                    <div class="img-hover-zoom">
+                        <Image src={niranjan} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    </div>    
                         <p className="text-center">Niranjan Swamy N</p>
                     </Col>
-                    <Col sm={4} className="mt-3 p-4">    
-                        <Image src={dummym} thumbnail/>
+                    <Col sm={4} className="mt-3 p-4">
+                    <div class="img-hover-zoom">    
+                        <Image src={dummym} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    </div>
                         <p className="text-center">Dr Shiraz</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
-                        <Image src={nabeel} thumbnail/>
+                    <div class="img-hover-zoom">
+                        <Image src={nabeel} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    </div>
                         <p className="text-center">Nabeel</p>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm={4} className="mt-3 p-4">
-                        <Image src={vinod} thumbnail/>
+                    <div class="img-hover-zoom">
+                        <Image src={vinod} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                        </div>    
                         <p className="text-center">Dr. Vinod Singh</p>
                         <p className="text-muted text-center" style={caption}>Chief Operating Officer</p>
                     </Col>
-                    <Col sm={4} className="mt-3 p-4">    
-                        <Image src={dummywo} thumbnail/>
+                    <Col sm={4} className="mt-3 p-4">
+                    <div class="img-hover-zoom">    
+                        <Image src={dummywo} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    </div>    
                         <p className="text-center">Sinu George</p>
                         <p className="text-muted text-center" style={caption}>Director</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
-                        <Image src={krishna} thumbnail/>
+                    <div class="img-hover-zoom">
+                        <Image src={krishna} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    </div>    
                         <p className="text-center">Krishna Raghavan</p>
                         <p className="text-muted text-center" style={caption}>Director</p>
                     </Col>

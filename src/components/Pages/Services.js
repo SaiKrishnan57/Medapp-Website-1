@@ -73,7 +73,7 @@ const Services = () => {
             </Jumbo>
             <Container className="mt-5 p-2">
                 <div >
-                <Row>
+                <Row className="animated fadeIn delay-1s">
                     <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#FFD700'}}>
                         <animated.div 
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
@@ -104,7 +104,7 @@ const Services = () => {
                 </Row>
                 </div>
                 <div >  
-                <Row>
+                <Row className="animated fadeIn delay-2s">
                     <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#0000CD'}}>
                         <animated.div 
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
@@ -135,7 +135,7 @@ const Services = () => {
                 </Row>
                 </div>
                 <div >
-                <Row>
+                <Row className="animated fadeIn delay-3s">
                     <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#32CD32'}}>
                         <animated.div 
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
