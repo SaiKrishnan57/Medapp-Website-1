@@ -149,7 +149,8 @@ const styleimg1 = {
             </Container>
             <MediaQuery query="(max-device-width: 1224px)">
             <Container className="p-2">
-                <Row>
+                <Row>   
+                  <MediaQuery query="(orientation: portrait)">
                     <Col sm={2} className="mt-2 mx-3 p-2 text-center" >
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}>
                         <CountUp end={125200} suffix="+" duration={3} />
@@ -179,7 +180,41 @@ const styleimg1 = {
                         <CountUp end={72000} suffix="+" duration={3} />
                       </p>
                       <p className="text-muted text-center">Lives Impacted</p> 
-                    </Col>       
+                    </Col>
+                    </MediaQuery>
+
+                    <MediaQuery query="(orientation: landscape)">
+                    <Col sm={2} className="mt-2 mx-3 p-2 text-center" >
+                      <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw',marginRight:'2vw'}}>
+                        <CountUp end={125200} suffix="+" duration={3} />
+                      </p>
+                      <p className="text-muted">Patients Screened</p>         
+                    </Col>
+                    <Col sm={2} className="mt-2 mr-1 ml-4 p-2 text-center" >    
+                      <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4.7vw',marginLeft:'3vw'}}> 
+                        <CountUp end={414} duration={3} />
+                      </p>
+                      <p className="text-muted">Camps Conducted</p> 
+                    </Col> 
+                    <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
+                      <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
+                        <CountUp end={48} suffix="+" duration={3} />
+                      </p>
+                      <p className="text-muted text-center">Cities</p> 
+                    </Col>    
+                    <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
+                      <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
+                        <CountUp end={19} suffix="+" duration={3} />
+                      </p>
+                      <p className="text-muted text-center">States</p> 
+                    </Col>    
+                    <Col sm={2} className="mt-2 mx-0 p-2 text-center">    
+                      <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
+                        <CountUp end={72000} suffix="+" duration={3} />
+                      </p>
+                      <p className="text-muted text-center">Lives Impacted</p> 
+                    </Col>
+                    </MediaQuery>       
                 </Row>
             </Container>
             </MediaQuery>
