@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { Jumbotron as Jumbo, Container,Image,Row,Col } from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container,Image,Row,Col,Card,CardGroup } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/bg1.jpeg';
-import naa from './images/newsandawards.png';
-import presence from './images/Ourpresence.png';
-import services from './images/Ourservices.png';
-import impact from './images/Socialimpact.png';
-import team from './images/team.png';
-import wwa from './images/Whoweare.png';
-import life from './images/lifeatmedapp.png';
+import naa from './images/newsandawards.jpeg';
+import presence from './images/Ourpresence.jpeg';
+import services from './images/Ourservices.jpeg';
+import impact from './images/Socialimpact.jpeg';
+import team from './images/team.jpeg';
+import wwa from './images/Whoweare.jpeg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
@@ -69,34 +68,45 @@ const styleimg1 = {
             </Jumbo>
             <Container>
               <Col>
-               <Row sm={4} className="d-flex justify-content-around">
-                  <div className="mt-5">    
-                          <Link to='/Ourteam' className="text-center"><Image src={team} className="image" fluid/> </Link>      
-                  </div>    
-                  <div className="mt-5">
-                      <Link to='/' className="text-center"><Image src={naa} className="image" fluid/></Link>
-                  </div>
-                  <div className="mt-5">
-                      <Link to='/' className="text-center"> <Image src={life} className="image" fluid/> </Link>
-                  </div>
+               <Row sm={4} >
+                <CardGroup className="animated fadeInRight">
+                    <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
+                    <Link to='/Ourteam' className="text-center">
+                      <Image src={team} style={{borderRadius:'50%'}} fluid/>
+                    </Link>
+                  </Card>
+                    <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
+                    <Link to='/' className="text-center">
+                      <Image src={naa} style={{height:'365px', borderRadius:'50%'}} fluid/>
+                  </Link>
+                </Card>
+                <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
+                <Link to='/aboutus' className="text-center">
+                  <Image src={wwa} style={{height:'365px', borderRadius:'50%'}} fluid/>
+                  </Link>
+                </Card>
+              </CardGroup>
                 </Row>
-                <Row sm={4} className="d-flex justify-content-around">
-                  <div className="mt-5">
-                      <Link to='/Presence' className="text-center"><Image src={presence} className="image" fluid/></Link>
-                  </div>
-                  <div className="mt-5">    
-                          <Link to='/services' className="text-center"><Image src={services} className="image" fluid/></Link>      
-                  </div> 
-                  <div className="mt-5">
-                      <Link to='/aboutus' className="text-center"><Image src={wwa} className="image" fluid/></Link>
-                  </div>   
+                <Row sm={4} className="d-flex justify-content-around">  
+                <CardGroup className="animated fadeInLeft">
+                  <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>  
+                  <Link to='/Presence' className="text-center ">
+                  <Image src={presence} style={{borderRadius:'50%'}} fluid/>
+                    </Link>
+                  </Card>
+                  <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
+                  <Link to='/services' className="text-center" > 
+                    <Image src={services} style={{height:'325px', borderRadius:'50%'}} fluid/>
+                    </Link>  
+                </Card>
+                <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
+                <Link to='/' className="text-center">
+                <Image src={impact} style={{height:'325px',borderRadius:'50%'}} fluid/>
+                </Link>  
+                </Card>
+              </CardGroup>   
                 </Row>
-                <Row sm={4} className="d-flex justify-content-around mt-5">
-                  <div>
-                      <Link to='/' className="text-center"><Image src={impact} className="image" fluid/></Link>
-                  </div>
-                </Row>    
-              </Col> 
+              </Col>
             </Container>
 
             <Container className="mt-5 p-2" >
@@ -113,12 +123,12 @@ const styleimg1 = {
                               })
                               .interpolate(x => `scale(${x})`)
                           }}>
-                          <div className="jumbotron">
-                            <h1 className="display-4 d-flex justify-content-center">Mission</h1>
-                            <hr className="my-4"/>
-                            <p className="lead font-italic">"The mission of the medapp.in is to improve the health of those we serve with a commitment to excellence in 
-                            all that we do. Our goal is to offer quality care & services that set community standards, exceed patients 
-                            expectations and are provided in a caring, convenient, cost effective in a accessible manner".</p>
+                          <div className="jumbotron mx-4 vision parallax">
+                            <h1 className="display-4 d-flex justify-content-center text-white">Vision</h1>
+                            <hr className="my-4 bg-white"/>
+                            <p className="lead font-italic mt-2 text-white">
+                              "Medapp.in will become the national model for the delivery of Preventive care and Primary health care at 
+                              the urban & rural level by Touching life, Changing life, and saving life with out barrier of geography."</p>
                           </div>
                         </animated.div>
                       </div>        
@@ -135,12 +145,12 @@ const styleimg1 = {
                               })
                               .interpolate(x => `scale(${x})`)
                           }}>
-                          <div className="jumbotron m-4">
-                            <h1 className="display-4 d-flex justify-content-center">Vision</h1>
-                            <hr className="my-4"/>
-                            <p className="lead font-italic mt-2">
-                              "medapp.in will become the national model for the delivery of Preventive care and Primary health care at 
-                              the urban & rural level by Touching life, Changing life, and saving life with out barrier of geography."</p>
+                          <div className="jumbotron mission parallax">
+                            <h1 className="display-4 d-flex justify-content-center text-white">Mission</h1>
+                            <hr className="my-4 bg-white"/>
+                            <p className="lead font-italic text-white">"The mission of the medapp.in is to improve the health of those we serve with a commitment to excellence in 
+                            all that we do. Our goal is to offer quality care & services that set community standards, exceed patients 
+                            expectations and are provided in a caring, convenient, cost effective in a accessible manner".</p>
                           </div>
                       </animated.div>
                       </div>

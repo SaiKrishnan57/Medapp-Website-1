@@ -57,11 +57,17 @@ const Services = () => {
                 <div className="overlay"></div>
                 <Container>
                 <Row>
-                    <Col sm={8} className="px-3">
+                    <Col sm={8} className="px-2">
                         <div style={stylealign}>
-                            <h1 className="display-3 mt-2 font-weight-bold animated fadeIn">OUR SERVICES</h1>
-                            <p style={styletext} className="mt-3 animated fadeIn">Initiating Compassionate Care & service to Communities (touching life, changing life, saving life )</p>
-                            <p style={styletext} className="animated fadeIn">Chronic disease accounts for at least 6 to 7 of the 10 leading causes of death and 85% of all healthcare spending.
+                            <h3 className="display-4 font-weight-bold animated fadeIn">OUR SERVICES</h3>
+                            <div className="p-1 service">
+                             <p className="mt-2 animated fadeIn" style={{fontSize:"20px",fontFamily:"'Rubik', sans-serif"}}>
+                                <i className="fas fa-quote-left mr-4"></i>
+                                    Initiating Compassionate Care & service to Communities (touching life, changing life, saving life )
+                                <i className="fas fa-quote-right ml-4"></i>  
+                             </p>  
+                            </div> 
+                            <p style={styletext} className="animated fadeIn mt-1">Chronic disease accounts for at least 6 to 7 of the 10 leading causes of death and 85% of all healthcare spending.
                             Healthcare systems are poorly-equipped to handle this epidemic as most chronic diseases require continuous intervention
                             to make the behavioral and lifestyle changes needed to effectively manage them. medapp.in enables broad scaling of frequent screening,
                             high-touch, personalized,behavioral interventions & counselling at low cost, and as such has become an essential part
@@ -79,7 +85,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-medkit" style={icon}></i> 
+                            <i className="fas fa-stethoscope" style={icon}></i> 
                             <p style={caption}>Diabetic Screening Camps</p>
                         </animated.div>
                     </Col>
@@ -88,7 +94,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-medkit" style={icon}></i>
+                            <i className="fas fa-ambulance" style={icon}></i>
                             <p style={caption}>Primary Health care services at door step</p>
                         </animated.div>
                     </Col>
@@ -110,7 +116,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-medkit" style={icon}></i> 
+                            <i className="fas fa-file-medical-alt" style={icon}></i> 
                             <p style={caption}>Chronic Disease Management</p>
                         </animated.div>  
                     </Col>
@@ -119,7 +125,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-medkit" style={icon}></i>
+                            <i className="fas fa-user-md" style={icon}></i>
                             <p style={caption}>Patient Support Programme</p>
                         </animated.div>
                     </Col>
@@ -128,7 +134,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-medkit" style={icon}></i>
+                            <i className="fas fa-user-nurse" style={icon}></i>
                             <p style={caption}>Training for Nurses & Paramedics</p>
                         </animated.div>
                     </Col>     
@@ -141,7 +147,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-medkit" style={icon}></i> 
+                            <i className="fas fa-procedures" style={icon}></i> 
                             <p style={caption}>Screening for Asthma & Respiratory diseases</p>
                         </animated.div>                          
                     </Col>
@@ -150,7 +156,7 @@ const Services = () => {
                             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                             onMouseLeave={() => set({ xys: [0, 0, 1] })}
                             style={{ transform: props.xys.interpolate(trans) }} >         
-                            <i className="fas fa-medkit" style={icon}></i>
+                            <i className="fas fa-clinic-medical" style={icon}></i>
                             <p style={caption}>One shop solution for all diagnostic services</p>
                         </animated.div>      
                     </Col>
@@ -159,7 +165,7 @@ const Services = () => {
                         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
                         onMouseLeave={() => set({ xys: [0, 0, 1] })}
                         style={{ transform: props.xys.interpolate(trans) }} >         
-                         <i className="fas fa-medkit" style={icon}></i>
+                         <i className="fas fa-syringe" style={icon}></i>
                          <p style={caption}>Onsite Injection & Infusions</p>
                     </animated.div>   
                     </Col>     

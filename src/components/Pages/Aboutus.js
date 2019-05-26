@@ -1,9 +1,10 @@
 import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import bgimg from './images/bg2.jpg';
+import bgimg from './images/bg-4.jpg';
 import pic1 from './images/medapp-aboutus.jpg';
 import pic2 from './images/medapp-whoweare.jpg';
+import './imagestyles.css';
 
 const Styles = styled.div`
   .jumbo {
@@ -39,7 +40,7 @@ const Aboutus = () => {
                 <Container className="p-4" style={{marginTop:'15%'}}>
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                      <h1 className="display-4 font-weight-bold">ABOUT US MEDAPP</h1>
+                      <h1 className="display-4 font-weight-bold">ABOUT US </h1>
                     </Col>
                     <Col sm={6} className="mt-3 p-4">    
                         <p className="display-5 mt-2" style={{fontSize:'25px'}}>
@@ -51,7 +52,7 @@ const Aboutus = () => {
             </Jumbo>
             <Container className="p-4">
                 <Row>
-                    <Col sm={6} className="mt-3 p-4 jumbotron">
+                    <Col sm={6} className="mt-3 p-4 jumbotron box">
                       <h3 className="display-5 font-weight-normal">
                          We’re all united around a common mission — touching life, changing life, and saving life.
                       </h3>
@@ -59,7 +60,7 @@ const Aboutus = () => {
                       <p style={caption}>
                       Across our network of healthcare services, our team provide compassionate, quality care to millions of patients through a wide range of services: from primary care to chronic care management, disease management, preventive care to curative care and advanced one point solutions for all diagnostic services. 
                       </p>
-                      <p className="mt-2 lead font-italic">
+                      <p className="mt-2 lead font-italic quote">
                       We’re also collaborating with others to enhance healthcare solutions across the care continuum.
                       </p>
                       <p className="mt-2"  style={caption}>
@@ -74,21 +75,21 @@ const Aboutus = () => {
 
                     </Col>
                     <Col sm={6} className="mt-3 p-4">    
-                       <Image src={pic1} className="animated bounceIn" fluid/>
+                       <Image src={pic1} className="animated bounceIn imgbox" fluid/>
                     </Col>    
                 </Row>
                 </Container>
                 <Container className="p-4">
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                        <Image src={pic2} className="animated bounceIn" fluid/>
+                        <Image src={pic2} className="animated bounceIn imgbox" fluid/>
                     </Col>
-                    <Col sm={6} className="mt-3 p-4 jumbotron">    
+                    <Col sm={6} className="mt-3 p-4 jumbotron box">    
                       <h3 className="display-5 font-weight-normal">
                         Our Commitment to Quality
                       </h3>
                       <hr className="my-4"/>
-                      <p className="mt-2 lead font-italic">
+                      <p className="mt-2 lead font-italic quote">
                         Healthcare is changing. And at medapp.in, we have a plan to lead that charge.
                       </p>
                       <p className="mt-2" style={caption}>

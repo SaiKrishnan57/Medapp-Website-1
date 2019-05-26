@@ -8,7 +8,6 @@
     height: 250px ;
     
 }
-
 .img-hover-zoom {
     overflow: hidden;
     border-radius: 20px;
@@ -21,4 +20,70 @@
 .img-hover-zoom:hover .profile{
     transform: scale(1.20);
 
+}
+.parallax{
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.mission{
+  background-image: url(./images/mission.jpg);
+}
+.vision{
+  background-image: url(./images/vision2.jpg);
+}
+
+.box{
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.box:hover{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.05);
+}
+
+.imgbox{
+  border-radius: 10px;
+}
+.imgbox:hover{
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.iconbox{
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: 5px;
+  border-radius: 20px;
+}
+.iconbox:hover{
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.04);
+}
+
+.quote{
+  text-decoration-line: underline;
+  color: black;
+  line-height: 1.5em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 3vh;
+  padding: 10px;
+}
+
+.contacts{
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-bottom: 5%;
+}
+.contacts:hover{
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.04);
 }

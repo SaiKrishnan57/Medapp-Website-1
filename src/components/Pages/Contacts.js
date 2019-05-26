@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Form,Button} from 'react-bootstrap';
 import styled from 'styled-components';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import './imagestyles.css';
 
 const Styles = styled.div`
   .jumbo {
@@ -24,7 +25,9 @@ const Styles = styled.div`
 `;
 
 const styletext = {
-       fontSize:'14px'
+       fontSize:'18px',
+       textTransform: 'uppercase',
+       fontFamily:'Rubik, sans-serif',
   };
 
 class Contacts extends Component {
@@ -44,13 +47,14 @@ class Contacts extends Component {
                   </InfoWindow>
                 </Map>           
             </Jumbo>
-            <Container className="p-4">
+            <Container className="p-4 contacts">
+            <h1 align="center">Get in Touch with Us.</h1>
                 <Row>
-                    <Col sm={4} className="mt-3 p-4">
+                    <Col sm={4} style={{marginTop:'10%'}}>
                       <h3 className="display-5 font-weight-normal">
                         Our Contacts
                       </h3>
-                      <p className="mt-4">
+                      <p className="mt-4" style={styletext}>
                         Bengaluru
                       </p>
                       <p className="mt-2 text-muted" style={styletext}>
