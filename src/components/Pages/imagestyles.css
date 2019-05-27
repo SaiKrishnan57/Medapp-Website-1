@@ -11,6 +11,9 @@
 .img-hover-zoom {
     overflow: hidden;
     border-radius: 20px;
+    height: 53vh;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
   }
   
 .img-hover-zoom .profile{
@@ -54,17 +57,19 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.iconbox{
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+.owl-theme{
   border: 5px;
-  border-radius: 20px;
-}
-.iconbox:hover{
-  transition: 0.5s;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 20px;
+  width: 100%;
+}
+.owl-theme:hover{
+  transition: 0.5s;
   transform: scale(1.04);
 }
-
+.item{
+  height: auto;
+}
 .quote{
   text-decoration-line: underline;
   color: black;

@@ -1,28 +1,6 @@
 import React, { Component } from 'react'
-import { Jumbotron as Jumbo, Container,Row,Col,Form,Button} from 'react-bootstrap';
-import styled from 'styled-components';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Container,Row,Col,Form,Button} from 'react-bootstrap';
 import './imagestyles.css';
-
-const Styles = styled.div`
-  .jumbo {
-    background-size: cover;
-    color: #efefef;
-    height: 600px;
-    position: relative;
-    z-index: -2;
-  }
-  .overlay {
-    background-color: #000;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-`;
 
 const styletext = {
        fontSize:'18px',
@@ -33,21 +11,8 @@ const styletext = {
 class Contacts extends Component {
   render() {
     return (
-    <div>
-        <Styles>
-            <Jumbo fluid className="jumbo">
-                <div className="overlay"></div>
-                <Map google={this.props.google} zoom={14}>
- 
-                  <Marker onClick={this.onMarkerClick}
-                        name={'Current location'} />
-
-                  <InfoWindow onClose={this.onInfoWindowClose}>
-
-                  </InfoWindow>
-                </Map>           
-            </Jumbo>
-            <Container className="p-4 contacts">
+      <div>
+         <Container className="p-4 contacts">
             <h1 align="center">Get in Touch with Us.</h1>
                 <Row>
                     <Col sm={4} style={{marginTop:'10%'}}>
@@ -98,12 +63,9 @@ class Contacts extends Component {
                     </Col>    
                 </Row>
                 </Container>
-        </Styles>
     </div>
   )
 }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyAM0T1gdo1nyLdq-RegZDtE1fGA0tYAqsM')
-})(Contacts);
+export default Contacts;

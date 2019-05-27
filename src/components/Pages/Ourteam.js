@@ -1,5 +1,6 @@
-import React from 'react'
+import React,{Component} from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
+import { Link }from 'react-router-dom';
 import styled from 'styled-components';
 import bgimg from './images/bg2.jpg';
 import dummym from './images/dummy-men.jpg';
@@ -37,7 +38,9 @@ const caption = {
 };
   
  
-const Ourteam = () => {
+class Ourteam extends Component {
+
+    render(){
   return (
     <div>
         <Styles>
@@ -60,19 +63,19 @@ const Ourteam = () => {
                  <h1 className="display-5 font-weight-normal text-center">Our Team</h1>
                 <Row>
                     <Col sm={4} className="mt-3 p-4" >
-                    <div class="img-hover-zoom">
-                        <Image src={niranjan} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    <div className="img-hover-zoom">
+                    <Link to={`/Ourteam/Members/${0}`}><Image src={niranjan} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
                         <p className="text-center">Niranjan Swamy N</p>
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
-                    <div class="img-hover-zoom">    
+                    <div className="img-hover-zoom">    
                         <Image src={dummym} thumbnail className="profile" style={{borderRadius:'20px'}}/>
                     </div>
                         <p className="text-center">Dr Shiraz</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
-                    <div class="img-hover-zoom">
+                    <div className="img-hover-zoom">
                         <Image src={nabeel} thumbnail className="profile" style={{borderRadius:'20px'}}/>
                     </div>
                         <p className="text-center">Nabeel</p>
@@ -80,22 +83,22 @@ const Ourteam = () => {
                 </Row>
                 <Row>
                     <Col sm={4} className="mt-3 p-4">
-                    <div class="img-hover-zoom">
-                        <Image src={vinod} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    <div className="img-hover-zoom">
+                        <Link to={`/Ourteam/Members/${1}`}><Image src={vinod} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
                         </div>    
                         <p className="text-center">Dr. Vinod Singh</p>
                         <p className="text-muted text-center" style={caption}>Chief Operating Officer</p>
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
-                    <div class="img-hover-zoom">    
-                        <Image src={dummywo} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    <div className="img-hover-zoom">    
+                    <Link to={`/Ourteam/Members/${2}`}><Image src={dummywo} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
                         <p className="text-center">Sinu George</p>
                         <p className="text-muted text-center" style={caption}>Director</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
-                    <div class="img-hover-zoom">
-                        <Image src={krishna} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                    <div className="img-hover-zoom">
+                    <Link to={`/Ourteam/Members/${3}`}><Image src={krishna} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
                         <p className="text-center">Krishna Raghavan</p>
                         <p className="text-muted text-center" style={caption}>Director</p>
@@ -105,6 +108,7 @@ const Ourteam = () => {
         </Styles>
     </div>
   )
+}
 }
 
 export default Ourteam;

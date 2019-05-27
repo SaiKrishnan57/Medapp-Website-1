@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Jumbotron as Jumbo, Container,Image,Row,Col,Card,CardGroup } from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container,Image,Row,Col} from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/bg1.jpeg';
 import naa from './images/newsandawards.jpeg';
 import presence from './images/Ourpresence.jpeg';
-import services from './images/Ourservices.jpeg';
+import services from './images/Ourservices.png';
 import impact from './images/Socialimpact.jpeg';
 import team from './images/team.jpeg';
 import wwa from './images/Whoweare.jpeg';
@@ -15,6 +15,9 @@ import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Styles = styled.div`
   .jumbo {
@@ -67,46 +70,97 @@ const styleimg1 = {
                 </Container>
             </Jumbo>
             <Container>
-              <Col>
-               <Row sm={4} >
-                <CardGroup className="animated fadeInRight">
-                    <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
-                    <Link to='/Ourteam' className="text-center">
-                      <Image src={team} style={{borderRadius:'50%'}} fluid/>
-                    </Link>
-                  </Card>
-                    <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
-                    <Link to='/' className="text-center">
-                      <Image src={naa} style={{height:'365px', borderRadius:'50%'}} fluid/>
-                  </Link>
-                </Card>
-                <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
-                <Link to='/aboutus' className="text-center">
-                  <Image src={wwa} style={{height:'365px', borderRadius:'50%'}} fluid/>
-                  </Link>
-                </Card>
-              </CardGroup>
+              <Row>
+              <Col sm={12} className="p-4">
+              <MediaQuery query="(max-device-width: 1224px)">    
+                <OwlCarousel
+                    className="owl-theme my-5"
+                    loop
+                    nav
+                    autoplay
+                    autoplayTimeout='2000'
+                    autoplayHoverPause
+                    dotsEach
+                    items='1'
+                >
+                    <div className="item m-3 mt-5">
+                        <Link to='/Ourteam'>
+                          <Image src={team} fluid/>
+                        </Link>
+                    </div>
+                    <div className="item m-4 mt-5">
+                      <Link to='/'>
+                        <Image src={naa} fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/aboutus'>
+                        <Image src={wwa} fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/Presence'>
+                        <Image src={presence}  fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">   
+                      <Link to='/services'> 
+                        <Image src={services} fluid/>
+                      </Link>  
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/'>
+                        <Image src={impact} fluid/>
+                      </Link> 
+                    </div>
+                </OwlCarousel>
+              </MediaQuery>
+              <MediaQuery query="(min-device-width: 1224px)">
+              <OwlCarousel
+                    className="owl-theme my-5"
+                    loop
+                    nav
+                    autoplay
+                    autoplayTimeout='2000'
+                    autoplayHoverPause
+                    dotsEach
+                    items='3'
+                >
+                    <div className="item m-3 mt-5">
+                        <Link to='/Ourteam'>
+                          <Image src={team} fluid/>
+                        </Link>
+                    </div>
+                    <div className="item m-4 mt-5">
+                      <Link to='/'>
+                        <Image src={naa} fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/aboutus'>
+                        <Image src={wwa} fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/Presence'>
+                        <Image src={presence}  fluid/>
+                      </Link>
+                    </div>
+                    <div className="item m-3 mt-5">   
+                      <Link to='/services'> 
+                        <Image src={services} fluid/>
+                      </Link>  
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/'>
+                        <Image src={impact} style={{height:'20vw'}} fluid/>
+                      </Link> 
+                    </div>
+                </OwlCarousel>
+              
+              </MediaQuery>
+                </Col>
                 </Row>
-                <Row sm={4} className="d-flex justify-content-around">  
-                <CardGroup className="animated fadeInLeft">
-                  <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>  
-                  <Link to='/Presence' className="text-center ">
-                  <Image src={presence} style={{borderRadius:'50%'}} fluid/>
-                    </Link>
-                  </Card>
-                  <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
-                  <Link to='/services' className="text-center" > 
-                    <Image src={services} style={{height:'325px', borderRadius:'50%'}} fluid/>
-                    </Link>  
-                </Card>
-                <Card className="m-3 iconbox" style={{borderRadius:'50%'}}>
-                <Link to='/' className="text-center">
-                <Image src={impact} style={{height:'325px',borderRadius:'50%'}} fluid/>
-                </Link>  
-                </Card>
-              </CardGroup>   
-                </Row>
-              </Col>
             </Container>
 
             <Container className="mt-5 p-2" >

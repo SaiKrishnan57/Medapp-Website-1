@@ -9,6 +9,7 @@ import Contacts from './components/Pages/Contacts';
 import Presence from './components/Pages/Presence';
 import Ourteam from './components/Pages/Ourteam';
 import Footer from './components/layout/Footer';
+import Members from './components/Pages/Members';
 
 class App extends Component {
   render(){
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/Contacts" component = {Contacts}/>
             <Route exact path="/Presence" component = {Presence}/>
             <Route exact path="/Ourteam" component = {Ourteam}/>
+            <Route exact path="/Ourteam/Members/:id" component = {Members}/>
             </Switch>
           <Footer/> 
         </BrowserRouter>  
