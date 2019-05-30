@@ -67,6 +67,7 @@ class Ourteam extends Component {
                     <Link to={`/Ourteam/Members/${0}`}><Image src={niranjan} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
                         <p className="text-center mt-2">Niranjan Swamy N</p>
+                        <p className="text-muted text-center" style={caption}>Co-Founder</p> 
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
