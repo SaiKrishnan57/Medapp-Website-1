@@ -35,8 +35,8 @@ export default class Members extends Component {
                 <Container>
                 <Row>
                     <Col sm={4} className="px-5 mt-5">
-                        <div className="mt-5 img-hover-zoom">
-                            <Image src={this.state.Member[props].pic} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                        <div className="mt-5 img-hover-zoom" style={{backgroundColor:"white"}}>
+                            <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
                         </div>    
                     </Col>
                     <Col sm={8} className="px-3">

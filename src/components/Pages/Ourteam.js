@@ -64,43 +64,43 @@ class Ourteam extends Component {
                 <Row>
                     <Col sm={4} className="mt-3 p-4" >
                     <div className="img-hover-zoom">
-                    <Link to={`/Ourteam/Members/${0}`}><Image src={niranjan} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
+                    <Link to={`/Ourteam/Members/${0}`}><Image src={niranjan} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
-                        <p className="text-center">Niranjan Swamy N</p>
+                        <p className="text-center mt-2">Niranjan Swamy N</p>
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
-                        <Image src={dummym} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                        <Image src={dummym} fluid className="profile" style={{borderRadius:'20px'}}/>
                     </div>
-                        <p className="text-center">Dr Shiraz</p>                
+                        <p className="text-center mt-2">Dr Shiraz</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
-                        <Image src={nabeel} thumbnail className="profile" style={{borderRadius:'20px'}}/>
+                        <Image src={nabeel} fluid className="profile" style={{borderRadius:'20px'}}/>
                     </div>
-                        <p className="text-center">Nabeel</p>
+                        <p className="text-center mt-2">Nabeel</p>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
-                        <Link to={`/Ourteam/Members/${1}`}><Image src={vinod} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
+                        <Link to={`/Ourteam/Members/${1}`}><Image src={vinod} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                         </div>    
-                        <p className="text-center">Dr. Vinod Singh</p>
+                        <p className="text-center mt-2">Dr. Vinod Singh</p>
                         <p className="text-muted text-center" style={caption}>Chief Operating Officer</p>
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
-                    <Link to={`/Ourteam/Members/${2}`}><Image src={dummywo} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
+                    <Link to={`/Ourteam/Members/${2}`}><Image src={dummywo} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
-                        <p className="text-center">Sinu George</p>
+                        <p className="text-center mt-2">Sinu George</p>
                         <p className="text-muted text-center" style={caption}>Director</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
-                    <Link to={`/Ourteam/Members/${3}`}><Image src={krishna} thumbnail className="profile" style={{borderRadius:'20px'}}/></Link>
+                    <Link to={`/Ourteam/Members/${3}`}><Image src={krishna} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
-                        <p className="text-center">Krishna Raghavan</p>
+                        <p className="text-center mt-2">Krishna Raghavan</p>
                         <p className="text-muted text-center" style={caption}>Director</p>
                     </Col>
                 </Row>

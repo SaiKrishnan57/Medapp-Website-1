@@ -43,7 +43,7 @@ export default class Blog1 extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-            ARE WE TOGETHER?
+            KNOW YOUR HIV STATUS!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body >
