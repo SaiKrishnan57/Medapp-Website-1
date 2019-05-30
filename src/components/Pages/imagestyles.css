@@ -11,13 +11,27 @@
 .img-hover-zoom {
     overflow: hidden;
     border-radius: 20px;
-    height: 50vh;
+    height: 53vh;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
   }
-.profile{
-  height: 50vh;
-}
+  .img-hover-zoom1 {
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  @media only screen and (max-width: 768px) and (max-width: 1024px) and (max-width: 1366px){
+   
+    .img-hover-zoom {
+      overflow: hidden;
+      border-radius: 20px;
+      height: 75%;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .profile{
+      height: auto;
+      width: 100%;
+    }
+  }
 .img-hover-zoom .profile{
     transition: transform .8s ease;
   }

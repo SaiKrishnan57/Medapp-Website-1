@@ -35,22 +35,27 @@ export default class Members extends Component {
             <Jumbo fluid className="jumbo">
                 <Container className="rounded mt-5 contain">
                 <Row>
+                    <MediaQuery query="(max-device-width: 1224px)">
                     <Col sm={4} className="p-4">
-                        <div className="mt-2 img-hover-zoom" style={{backgroundColor:"white",borderRadius:'50%'}}>
+                        <div className="mt-2 img-hover-zoom1" style={{backgroundColor:"white",borderRadius:'50%'}}>
                             <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
                         </div>    
                     </Col>
-                    <MediaQuery query="(max-device-width: 1224px)">
-                    <Col sm={8} className="py-4">
-                        <div className=" membername py-2 rounded">
+                    <Col sm={8} className="py-4 d-flex flex-column justify-content-center">
+                        <div className="membername py-2 rounded">
                             <h2 className=" text-white font-weight-bold animated fadeInLeft slow py-2 px-4">{this.state.Member[props].Name}</h2>
                             <h5 className="font-weight-bold text-white animated fadeInRight slower py-2 px-4">{this.state.Member[props].Designation}</h5>
                         </div>    
                     </Col>
                    </MediaQuery> 
                 <MediaQuery query="(min-device-width: 1224px)">
-                    <Col sm={8} className="mt-5 py-4">
-                        <div className="mt-5 membername py-2 rounded">
+                    <Col sm={4} className="p-4">
+                        <div className="mt-2 img-hover-zoom" style={{backgroundColor:"white",borderRadius:'50%'}}>
+                            <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
+                        </div>    
+                    </Col>
+                    <Col sm={8} className="py-4 d-flex flex-column justify-content-center">
+                        <div className="membername py-2 rounded">
                             <h1 className=" text-white font-weight-bold animated fadeInLeft slow py-2 px-4">{this.state.Member[props].Name}</h1>
                             <h5 className="font-weight-bold text-white animated fadeInRight slower py-2 px-4">{this.state.Member[props].Designation}</h5>
                         </div>    
