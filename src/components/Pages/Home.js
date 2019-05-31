@@ -4,12 +4,12 @@ import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/bg1.jpeg';
-import naa from './images/newsandawards.jpeg';
-import presence from './images/Ourpresence.jpeg';
-import services from './images/Ourservices.png';
-import impact from './images/Socialimpact.jpeg';
-import team from './images/team.jpeg';
-import wwa from './images/Whoweare.jpeg';
+import presence from './images/Medapp/DSC08702.jpg';
+import services from './images/Medapp/DSC08735.jpg';
+import impact from './images/Medapp/DSC08788.jpg';
+import team from './images/Medapp/DSC08785.jpg';
+import wwa from './images/Medapp/DSC08674.jpg';
+import naa from './images/Medapp/DSC08662.jpg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
@@ -82,6 +82,7 @@ const styleimg1 = {
                     autoplayHoverPause
                     dotsEach
                     items='1'
+                    style={{backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
@@ -125,35 +126,36 @@ const styleimg1 = {
                     autoplayHoverPause
                     dotsEach
                     items='3'
+                    style={{backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
-                          <Image src={team} fluid/>
+                          <Image src={team} className="rounded" fluid/>
                         </Link>
                     </div>
-                    <div className="item m-4 mt-5">
+                    <div className="item m-3 mt-5">
                       <Link to='/'>
-                        <Image src={naa} fluid/>
+                        <Image src={naa} className="rounded" fluid/>
                       </Link>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
-                        <Image src={wwa} fluid/>
+                        <Image src={wwa} className="rounded" fluid/>
                       </Link>
                     </div>
                     <div className="item m-3 mt-5">
-                      <Link to='/Presence'>
-                        <Image src={presence}  fluid/>
+                      <Link to='/Presence' >
+                        <Image src={presence} className="rounded"  fluid/>
                       </Link>
                     </div>
                     <div className="item m-3 mt-5">   
                       <Link to='/services'> 
-                        <Image src={services} fluid/>
+                        <Image src={services} className="rounded" fluid/>
                       </Link>  
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/'>
-                        <Image src={impact} style={{height:'20vw'}} fluid/>
+                        <Image src={impact} className="rounded" fluid />
                       </Link> 
                     </div>
                 </OwlCarousel>

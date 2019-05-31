@@ -34,11 +34,9 @@
   }
 .img-hover-zoom .profile{
     transition: transform .8s ease;
-  }
-  
+  }  
 .img-hover-zoom:hover .profile{
     transform: scale(1.20);
-
 }
 .parallax{
   background-size: cover;
@@ -53,7 +51,6 @@
 .vision{
   background-image: url(./images/vision2.jpg);
 }
-
 .box{
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
@@ -64,7 +61,6 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transform: scale(1.05);
 }
-
 .imgbox{
   border-radius: 10px;
 }
@@ -72,7 +68,6 @@
   transition: 0.5s;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 .owl-theme{
   border: 5px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -95,7 +90,6 @@
   font-size: 3vh;
   padding: 10px;
 }
-
 .contacts{
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 25px;
@@ -110,6 +104,4 @@
 }
 .membername{
    background-image: linear-gradient(135deg, #673AB7 0%, #512DA8 100%);
-}
-.contain{
 }

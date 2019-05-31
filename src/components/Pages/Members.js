@@ -37,7 +37,7 @@ export default class Members extends Component {
                 <Row>
                     <MediaQuery query="(max-device-width: 1224px)">
                     <Col sm={4} className="p-4">
-                        <div className="mt-2 img-hover-zoom1" style={{backgroundColor:"white",borderRadius:'50%'}}>
+                        <div className="mt-2 img-hover-zoom rounded-circle" style={{backgroundColor:"white"}}>
                             <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
                         </div>    
                     </Col>
@@ -50,7 +50,7 @@ export default class Members extends Component {
                    </MediaQuery> 
                 <MediaQuery query="(min-device-width: 1224px)">
                     <Col sm={4} className="p-4">
-                        <div className="mt-2 img-hover-zoom" style={{backgroundColor:"white",borderRadius:'50%'}}>
+                        <div className="mt-2 img-hover-zoom rounded-circle" style={{backgroundColor:"white"}}>
                             <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
                         </div>    
                     </Col>
