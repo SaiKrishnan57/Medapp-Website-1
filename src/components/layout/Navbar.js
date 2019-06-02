@@ -21,10 +21,10 @@ import logo from './logo1.png';
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-5 my-2">
         <Link to='/' className="mx-5 my-2 text-dark">HOME</Link>
-        <Link to='/aboutus' className="mx-5 my-2 text-dark">WHO WE ARE</Link>
+        <Link to='/Aboutus' className="mx-5 my-2 text-dark">WHO WE ARE</Link>
         <Link to='/services' className="mx-5 my-2 text-dark">SERVICES</Link>
-        <Link to='/ourblogs' className="mx-5 my-2 text-dark">OUR BLOG</Link>
-        <Link to='/contacts' className="mx-5 my-2 text-dark">CONTACTS</Link>
+        <Link to='/Ourblogs' className="mx-5 my-2 text-dark">OUR BLOG</Link>
+        <Link to='/Contacts' className="mx-5 my-2 text-dark">CONTACTS</Link>
       </Nav>
   </Navbar.Collapse>
 </Navbar>

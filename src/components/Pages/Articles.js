@@ -48,7 +48,6 @@ class Articles extends Component{
                     <Col sm={8} className="py-4 px-3">
                         <div style={stylealign}>
                             <h1 className="display-3 mt-2 font-weight-bold">OUR ARTICLES</h1>
-                            <p style={styletext} className="mt-3"> Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>    
                     </Col>
                     </Row>                     
