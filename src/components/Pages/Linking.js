@@ -5,8 +5,8 @@ import Typist from 'react-typist';
 import bgimg from './images/bg3.jpg';
 import chronic from './images/chronic.jpg';
 import advancement from './images/advancement.jpg';
-import life from './images/lifeatmed.jpg';
 import touching from './images/touching.jpg';
+import life from './images/life.jpg';
 import {Link} from 'react-router-dom';
 import './imagestyles.css';
 
@@ -21,13 +21,13 @@ const Styles = styled.div`
   } 
   .jumbo1 {
     background-size: cover;
-    background-image: url(${life});
+    background-image: url(${touching});
     height: 300px;
     border-radius: 25px;
   }
   .jumbo2 {
     background-size: cover;
-    background-image: url(${touching});
+    background-image: url(${life});
     height: 300px;
     border-radius: 25px;
   }
@@ -94,8 +94,8 @@ class Linking extends Component{
                 <Col sm={6} className="p-3"> 
                   <div className="container jumbo2 box bg-secondary d-flex flex-column justify-content-center " >   
                     <Typist cursor={{hideWhenDone: true,element:" "}}>
-                        <h1 align="center" style={{color:'#B3D1FF'}}>MedApp</h1> 
-                        <h5 align="center" className="display-5 mt-2 text-white" >Touching lives, Changing lives, and Saving Lives</h5>
+                        <h1 align="center" style={{color:'black'}}>MedApp</h1> 
+                        <h5 align="center" className="display-5 mt-2" style={{fontSize:"25px",color:'black'}}>Touching lives, Changing lives, and Saving Lives</h5>
                     </Typist>   
                   </div>
                 </Col>
@@ -113,7 +113,7 @@ class Linking extends Component{
                 <Col sm={6} className="p-3"> 
                         <div className="container jumbo4 box bg-secondary d-flex flex-column justify-content-center" >   
                         <Typist cursor={{hideWhenDone: true,element:" "}}>
-                            <h4 align="center" className="display-5 mt-2 text-dark">Innovation and advancement in healthcare.</h4>
+                            <h4 align="center" className="display-5 mt-5 " style={{color:'black'}}>Innovation and advancement in healthcare.</h4>
                         </Typist>
                     </div>     
                 </Col>  

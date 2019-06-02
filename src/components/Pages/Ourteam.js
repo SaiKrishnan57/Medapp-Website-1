@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import { Link }from 'react-router-dom';
 import styled from 'styled-components';
-import bgimg from './images/bg2.jpg';
+import team from './images/team.jpg';
 import Nisar from './images/Nisar.jpg';
 import nabeel from './images/nabeel2.jpg';
 import niranjan from './images/niranjan-swamy-N.jpg';
@@ -10,13 +10,23 @@ import vinod from './images/vinod-singh.jpg';
 import krishna from './images/krishna.jpg';
 import sinu from './images/sinu.jpg';
 import './imagestyles.css';
+import MediaQuery from 'react-responsive';
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${bgimg}) no-repeat fixed bottom;
+    background-image: url(${team});
     background-size: cover;
     color: #efefef;
     height: 700px;
+    position: relative;
+    z-index: -2;
+  }
+  .jumbo-min{
+    background-image: url(${team});
+    background-size: cover;
+    color: #efefef;
+    height: 300px;
+    margin-top:45px;
     position: relative;
     z-index: -2;
   }
@@ -44,7 +54,8 @@ class Ourteam extends Component {
   return (
     <div>
         <Styles>
-            <Jumbo fluid className="jumbo">
+        <MediaQuery query="(min-device-width: 1224px)">    
+           <Jumbo fluid className="jumbo">
                 <div className="overlay"></div>
                 <Container className="p-4" style={{marginTop:'15%'}}>
                 <Row>
@@ -59,6 +70,24 @@ class Ourteam extends Component {
                 </Row>
                 </Container>
             </Jumbo>
+       </MediaQuery>
+        <MediaQuery query="(max-device-width: 1224px)">    
+           <Jumbo fluid className="jumbo-min">
+                <div className="overlay"></div>
+                <Container className="p-4">
+                <Row>
+                    <Col sm={6} className="p-3">
+                      <h1 className="display-5 font-weight-normal">TEAM MEMBERS</h1>
+                    </Col>
+                    <Col sm={6} className="p-1">    
+                        <p style={{fontSize:'18px'}}>
+                        We are professionals with exceptional background and years of expertise in business.
+                        </p>
+                    </Col>    
+                </Row>
+                </Container>
+            </Jumbo>
+       </MediaQuery>
                 <Container className="p-4">
                  <h1 className="display-5 font-weight-normal text-center">Our Team</h1>
                 <Row>
@@ -73,14 +102,16 @@ class Ourteam extends Component {
                     <div className="img-hover-zoom">    
                     <Link to={`/Ourteam/Members/${4}`}><Image src={Nisar} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>
-                        <p className="text-center mt-2">Dr Shiraz</p>
+                        <p className="text-center mt-2">Dr.Shiraz Nisar</p>
                         <p className="text-muted text-center" style={caption}>  Chief Medical Officer</p>
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
-                        <Image src={nabeel} fluid className="profile" style={{borderRadius:'20px'}}/>
+                    <Link to={`/Ourteam/Members/${5}`}>
+                        <Image src={nabeel} fluid className="profile" style={{borderRadius:'20px',height:'100%'}}/></Link>
                     </div>
-                        <p className="text-center mt-2">Nabeel</p>
+                        <p className="text-center mt-2">Nabeel Ahmed</p>
+                        <p className="text-muted text-center" style={caption}>Chief Marketing Officer</p>
                     </Col>
                 </Row>
                 <Row>

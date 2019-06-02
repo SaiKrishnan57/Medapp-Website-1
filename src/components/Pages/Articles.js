@@ -11,7 +11,7 @@ const Styles = styled.div`
     background: url(${bgimg}) no-repeat fixed bottom;
     background-size: cover;
     color: #efefef;
-    height: 700px;
+    height: 450px;
     position: relative;
     z-index: -2;
   }
@@ -26,11 +26,6 @@ const Styles = styled.div`
     z-index: -1;
   }
 `;
-
-const styletext = {
-    fontSize: '14px',
-    lineHeight: '1.5em'
-  };
 
 const stylealign = {
     marginTop: '17%'

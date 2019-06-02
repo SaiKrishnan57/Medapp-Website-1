@@ -3,6 +3,7 @@ import { Jumbotron as Jumbo, Container,Row,Col,Image} from 'react-bootstrap';
 import styled from 'styled-components';
 import niranjan from './images/niranjan-swamy-N.jpg';
 import vinod from './images/vinod-singh.jpg';
+import nabeel from './images/nabeel2.jpg';
 import krishna from './images/krishna.jpg';
 import sinu from './images/sinu.jpg';
 import Nisar from './images/Nisar.jpg';
@@ -25,7 +26,8 @@ export default class Members extends Component {
             {id:1,Name:'Dr. Vinod Singh',Designation:'Chief Operating Officer',Info:data[1].info,pic:vinod},
             {id:2,Name:'Sinu George',Designation:'Nurse Trainer and Director',Info:data[2].info ,pic:sinu},
             {id:3,Name:'Krishna Raghavan',Designation:'Director',Info:data[3].info,pic:krishna},
-            {id:4,Name:'Dr. Nisar Shiraz',Designation:'Chief Medical Officer',Info:data[4].info,pic:Nisar}
+            {id:4,Name:'Dr. Shiraz Nisar',Designation:'Chief Medical Officer',Info:data[4].info,pic:Nisar},
+            {id:5,Name:'Nabeel Ahmed',Designation:'Chief Marketing Officer',Info:data[5].info,pic:nabeel}
         ]
     }
     render() {

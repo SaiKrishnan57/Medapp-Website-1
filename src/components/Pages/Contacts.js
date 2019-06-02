@@ -11,22 +11,11 @@ const styletext = {
 class Contacts extends Component {
   render() {
     return (
-      <div>
-         <Container className="p-4 contacts">
+      <div className="p-2 mt-5">
+         <Container className="p-5 mt-5 contacts">
             <h1 align="center">Get in Touch with Us.</h1>
                 <Row>
-                    <Col sm={4} style={{marginTop:'10%'}}>
-                      <h3 className="display-5 font-weight-normal">
-                        Our Contacts
-                      </h3>
-                      <p className="mt-4" style={styletext}>
-                        Bengaluru
-                      </p>
-                      <p className="mt-2 text-muted" style={styletext}>
-                        701, 7th Floor, B wing, Mittal Towers, M G Road, Bengaluru, 560001
-                      </p>
-                    </Col>
-                    <Col sm={8} className="mt-3 p-4">    
+                    <Col sm={8} className="mt-3 p-4" style={{marginTop:'10%'}}>    
                     <Form>
                       <Row>
                         <Col sm={4} className="mt-3 p-1">
@@ -60,6 +49,17 @@ class Contacts extends Component {
                         </Button>
                       </Row>
                     </Form>
+                    </Col>
+                    <Col sm={4} className="mt-5 p-4">
+                      <h3 className="display-5 font-weight-normal">
+                        Our Contacts
+                      </h3>
+                      <p className="mt-4" style={styletext}>
+                        Bengaluru
+                      </p>
+                      <p className="mt-2 text-muted" style={styletext}>
+                        701, 7th Floor, B wing, Mittal Towers, M G Road, Bengaluru, 560001
+                      </p>
                     </Col>    
                 </Row>
                 </Container>

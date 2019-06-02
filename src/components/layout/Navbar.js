@@ -5,14 +5,14 @@ import logo from './logo1.png';
 
  const Navigationbar = () =>{
   return (
-    <Navbar bg="light" expand="lg" fixed="top" className="p-2">
+    <Navbar bg="light" expand="lg" fixed="top" className="">
       <Link to='/'>
       <Navbar.Brand className="ml-5">
       <img
         alt="Medapp.in"
         src={logo}
-        width="180"
-        height="80"
+        width="160"
+        height="70"
         className="d-inline-block align-top"
       />
       </Navbar.Brand>
@@ -24,7 +24,7 @@ import logo from './logo1.png';
         <Link to='/Aboutus' className="mx-5 my-2 text-dark">WHO WE ARE</Link>
         <Link to='/services' className="mx-5 my-2 text-dark">SERVICES</Link>
         <Link to='/Ourblogs' className="mx-5 my-2 text-dark">OUR BLOG</Link>
-        <Link to='/Contacts' className="mx-5 my-2 text-dark">CONTACTS</Link>
+        <Link to='/Contacts' className="mx-5 my-2 text-dark">CONTACT US</Link>
       </Nav>
   </Navbar.Collapse>
 </Navbar>

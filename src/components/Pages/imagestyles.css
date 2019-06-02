@@ -20,7 +20,6 @@
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
   @media only screen and (max-width: 768px) and (max-width: 1024px) and (max-width: 1366px){
-   
     .img-hover-zoom {
       overflow: hidden;
       border-radius: 20px;
@@ -130,7 +129,7 @@
 }
 .text2{
   font-size: 15px;
-  color: #6ab04c;
+  color: black;
 }
 
 @keyframes text {
@@ -149,5 +148,9 @@
 }
 .bgimg{
   background-image: url('./images/ourpresence1.jpg');
+  background-size: cover;
+}
+.servicesbgimg{
+  background-image: url('./images/healthservicesjpg.jpg');
   background-size: cover;
 }

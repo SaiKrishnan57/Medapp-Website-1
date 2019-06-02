@@ -1,20 +1,19 @@
 import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import bgimg from './images/newss.jpg';
+//import bgimg from './images/newss.jpg';
 import Techphlie from './images/Techphlie.jpg';
 import karnataka from './images/karnataka.jpg';
 import business from './images/business.jpg';
 import thar from './images/thar.jpg';
 import north from './images/north.jpg';
+import news from './images/news.jpg';
 import './imagestyles.css';
 
 const Styles = styled.div`
-  .jumbo {
-    background: url(${bgimg}) no-repeat fixed bottom;
-    background-size: cover;
+  .jumbo {background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
     color: #efefef;
-    height: 700px;
+    height: 450px;
     position: relative;
     z-index: -2;
   }
@@ -36,15 +35,19 @@ const NewsandAwards = () => {
         <Styles>
             <Jumbo fluid className="jumbo">
                 <div className="overlay"></div>
-                <Container className="p-4" style={{marginTop:'15%'}}>
+                <Container className="p-4" style={{marginTop:'5%'}}>
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                      <h1 className="display-4 font-weight-bold">News And Awards</h1>
+                      <h1 className="display-4 font-weight-bold animated bounceInLeft slow"><u>News And Awards</u></h1>
                     </Col>  
                 </Row>
                 </Container>
             </Jumbo>
             <Container className="p-4">
+                <h1 className=" mb-1 lead text-uppercase text-white d-flex p-3 rounded" style={{fontFamily: "'Quicksand', sans-serif",background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898", backgroundBlendMode: 'multiply,multiply'}}>
+                    News & Updates:
+                </h1>
+                <hr className="mb-5"/>
                 <Row align="center">
                     <Col sm={2}>
                         <a href='https://www.aninews.in/news/business/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india20190417193514/'>
@@ -124,7 +127,21 @@ const NewsandAwards = () => {
                         <Col sm={2}><a href="http://eodishasamachar.com/en/newsvoir/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Feodishasamachar.com%2Fen%2Fnewsvoir%2F"><Image className="ml-3 mt-3" src="http://eodishasamachar.com/en/wp-content/uploads/2017/06/engsite.gif" style={{width:'150px',height:'60px'}}/></a></Col>
                         <Col sm={2}><a href="http://www.northindiakaleidoscope.com/newsvoir-business-news/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-3" src={north} style={{width:'150px',height:'60px'}}/></a></Col>
                     </Row>   
-                </Container>             
+                </Container>
+                <Container className="p-4">
+                    <h1 className="mb-1 lead text-uppercase text-white d-flex p-3 rounded" style={{fontSize:'25px',fontFamily: "'Quicksand', sans-serif",background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898", backgroundBlendMode: 'multiply,multiply'}}>
+                        Awards and Accolades:
+                    </h1>
+                    <hr className="mb-5"/>
+                    <Row className="d-flex justify-content-center">
+                        <Col sm={4} >
+                            <Image className="my-2" src={news} fluid/>
+                            <p style={{fontFamily: "'Quicksand', sans-serif",fontSize:'25px'}}>Asia Pacific achievers award</p>
+                            <hr/>
+                        </Col>
+                    </Row>   
+                </Container>
+                         
         </Styles>
     </div>
   )

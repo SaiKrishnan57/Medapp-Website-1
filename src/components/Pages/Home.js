@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { Jumbotron as Jumbo, Container,Image,Row,Col,Carousel} from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container,Image,Row,Col} from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/Medapp1.jpg';
 import services from './images/services.jpg';
 import impact from './images/societal.jpg';
-import team from './images/team.jpg';
-import naa from './images/news.jpg';
+import team from './images/ourteam.jpg';
+import naa from './images/newsawards.jpg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
 import MediaQuery from 'react-responsive';
 import presence from './images/Map.png';
-import bgimg2 from './images/Medapp2.jpg';
 import bgimg3 from './images/Medapp3.jpg';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
@@ -22,16 +21,26 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${bgimg3});
+    background-image: url(${bgimg3});
     background-size: cover;
     color: #efefef;
     height: 900px;
     position: relative;
     z-index: -2;
   }
+  .jumbo-min{
+    background-image: url(${bgimg3});
+    background-size: cover;
+    color: #efefef;
+    height: 250px;
+    margin-top:85px;
+    width:100%;
+    position: relative;
+    z-index: -2;
+  }
   .overlay {
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.1;
     position: absolute;
     top: 0;
     left: 0;
@@ -40,13 +49,6 @@ const Styles = styled.div`
     z-index: -1;
   }
 `;
-const styleimg = {
-    height: '45px'
-  };
-
-const styleimg1 = {
-    height: '220px'
-  }; 
 
   const styletext = {
     fontFamily: 'Ubuntu, sans-serif',
@@ -58,22 +60,42 @@ const styleimg1 = {
   return (
     <div>
         <Styles>
+        <MediaQuery query="(min-device-width: 1224px)">   
             <Jumbo fluid className="jumbo">
                 <div className="overlay"></div>
                 <Container className="py-4">
                     <div className="mt-5 mr-5 d-flex justify-content-end animated fadeInLeft">
-                        <Image src={scooterweb} style={styleimg1} fluid/>      
+                        <Image src={scooterweb} style={{height: '220px'}} fluid/>      
                     </div>    
                     <div className="d-flex justify-content-end animated fadeInLeft mr-5 delay-1s">
-                        <Image src={medappslider} style={styleimg} fluid/>
+                        <Image src={medappslider} style={{height:'45px'}} fluid/>
                     </div>
-                    <p className="d-flex mt-3 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px'}}>
+                    <p className="d-flex mt-3 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px',color:'black'}}>
                       <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
                       <span className=" animated fadeIn delay-3s"> Changing lives,</span>
                       <span className="animated fadeInRight delay-4s"> Saving lives.</span>
                     </p>
                 </Container>
             </Jumbo>
+            </MediaQuery>
+        <MediaQuery query="(max-device-width: 1224px)">   
+            <Jumbo fluid className="jumbo-min">
+                <div className="overlay"></div>
+                <Container className="py-2">
+                    <div className="mt-2 mr-2 d-flex justify-content-end animated fadeInLeft">
+                        <Image src={scooterweb} style={{height: '100px'}} fluid/>      
+                    </div>    
+                    <div className="d-flex justify-content-end animated fadeInLeft mr-2 delay-1s">
+                        <Image src={medappslider} style={{height:'25px'}} fluid/>
+                    </div>
+                    <p className="d-flex mt-1 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '10px',color:'white'}}>
+                      <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
+                      <span className=" animated fadeIn delay-3s"> Changing lives,</span>
+                      <span className="animated fadeInRight delay-4s"> Saving lives.</span>
+                    </p>
+                </Container>
+            </Jumbo>
+            </MediaQuery>
             <Container>
               <Row>
               <Col sm={12} className="p-4">
@@ -90,22 +112,16 @@ const styleimg1 = {
                     style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
-                        <Link to='/Ourteam'>
-                          <Image src={team} style={{height:'235px'}} fluid/>
-                        </Link>
-                        <p align="center" style={styletext}>Our Team</p>
-                    </div>
-                    <div className="item m-4 mt-5">
-                      <Link to='/NewsandAwards'>
-                        <Image src={naa} style={{height:'235px'}} fluid/>
-                      </Link>
-                        <p align="center" style={styletext}>News and Awards</p>
-                    </div>
-                    <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
                         <Image src={bgimg} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Who we Are</p>
+                    </div>
+                    <div className="item m-4 mt-5">
+                      <Link to='/services'> 
+                        <Image src={services} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>Our Services</p>  
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/Presence'>
@@ -113,17 +129,23 @@ const styleimg1 = {
                       </Link>
                         <p align="center" style={styletext}>Our Presence</p>
                     </div>
-                    <div className="item m-3 mt-5">   
-                      <Link to='/services'> 
-                        <Image src={services} style={{height:'235px'}} fluid/>
-                      </Link>
-                        <p align="center" style={styletext}>Our Services</p>  
-                    </div>
                     <div className="item m-3 mt-5">
+                        <Link to='/Ourteam'>
+                          <Image src={team} style={{height:'235px'}} fluid/>
+                        </Link>
+                        <p align="center" style={styletext}>Our Team</p>
+                    </div>
+                    <div className="item m-3 mt-5"> 
                       <Link to='/'>
                         <Image src={impact} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Societal Impact</p>  
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/NewsandAwards'>
+                        <Image src={naa} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>News and Awards</p>  
                     </div>
                 </OwlCarousel>
               </MediaQuery>
@@ -140,40 +162,40 @@ const styleimg1 = {
                     style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
-                        <Link to='/Ourteam'>
-                          <Image src={team} className="rounded" style={{height:'235px'}} fluid/>
-                        </Link>
-                        <p align="center" style={styletext}>Our Team</p>
-                    </div>
-                    <div className="item m-3 mt-5">
-                      <Link to='/NewsandAwards'>
-                        <Image src={naa} className="rounded" style={{height:'235px'}} fluid/>
-                      </Link>
-                        <p align="center" style={styletext}>News and Awards</p>
-                    </div>
-                    <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
-                        <Image src={bgimg} className="rounded" style={{height:'235px'}} fluid/>
+                        <Image src={bgimg} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Who we Are</p>
                     </div>
                     <div className="item m-3 mt-5">
-                      <Link to='/Presence' >
-                        <Image src={presence} className="rounded" style={{height:'235px'}} fluid/>
-                      </Link>
-                        <p align="center" style={styletext}>Our Presence</p>
-                    </div>
-                    <div className="item m-3 mt-5">   
                       <Link to='/services'> 
-                        <Image src={services} className="rounded" style={{height:'235px'}} fluid/>
-                      </Link>  
+                        <Image src={services} style={{height:'235px'}} fluid/>
+                      </Link>
                         <p align="center" style={styletext}>Our Services</p>
                     </div>
                     <div className="item m-3 mt-5">
-                      <Link to='/'>
-                        <Image src={impact} className="rounded" style={{height:'235px'}} fluid />
+                      <Link to='/Presence'>
+                        <Image src={presence} style={{height:'235px'}} fluid/>
                       </Link>
-                        <p align="center" style={styletext}>Societal Impact</p> 
+                        <p align="center" style={styletext}>Our Presence</p>
+                    </div>
+                    <div className="item m-3 mt-5">
+                        <Link to='/Ourteam'>
+                          <Image src={team} style={{height:'235px'}} fluid/>
+                        </Link>
+                        <p align="center" style={styletext}>Our Team</p>
+                    </div>
+                    <div className="item m-3 mt-5">   
+                      <Link to='/'>
+                        <Image src={impact} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>Societal Impact</p>
+                    </div>
+                    <div className="item m-3 mt-5">
+                      <Link to='/NewsandAwards'>
+                        <Image src={naa} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>News and Awards</p>   
                     </div>
                 </OwlCarousel>
               

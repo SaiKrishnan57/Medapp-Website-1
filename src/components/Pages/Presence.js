@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container,Row,Col,Image,Table } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 import map from './images/Map.png';
@@ -29,20 +29,22 @@ const stylealign = {
     marginTop: '17%'
     }; 
 
-  
+    const styletext = {
+      fontSize:'20px'
+      }; 
 
 const Presence = () => {
 
   return (
     <div>
         <Styles>
-            <Jumbo fluid className="jumbo">
+            <Jumbo fluid className="jumbo mt-5">
                 <div className="overlay"></div>
                 <Container>
                 <Row>
                     <Col sm={8} className="px-3">
                         <div style={stylealign}>
-                            <h1 className="display-4 mt-2 font-weight-bold animated fadeIn">OUR PRESENCE</h1>
+                            <h1 className="display-4 mt-5 font-weight-bold animated fadeIn">OUR PRESENCE</h1>
                         </div>    
                     </Col>
                     </Row>                     
@@ -80,15 +82,42 @@ const Presence = () => {
             <h1 className="display-4 d-flex justify-content-center animated fadeIn">Hello!</h1>
             <p className="lead d-flex justify-content-center animated bounceIn">You can find our Head and Regional Offices here.</p>
             <hr className="my-4"/>
+            <Row>
+              <Col className="d-flex flex-column justify-content-center animated zoomIn" sm={4}>
+                <Row >
+                <Table className="p-4 mt-4" responsive>
+                  <tbody style={styletext}>
+                    <td>
+                      <tr>Patients Screened: </tr>
+                      <tr>Camps Conducted:</tr>
+                      <tr>Cities: </tr>
+                      <tr>States:</tr>
+                      <tr>Lives Impacted:</tr>
+                    </td>
+                    <td>
+                      <tr><span className="font-weight-bold">384594+</span></tr>
+                      <tr><span className="font-weight-bold">814</span></tr>
+                      <tr><span className="font-weight-bold">48+</span></tr>
+                      <tr><span className="font-weight-bold">19+</span></tr>
+                      <tr><span className="font-weight-bold">272844+</span></tr>
+                    </td>
+                  </tbody>
+                </Table>
+                </Row>
+
+              </Col>
+            <Col sm={8}>
             <MediaQuery query="(min-device-width: 1224px)">
-                <div align="center" className="p-0"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1024" height="768" title="Medapp Locations"></iframe></div>
+                <div align="center" className="p-0"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="900" height="600" title="Medapp Locations"></iframe></div>
             <MediaQuery query="(min-device-width: 1824px)">
-                <div align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1024" height="768" title="Medapp Locations"></iframe></div>
+                <div align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="900" height="540" title="Medapp Locations"></iframe></div>
             </MediaQuery>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
             <div align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe></div>
             </MediaQuery>
+            </Col> 
+            </Row>
         </div>
     </div>
   )
