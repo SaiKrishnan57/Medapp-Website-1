@@ -2,11 +2,11 @@ import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components';
-import bgimg from './images/bg1.jpeg';
+import bgimg from './images/services.jpg';
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${bgimg}) no-repeat fixed bottom;
+    background-image: url(${bgimg});
     background-size: cover;
     color: #efefef;
     height: 705px;

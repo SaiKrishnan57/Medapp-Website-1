@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image} from 'react-bootstrap';
 import styled from 'styled-components';
-import dummywo from './images/dummy-women.jpg';
 import niranjan from './images/niranjan-swamy-N.jpg';
 import vinod from './images/vinod-singh.jpg';
 import krishna from './images/krishna.jpg';
+import sinu from './images/sinu.jpg';
+import Nisar from './images/Nisar.jpg';
 import data from './data.json';
 import './imagestyles.css';
 import MediaQuery from 'react-responsive';
@@ -22,8 +23,9 @@ export default class Members extends Component {
         Member:[
             {id:0,Name:'Niranjan Swamy N',Designation:'Co-Founder',Info:data[0].info,pic:niranjan},
             {id:1,Name:'Dr. Vinod Singh',Designation:'Chief Operating Officer',Info:data[1].info,pic:vinod},
-            {id:2,Name:'Sinu George',Designation:'Director',Info:data[2].info ,pic:dummywo},
-            {id:3,Name:'Krishna Raghavan',Designation:'Director',Info:data[3].info,pic:krishna}
+            {id:2,Name:'Sinu George',Designation:'Nurse Trainer and Director',Info:data[2].info ,pic:sinu},
+            {id:3,Name:'Krishna Raghavan',Designation:'Director',Info:data[3].info,pic:krishna},
+            {id:4,Name:'Dr. Nisar Shiraz',Designation:'Chief Medical Officer',Info:data[4].info,pic:Nisar}
         ]
     }
     render() {
@@ -51,7 +53,7 @@ export default class Members extends Component {
                 <MediaQuery query="(min-device-width: 1224px)">
                     <Col sm={4} className="p-4">
                         <div className="mt-2 img-hover-zoom rounded-circle" style={{backgroundColor:"white"}}>
-                            <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
+                            <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px',height:'500px'}}/>
                         </div>    
                     </Col>
                     <Col sm={8} className="py-4 d-flex flex-column justify-content-center">

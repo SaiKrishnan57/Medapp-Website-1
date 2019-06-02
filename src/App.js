@@ -4,12 +4,14 @@ import Navigationbar from './components/layout/Navbar';
 import Home from './components/Pages/Home';
 import Services from './components/Pages/Services';
 import Aboutus from './components/Pages/Aboutus';
-import OurBlogs from './components/Pages/OurBlogs';
+import Articles from './components/Pages/Articles';
+import Ourblogs from './components/Pages/Ourblogs';
 import Contacts from './components/Pages/Contacts';
 import Presence from './components/Pages/Presence';
 import Ourteam from './components/Pages/Ourteam';
 import Footer from './components/layout/Footer';
 import Members from './components/Pages/Members';
+import NewsandAwards from './components/Pages/Newsandawards';
 
 class App extends Component {
   render(){
@@ -21,10 +23,12 @@ class App extends Component {
             <Route exact path="/" component = {Home}/>
             <Route exact path="/services" component = {Services}/>
             <Route exact path="/Aboutus" component = {Aboutus}/>
-            <Route exact path="/OurBlogs" component = {OurBlogs}/>
+            <Route exact path="/Articles" component = {Articles}/>
             <Route exact path="/Contacts" component = {Contacts}/>
             <Route exact path="/Presence" component = {Presence}/>
             <Route exact path="/Ourteam" component = {Ourteam}/>
+            <Route exact path="/Ourblogs" component = {Ourblogs}/>
+            <Route exact path="/NewsandAwards" component = {NewsandAwards}/>
             <Route exact path="/Ourteam/Members/:id" component = {Members}/>
             </Switch>
           <Footer/> 

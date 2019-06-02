@@ -1,7 +1,7 @@
 import React from 'react'
 import { Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from './logo.png';
+import logo from './logo1.png';
 
  const Navigationbar = () =>{
   return (
@@ -12,7 +12,7 @@ import logo from './logo.png';
         alt="Medapp.in"
         src={logo}
         width="180"
-        height="50"
+        height="80"
         className="d-inline-block align-top"
       />
       </Navbar.Brand>

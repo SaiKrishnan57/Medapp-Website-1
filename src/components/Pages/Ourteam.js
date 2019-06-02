@@ -3,12 +3,12 @@ import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import { Link }from 'react-router-dom';
 import styled from 'styled-components';
 import bgimg from './images/bg2.jpg';
-import dummym from './images/dummy-men.jpg';
-import nabeel from './images/nabeel.jpg';
+import Nisar from './images/Nisar.jpg';
+import nabeel from './images/nabeel2.jpg';
 import niranjan from './images/niranjan-swamy-N.jpg';
 import vinod from './images/vinod-singh.jpg';
 import krishna from './images/krishna.jpg';
-import dummywo from './images/dummy-women.jpg';
+import sinu from './images/sinu.jpg';
 import './imagestyles.css';
 
 const Styles = styled.div`
@@ -67,13 +67,14 @@ class Ourteam extends Component {
                     <Link to={`/Ourteam/Members/${0}`}><Image src={niranjan} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>    
                         <p className="text-center mt-2">Niranjan Swamy N</p>
-                        <p className="text-muted text-center" style={caption}>Co-Founder</p> 
+                        <p className="text-muted text-center" style={caption}>Founder and CEO</p> 
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
-                        <Image src={dummym} fluid className="profile" style={{borderRadius:'20px'}}/>
+                    <Link to={`/Ourteam/Members/${4}`}><Image src={Nisar} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
                     </div>
-                        <p className="text-center mt-2">Dr Shiraz</p>                
+                        <p className="text-center mt-2">Dr Shiraz</p>
+                        <p className="text-muted text-center" style={caption}>  Chief Medical Officer</p>
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
@@ -92,10 +93,10 @@ class Ourteam extends Component {
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
-                    <Link to={`/Ourteam/Members/${2}`}><Image src={dummywo} fluid className="profile" style={{borderRadius:'20px'}}/></Link>
+                    <Link to={`/Ourteam/Members/${2}`}><Image src={sinu} fluid className="profile" style={{borderRadius:'20px',height:'100%'}}/></Link>
                     </div>    
                         <p className="text-center mt-2">Sinu George</p>
-                        <p className="text-muted text-center" style={caption}>Director</p>                
+                        <p className="text-muted text-center" style={caption}>Nurse Trainer and Director</p>                
                     </Col>    
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">

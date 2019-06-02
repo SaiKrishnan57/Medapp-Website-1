@@ -2,9 +2,8 @@ import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import bgimg from './images/bg-4.jpg';
-import pic1 from './images/medapp-aboutus.jpg';
-import pic2 from './images/medapp-whoweare.jpg';
 import './imagestyles.css';
+import MediaQuery from 'react-responsive';
 
 const Styles = styled.div`
   .jumbo {
@@ -50,20 +49,20 @@ const Aboutus = () => {
                 </Row>
                 </Container>
             </Jumbo>
-            <Container className="p-4">
-                <Row>
-                    <Col sm={6} className="mt-3 p-4 jumbotron box">
-                      <h3 className="display-5 font-weight-normal">
-                         We’re all united around a common mission — touching life, changing life, and saving life.
-                      </h3>
-                      <hr className="my-4"/>
+            <Container className="p-4 animated bounceIn">
+                <Row className="p-3">
+                    <Col sm={6} className="mt-3 p-4 jumbotron" style={{borderBottomLeftRadius:'50px'}}>
+                      <hr/>
                       <p style={caption}>
                       Across our network of healthcare services, our team provide compassionate, quality care to millions of patients through a wide range of services: from primary care to chronic care management, disease management, preventive care to curative care and advanced one point solutions for all diagnostic services. 
                       </p>
-                      <p className="mt-2 lead font-italic quote">
-                      We’re also collaborating with others to enhance healthcare solutions across the care continuum.
-                      </p>
-                      <p className="mt-2"  style={caption}>
+                    <div>
+                      <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
+                        <h2 className="ml-5 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black'}}>
+                          <u>We’re also collaborating with others to enhance healthcare solutions across the care continuum.</u>
+                        </h2>
+                    </div>
+                      <p className="mt-3"  style={caption}>
                       Healthcare is changing. medapp.in is Changing it for the Better.
                       </p>
                       <p className="mt-2"  style={caption}>
@@ -72,27 +71,50 @@ const Aboutus = () => {
                       <p className="mt-2"  style={caption}>
                       Today, we’re a leading healthcare services company working across the system to improve primary healthcare service delivery, patient support programme and healthcare outcomes.
                       </p>
-
                     </Col>
-                    <Col sm={6} className="mt-3 p-4">    
-                       <Image src={pic1} className="animated bounceIn imgbox" fluid/>
-                    </Col>    
+                  <MediaQuery query="(min-device-width: 1224px)">      
+                    <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundColor:'skyblue',borderTopRightRadius:'50px'}}>
+                        <div className="mt-2" align="center">
+                          <h3>We’re all united around a common mission</h3>
+                          <u style={{color:"white"}}><span className="mt-5"><h2 className="animated fadeIn display-4 font-weight-bold" style={{color:'Purple'}}>Touching life, changing life, and saving life.</h2></span></u>
+                        </div>    
+                    </Col> 
+                  </MediaQuery>     
+                  <MediaQuery query="(max-device-width: 1224px)">      
+                    <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundColor:'skyblue',borderTopRightRadius:'50px'}}>
+                        <div className="mt-2" align="center">
+                          <h4>We’re all united around a common mission</h4>
+                          <u style={{color:"white"}}><span className="mt-5"><h2 className="animated fadeIn" style={{color:'Purple'}}>Touching life, changing life, and saving life.</h2></span></u>
+                        </div>    
+                    </Col> 
+                  </MediaQuery>
                 </Row>
                 </Container>
-                <Container className="p-4">
-                <Row>
-                    <Col sm={6} className="mt-3 p-4">
-                        <Image src={pic2} className="animated bounceIn imgbox" fluid/>
-                    </Col>
-                    <Col sm={6} className="mt-3 p-4 jumbotron box">    
-                      <h3 className="display-5 font-weight-normal">
-                        Our Commitment to Quality
-                      </h3>
-                      <hr className="my-4"/>
-                      <p className="mt-2 lead font-italic quote">
-                        Healthcare is changing. And at medapp.in, we have a plan to lead that charge.
-                      </p>
-                      <p className="mt-2" style={caption}>
+                <Container className="p-2 animated bounceIn delay-1s">
+                <Row className="p-3">
+                  <MediaQuery query="(min-device-width: 1224px)">    
+                      <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundColor:'pink',borderTopLeftRadius:'50px'}}>
+                        <div className="mt-2" align="center">
+                          <h1 className="animated zoomIn display-4">Our Commitment to Quality</h1>
+                        </div>    
+                      </Col> 
+                  </MediaQuery>
+                    <MediaQuery query="(max-device-width: 1224px)">    
+                        <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundColor:'pink',borderTopLeftRadius:'50px'}}>
+                         <div className="mt-2 p-3" align="center">
+                            <h1 className="animated zoomIn display-5">Our Commitment to Quality</h1>
+                         </div>
+                        </Col>        
+                    </MediaQuery>
+                   <Col sm={6} className="mt-3 p-5 jumbotron" style={{borderBottomRightRadius:'50px'}}>    
+                      <hr/>
+                    <div>
+                      <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
+                        <h2 className="ml-5 mt-2 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black'}}>
+                          <u>Healthcare is changing. And at medapp.in, we have a plan to lead that charge.</u>
+                        </h2>
+                    </div>
+                      <p className="mt-4" style={caption}>
                         How? By making safety services, innovative technology and industry-leading clinical outcomes the cornerstones of our mission. By seeking to provide high-quality, high-value care backed by compassionate service. By giving our caregivers the tools, technologies and resources they need to deliver the best care possible. By always doing what’s right for our clients and communities.
                       </p>
                       <p className="mt-2" style={caption}>

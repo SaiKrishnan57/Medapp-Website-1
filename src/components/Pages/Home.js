@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { Jumbotron as Jumbo, Container,Image,Row,Col} from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container,Image,Row,Col,Carousel} from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
-import bgimg from './images/bg1.jpeg';
-import presence from './images/Medapp/DSC08702.jpg';
-import services from './images/Medapp/DSC08735.jpg';
-import impact from './images/Medapp/DSC08788.jpg';
-import team from './images/Medapp/DSC08785.jpg';
-import wwa from './images/Medapp/DSC08674.jpg';
-import naa from './images/Medapp/DSC08662.jpg';
+import bgimg from './images/Medapp1.jpg';
+import services from './images/services.jpg';
+import impact from './images/societal.jpg';
+import team from './images/team.jpg';
+import naa from './images/news.jpg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
 import MediaQuery from 'react-responsive';
+import presence from './images/Map.png';
+import bgimg2 from './images/Medapp2.jpg';
+import bgimg3 from './images/Medapp3.jpg';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -21,10 +22,10 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${bgimg}) no-repeat fixed bottom;
+    background: url(${bgimg3});
     background-size: cover;
     color: #efefef;
-    height: 700px;
+    height: 900px;
     position: relative;
     z-index: -2;
   }
@@ -47,6 +48,10 @@ const styleimg1 = {
     height: '220px'
   }; 
 
+  const styletext = {
+    fontFamily: 'Ubuntu, sans-serif',
+};
+
   const Home = () =>{
   const [state, toggle] = useState(true)
   const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 2000 } })
@@ -55,14 +60,14 @@ const styleimg1 = {
         <Styles>
             <Jumbo fluid className="jumbo">
                 <div className="overlay"></div>
-                <Container>
-                    <div className="mt-5 d-flex justify-content-end animated fadeInLeft">
+                <Container className="py-4">
+                    <div className="mt-5 mr-5 d-flex justify-content-end animated fadeInLeft">
                         <Image src={scooterweb} style={styleimg1} fluid/>      
                     </div>    
-                    <div className="d-flex justify-content-end animated fadeInLeft delay-1s">
+                    <div className="d-flex justify-content-end animated fadeInLeft mr-5 delay-1s">
                         <Image src={medappslider} style={styleimg} fluid/>
                     </div>
-                    <p className="d-flex mt-3 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px'}}>
+                    <p className="d-flex mt-3 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px'}}>
                       <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
                       <span className=" animated fadeIn delay-3s"> Changing lives,</span>
                       <span className="animated fadeInRight delay-4s"> Saving lives.</span>
@@ -82,37 +87,43 @@ const styleimg1 = {
                     autoplayHoverPause
                     dotsEach
                     items='1'
-                    style={{backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
+                    style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
-                          <Image src={team} fluid/>
+                          <Image src={team} style={{height:'235px'}} fluid/>
                         </Link>
+                        <p align="center" style={styletext}>Our Team</p>
                     </div>
                     <div className="item m-4 mt-5">
-                      <Link to='/'>
-                        <Image src={naa} fluid/>
+                      <Link to='/NewsandAwards'>
+                        <Image src={naa} style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>News and Awards</p>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
-                        <Image src={wwa} fluid/>
+                        <Image src={bgimg} style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>Who we Are</p>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/Presence'>
-                        <Image src={presence}  fluid/>
+                        <Image src={presence} style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>Our Presence</p>
                     </div>
                     <div className="item m-3 mt-5">   
                       <Link to='/services'> 
-                        <Image src={services} fluid/>
-                      </Link>  
+                        <Image src={services} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>Our Services</p>  
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/'>
-                        <Image src={impact} fluid/>
-                      </Link> 
+                        <Image src={impact} style={{height:'235px'}} fluid/>
+                      </Link>
+                        <p align="center" style={styletext}>Societal Impact</p>  
                     </div>
                 </OwlCarousel>
               </MediaQuery>
@@ -126,37 +137,43 @@ const styleimg1 = {
                     autoplayHoverPause
                     dotsEach
                     items='3'
-                    style={{backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
+                    style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
-                          <Image src={team} className="rounded" fluid/>
+                          <Image src={team} className="rounded" style={{height:'235px'}} fluid/>
                         </Link>
+                        <p align="center" style={styletext}>Our Team</p>
                     </div>
                     <div className="item m-3 mt-5">
-                      <Link to='/'>
-                        <Image src={naa} className="rounded" fluid/>
+                      <Link to='/NewsandAwards'>
+                        <Image src={naa} className="rounded" style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>News and Awards</p>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
-                        <Image src={wwa} className="rounded" fluid/>
+                        <Image src={bgimg} className="rounded" style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>Who we Are</p>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/Presence' >
-                        <Image src={presence} className="rounded"  fluid/>
+                        <Image src={presence} className="rounded" style={{height:'235px'}} fluid/>
                       </Link>
+                        <p align="center" style={styletext}>Our Presence</p>
                     </div>
                     <div className="item m-3 mt-5">   
                       <Link to='/services'> 
-                        <Image src={services} className="rounded" fluid/>
+                        <Image src={services} className="rounded" style={{height:'235px'}} fluid/>
                       </Link>  
+                        <p align="center" style={styletext}>Our Services</p>
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/'>
-                        <Image src={impact} className="rounded" fluid />
-                      </Link> 
+                        <Image src={impact} className="rounded" style={{height:'235px'}} fluid />
+                      </Link>
+                        <p align="center" style={styletext}>Societal Impact</p> 
                     </div>
                 </OwlCarousel>
               
@@ -219,13 +236,13 @@ const styleimg1 = {
                   <MediaQuery query="(orientation: portrait)">
                     <Col sm={2} className="mt-2 mx-3 p-2 text-center" >
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}>
-                        <CountUp end={125200} suffix="+" duration={3} />
+                        <CountUp end={384594} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted">Patients Screened</p>         
                     </Col>
                     <Col sm={2} className="mt-2 mr-1 ml-4 p-2 text-center" >    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}> 
-                        <CountUp end={414} duration={3} />
+                        <CountUp end={814} duration={3} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
@@ -243,7 +260,7 @@ const styleimg1 = {
                     </Col>    
                     <Col sm={2} className="mt-2 mx-0 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}>
-                        <CountUp end={72000} suffix="+" duration={3} />
+                        <CountUp end={272844} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Lives Impacted</p> 
                     </Col>
@@ -252,31 +269,31 @@ const styleimg1 = {
                     <MediaQuery query="(orientation: landscape)">
                     <Col sm={2} className="mt-2 mx-3 p-2 text-center" >
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw',marginRight:'2vw'}}>
-                        <CountUp end={125200} suffix="+" duration={3} />
+                        <CountUp end={384594} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted">Patients Screened</p>         
                     </Col>
                     <Col sm={2} className="mt-2 mr-1 ml-4 p-2 text-center" >    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4.7vw',marginLeft:'3vw'}}> 
-                        <CountUp end={414} duration={3} />
+                        <CountUp end={814} duration={3} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
-                        <CountUp end={48} suffix="+" duration={3} />
+                        <CountUp end={48} suffix="+" duration={2} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
-                        <CountUp end={19} suffix="+" duration={3} />
+                        <CountUp end={19} suffix="+" duration={2} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-0 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
-                        <CountUp end={72000} suffix="+" duration={3} />
+                        <CountUp end={272844} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Lives Impacted</p> 
                     </Col>
@@ -286,10 +303,10 @@ const styleimg1 = {
             </MediaQuery>
             <MediaQuery query="(min-device-width: 1224px)">
             <Container className="p-2">
-                <Row>
+                <Row className="d-flex">
                     <Col sm={2} className="mt-2 mr-3 ml-5 p-2 text-center" >
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={125200} suffix="+" duration={3} />
+                        <CountUp end={384594} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted">Patients Screened</p>         
                     </Col>
@@ -301,19 +318,19 @@ const styleimg1 = {
                     </Col> 
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={48} suffix="+" duration={3} />
+                        <CountUp end={48} suffix="+" duration={2} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={19} suffix="+" duration={3} />
+                        <CountUp end={19} suffix="+" duration={2} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-2 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={72000} suffix="+" duration={3} />
+                        <CountUp end={272844} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Lives Impacted</p> 
                     </Col>       
