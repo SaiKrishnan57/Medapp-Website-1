@@ -64,7 +64,7 @@ const stylealign = {
     marginTop: '17%'
     };
     
-class Ourblogs extends Component{
+class Linking extends Component{
   render(){
   return (
     <div>
@@ -143,4 +143,4 @@ class Ourblogs extends Component{
 }
 }
 
-export default Ourblogs;
+export default Linking;

@@ -5,7 +5,7 @@ import Home from './components/Pages/Home';
 import Services from './components/Pages/Services';
 import Aboutus from './components/Pages/Aboutus';
 import Articles from './components/Pages/Articles';
-import Ourblogs from './components/Pages/Ourblogs';
+import Linking from './components/Pages/Linking'
 import Contacts from './components/Pages/Contacts';
 import Presence from './components/Pages/Presence';
 import Ourteam from './components/Pages/Ourteam';
@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path="/Contacts" component = {Contacts}/>
             <Route exact path="/Presence" component = {Presence}/>
             <Route exact path="/Ourteam" component = {Ourteam}/>
-            <Route exact path="/Ourblogs" component = {Ourblogs}/>
+            <Route exact path="/Ourblogs" component = {Linking}/>
             <Route exact path="/NewsandAwards" component = {NewsandAwards}/>
             <Route exact path="/Ourteam/Members/:id" component = {Members}/>
             </Switch>
