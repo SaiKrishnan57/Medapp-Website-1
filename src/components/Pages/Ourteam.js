@@ -108,7 +108,7 @@ class Ourteam extends Component {
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">
                     <Link to={`/Ourteam/Members/${5}`}>
-                        <Image src={nabeel} fluid className="profile" style={{borderRadius:'20px',height:'100%'}}/></Link>
+                        <Image src={nabeel} fluid className="profile" style={{borderRadius:'20px',height:'400px'}}/></Link>
                     </div>
                         <p className="text-center mt-2">Nabeel Ahmed</p>
                         <p className="text-muted text-center" style={caption}>Chief Marketing Officer</p>
@@ -124,7 +124,7 @@ class Ourteam extends Component {
                     </Col>
                     <Col sm={4} className="mt-3 p-4">
                     <div className="img-hover-zoom">    
-                    <Link to={`/Ourteam/Members/${2}`}><Image src={sinu} fluid className="profile" style={{borderRadius:'20px',height:'100%'}}/></Link>
+                    <Link to={`/Ourteam/Members/${2}`}><Image src={sinu} fluid className="profile" style={{borderRadius:'20px',height:'400px'}}/></Link>
                     </div>    
                         <p className="text-center mt-2">Sinu George</p>
                         <p className="text-muted text-center" style={caption}>Nurse Trainer and Director</p>                

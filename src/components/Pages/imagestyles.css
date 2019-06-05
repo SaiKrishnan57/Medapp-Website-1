@@ -57,11 +57,10 @@
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 .box:hover{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 50px;
   transition: 0.5s;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .imgbox{
   border-radius: 10px;

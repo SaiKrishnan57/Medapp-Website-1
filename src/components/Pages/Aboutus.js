@@ -52,14 +52,13 @@ const Aboutus = () => {
             <Container className="p-4 animated bounceIn">
                 <Row className="p-3">
                     <Col sm={6} className="mt-3 p-4 container" style={{borderBottomLeftRadius:'50px'}}>
-                      <hr/>
                       <p style={caption}>
                       Across our network of healthcare services, our team provide compassionate, quality care to millions of patients through a wide range of services: from primary care to chronic care management, disease management, preventive care to curative care and advanced one point solutions for all diagnostic services. 
                       </p>
                     <div>
                       <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
                         <h2 className="ml-5 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
-                          <u>We’re also collaborating with others to enhance healthcare solutions across the care continuum.</u>
+                          We’re also collaborating with others to enhance healthcare solutions across the care continuum.
                         </h2>
                     </div>
                       <p className="mt-3"  style={caption}>
@@ -76,7 +75,7 @@ const Aboutus = () => {
                     <Col sm={6} className="d-flex flex-column justify-content-center mt-5 p-4 container rounded-circle" style={{height:'500px',width:'500px',backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'}}>
                         <div className="mt-2 phrase" align="center" style={{fontFamily: "'Quicksand', sans-serif"}}>
                           <h1 className="text1">We’re all united around a common mission of</h1>
-                          <u style={{color:"white"}}><span className="mt-3  text2"><h2 className="animated fadeIn display-5 font-weight-bold" >Touching life, changing life, and saving life.</h2></span></u>
+                          <span className="mt-3  text2"><h2 className="animated fadeIn display-5 font-weight-bold" >Touching life, changing life, and saving life.</h2></span>
                         </div>    
                     </Col> 
                   </MediaQuery>     
@@ -84,7 +83,7 @@ const Aboutus = () => {
                     <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',borderTopRightRadius:'50px'}}>
                         <div className="mt-2" align="center">
                           <h4>We’re all united around a common mission of</h4>
-                          <u style={{color:"#ffaa43"}}><span className="mt-5"><h2 className="animated fadeIn text-dark">Touching life, changing life, and saving life.</h2></span></u>
+                          <span className="mt-5"><h2 className="animated fadeIn text-dark">Touching life, changing life, and saving life.</h2></span>
                         </div>    
                     </Col> 
                   </MediaQuery>
@@ -110,7 +109,7 @@ const Aboutus = () => {
                     <div>
                       <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
                         <h2 className="ml-5 mt-2 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
-                          <u>Healthcare is changing. And at medapp.in, we have a plan to lead that charge.</u>
+                          Healthcare is changing. And at medapp.in, we have a plan to lead that charge.
                         </h2>
                     </div>
                       <p className="mt-4" style={caption}>

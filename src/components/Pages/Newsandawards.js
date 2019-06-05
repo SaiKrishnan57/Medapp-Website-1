@@ -38,7 +38,7 @@ const NewsandAwards = () => {
                 <Container className="p-4" style={{marginTop:'5%'}}>
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                      <h1 className="display-4 font-weight-bold animated bounceInLeft slow"><u>News And Awards</u></h1>
+                      <h1 className="display-4 font-weight-bold animated bounceInLeft slow">News And Awards</h1>
                     </Col>  
                 </Row>
                 </Container>
@@ -130,7 +130,7 @@ const NewsandAwards = () => {
                 </Container>
                 <Container className="p-4">
                     <h1 className="mb-1 lead text-uppercase text-white d-flex p-3 rounded" style={{fontSize:'25px',fontFamily: "'Quicksand', sans-serif",background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898", backgroundBlendMode: 'multiply,multiply'}}>
-                        Awards and Accolades:
+                        Awards & Accolades:
                     </h1>
                     <hr className="mb-5"/>
                     <Row className="d-flex justify-content-center">

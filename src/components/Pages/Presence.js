@@ -56,15 +56,15 @@ const Presence = () => {
             <MediaQuery query="(min-device-width: 1224px)">
               <div>
                 <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png" className="my-2"/>
-                <h3 className="ml-5 mt-2 lead display-4 text-dark">Good health and good sense are two of life's greatest blessings - </h3>
-                <h2 className="ml-5 m-3"><u>Publilius Syrus</u></h2>
+                <h3 className="ml-5 mt-2 lead display-4" style={{color:'black'}}>Good health and good sense are two of life's greatest blessings - </h3>
+                <h2 className="ml-5 m-3">Publilius Syrus</h2>
               </div>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
               <div>
                 <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
-                <h3 className="ml-5 mt-2 lead display-5">Good health and good sense are two of life's greatest blessings - </h3>
-                <h2 className="ml-5 m-3"><u>Publilius Syrus</u></h2>
+                <h3 className="ml-5 mt-2 lead display-5" style={{color:'black'}}>Good health and good sense are two of life's greatest blessings - </h3>
+                <h2 className="ml-5 m-3">Publilius Syrus</h2>
               </div>
            </MediaQuery>
         </div>

@@ -23,25 +23,21 @@ const Styles = styled.div`
     background-size: cover;
     background-image: url(${touching});
     height: 300px;
-    border-radius: 25px;
   }
   .jumbo2 {
     background-size: cover;
     background-image: url(${life});
     height: 300px;
-    border-radius: 25px;
   }
   .jumbo3 {
     background-size: cover;
     background-image: url(${chronic});
     height: 300px;
-    border-radius: 25px;
   }
   .jumbo4 {
     background-size: cover;
     background-image: url(${advancement});
     height: 300px;
-    border-radius: 25px;
   }
   .overlay {
     background-color: #000;
@@ -86,35 +82,43 @@ class Linking extends Component{
               <Row>
                 <Col sm={6} className="p-3"> 
                   <div className="container jumbo1 box bg-secondary d-flex flex-column justify-content-center" >   
-                    <Typist style={styletext} avgTypingDelay={50} cursor={{hideWhenDone: true,element:" "}}>
-                        <h3 className="display-5 d-flex justify-content-center" style={{color:'black'}}>Life at MedApp.</h3>
-                    </Typist>
+                  </div>
+                  <div className="py-2 rounded mt-4" >
+                  <Typist style={styletext} avgTypingDelay={50} cursor={{hideWhenDone: true,element:" "}}>
+                        <h3 className="d-flex justify-content-center mt-3" style={{fontSize:"20px",color:'black'}}>Life at MedApp.</h3>
+                  </Typist>
                   </div>
                 </Col>
                 <Col sm={6} className="p-3"> 
                   <div className="container jumbo2 box bg-secondary d-flex flex-column justify-content-center " >   
-                    <Typist cursor={{hideWhenDone: true,element:" "}}>
+                  </div>
+                  <div className="py-2 rounded mt-4" >
+                  <Typist cursor={{hideWhenDone: true,element:" "}}>
                         <h1 align="center" style={{color:'black'}}>MedApp</h1> 
-                        <h5 align="center" className="display-5 mt-2" style={{fontSize:"25px",color:'black'}}>Touching lives, Changing lives, and Saving Lives</h5>
-                    </Typist>   
+                        <h5 align="center" className="mt-2" style={{fontSize:"20px",color:'black'}}>Touching lives, Changing lives, and Saving Lives</h5>
+                  </Typist>   
                   </div>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mt-4">
                 <Col sm={6} className="p-3"> 
                     <Link to="/Articles">
                         <div className="container jumbo3 box bg-secondary d-flex flex-column justify-content-center">
-                         <Typist cursor={{hideWhenDone: true,element:" "}}>
-                            <h4 align="center" className="display-5 mt-2" style={{color:'black'}}>All you need to know about Chronic diseases.</h4>
-                         </Typist>
                         </div>
                     </Link>       
+                    <div className="py-2 rounded mt-4" >
+                    <Typist cursor={{hideWhenDone: true,element:" "}}>
+                            <h4 align="center" className="mt-3" style={{fontSize:'20px',color:'black'}}>All you need to know about Chronic diseases.</h4>
+                    </Typist>
+                    </div>     
                 </Col>  
                 <Col sm={6} className="p-3"> 
-                        <div className="container jumbo4 box bg-secondary d-flex flex-column justify-content-center" >   
-                        <Typist cursor={{hideWhenDone: true,element:" "}}>
-                            <h4 align="center" className="display-5 mt-5 " style={{color:'black'}}>Innovation and advancement in healthcare.</h4>
-                        </Typist>
+                    <div className="container jumbo4 box bg-secondary d-flex flex-column justify-content-center" >   
+                    </div>     
+                    <div className="py-2 rounded mt-4" >
+                    <Typist cursor={{hideWhenDone: true,element:" "}}>
+                        <h4 align="center" className="display-5 mt-3" style={{fontSize:'20px',color:'black'}}>Innovation and advancement in healthcare.</h4>
+                    </Typist>
                     </div>     
                 </Col>  
               </Row>

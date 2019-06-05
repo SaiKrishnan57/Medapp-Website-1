@@ -45,7 +45,7 @@ export default class Members extends Component {
                             <Image src={this.state.Member[props].pic} fluid className="profile" style={{borderRadius:'20px'}}/>
                         </div>    
                     </Col>
-                    <Col sm={8} className="py-4 d-flex flex-column justify-content-center">
+                    <Col sm={8} className="d-flex flex-column justify-content-center">
                         <div className="membername py-2 rounded">
                             <h2 className=" text-white font-weight-bold animated fadeInLeft slow py-2 px-4">{this.state.Member[props].Name}</h2>
                             <h5 className="font-weight-bold text-white animated fadeInRight slower py-2 px-4">{this.state.Member[props].Designation}</h5>
