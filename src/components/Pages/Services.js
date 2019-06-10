@@ -1,6 +1,5 @@
 import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import bgimg from './images/services.jpg';
@@ -35,20 +34,11 @@ const Styles = styled.div`
   }
 `;
 
-const icon = {
-    fontSize: '40px'
-    };
-
 const caption = {
     fontFamily: 'Ubuntu, sans-serif'
 };
-    
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 const Services = () => {
-
-    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
   return (
     <div>
         <Styles> 
@@ -96,95 +86,68 @@ const Services = () => {
         </div>
             <Container className="mt-5 p-2">
                 <div >
-                <Row className="animated fadeIn delay-1s">
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#FFD700'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-stethoscope" style={icon}></i> 
+                <Row className="animated fadeIn">
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#FFD700'}}>
+                        <div> 
+                            <i className="fas fa-stethoscope icon1" ></i> 
                             <p style={caption}>Diabetic Screening Camps</p>
-                        </animated.div>
+                        </div>
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#5F9EA0'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-ambulance" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#5F9EA0'}}>
+                        <div>    
+                            <i className="fas fa-ambulance icon1" ></i>
                             <p style={caption}>Primary Health care services at door step</p>
-                        </animated.div>
+                            </div>
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#8B4513'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys:calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-medkit" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#8B4513'}}>
+                        <div>
+                            <i className="fas fa-medkit icon1" ></i>
                             <p style={caption}>Diabetic Care & Counselling</p>
-                        </animated.div>
+                        </div>
                     </Col>     
                 </Row>
                 </div>
                 <div >  
-                <Row className="animated fadeIn delay-2s">
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#0000CD'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-file-medical-alt" style={icon}></i> 
-                            <p style={caption}>Chronic Disease Management</p>
-                        </animated.div>  
+                <Row className="animated fadeIn">
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#0000CD'}}>
+                        <div>
+                          <i className="fas fa-file-medical-alt icon1" ></i> 
+                          <p style={caption}>Chronic Disease Management</p>
+                        </div>  
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#00BFFF'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-user-md" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#00BFFF'}}>
+                        <div> 
+                            <i className="fas fa-user-md icon1" ></i>
                             <p style={caption}>Patient Support Programme</p>
-                        </animated.div>
+                        </div>
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#FF4500'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} >     
-                            <i className="fas fa-user-nurse" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#FF4500'}}>
+                        <div> 
+                            <i className="fas fa-user-nurse icon1" ></i>
                             <p style={caption}>Training for Nurses & Paramedics</p>
-                        </animated.div>
+                        </div>
                     </Col>     
                 </Row>
                 </div>
                 <div >
-                <Row className="animated fadeIn delay-3s">
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#32CD32'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} > 
-                            <i className="fas fa-procedures" style={icon}></i> 
+                <Row className="animated fadeIn">
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#32CD32'}}>
+                        <div>
+                            <i className="fas fa-procedures icon1" ></i> 
                             <p style={caption}>Screening for Asthma & Respiratory diseases</p>
-                        </animated.div>                          
+                        </div>                          
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#B22222'}}>
-                        <animated.div 
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: props.xys.interpolate(trans) }} >         
-                            <i className="fas fa-clinic-medical" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#B22222'}}>
+                        <div>
+                            <i className="fas fa-clinic-medical icon1" ></i>
                             <p style={caption}>One shop solution for all diagnostic services</p>
-                        </animated.div>      
+                        </div>      
                     </Col>
-                    <Col sm={3} className="mt-1 ml-5 p-4 text-center" style={{color:'#FF1493'}}>    
-                      <animated.div 
-                        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x+45, y+45) })}
-                        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                        style={{ transform: props.xys.interpolate(trans) }} >         
-                         <i className="fas fa-syringe" style={icon}></i>
+                    <Col sm={3} className="mt-1 ml-5 p-4 icon text-center" style={{color:'#FF1493'}}>    
+                        <div>
+                         <i className="fas fa-syringe icon1"></i>
                          <p style={caption}>Onsite Injection & Infusions</p>
-                    </animated.div>   
+                        </div>   
                     </Col>     
                 </Row>
                 </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import bgimg from './images/bg-4.jpg';
+import person from './images/person.png';
+import nurse from './images/nurse1.png';
 import './imagestyles.css';
 import MediaQuery from 'react-responsive';
 
@@ -27,7 +29,9 @@ const Styles = styled.div`
 `;
 
 const caption = {
-  fontFamily: 'Ubuntu, sans-serif'
+  fontFamily: 'Ubuntu, sans-serif',
+  fontWeight:'bolder',
+  lineHeight:'1.75em'
 };
 
 const Aboutus = () => {
@@ -49,9 +53,9 @@ const Aboutus = () => {
                 </Row>
                 </Container>
             </Jumbo>
-            <Container className="p-4 animated bounceIn">
-                <Row className="p-3">
-                    <Col sm={6} className="mt-3 p-4 container" style={{borderBottomLeftRadius:'50px'}}>
+            <Container className="p-1">
+                <Row>
+                    <Col sm={10} className=" p-4 container">
                       <p style={caption}>
                       Across our network of healthcare services, our team provide compassionate, quality care to millions of patients through a wide range of services: from primary care to chronic care management, disease management, preventive care to curative care and advanced one point solutions for all diagnostic services. 
                       </p>
@@ -71,41 +75,32 @@ const Aboutus = () => {
                       Today, we’re a leading healthcare services company working across the system to improve primary healthcare service delivery, patient support programme and healthcare outcomes.
                       </p>
                     </Col>
-                  <MediaQuery query="(min-device-width: 1224px)">      
-                    <Col sm={6} className="d-flex flex-column justify-content-center mt-5 p-4 container rounded-circle" style={{height:'500px',width:'500px',backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'}}>
-                        <div className="mt-2 phrase" align="center" style={{fontFamily: "'Quicksand', sans-serif"}}>
-                          <h1 className="text1">We’re all united around a common mission of</h1>
-                          <span className="mt-3  text2"><h2 className="animated fadeIn display-5 font-weight-bold" >Touching life, changing life, and saving life.</h2></span>
-                        </div>    
-                    </Col> 
-                  </MediaQuery>     
+                    </Row>
+                    <Row> 
+                    <MediaQuery query="(min-device-width: 1224px)">      
+                     <Col sm={10} className="animated fadeIn slow d-flex mt-5 p-4 container rounded-circle" style={{height:'800px',width:'800px',backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',textTransform:'uppercase',color:'black'}}>
+                        <div className="mt-2" align="left" style={{fontFamily: "'Quicksand', sans-serif"}}>
+                            <h1 className="mt-5 p-2" style={{fontSize:'50px',}}>We’re all united around a common mission of</h1>
+                            <span className="mt-5 p-5"><h2 className="animated fadeIn display-5 font-weight-bold" style={{textTransform:'uppercase'}}>Touching life, changing life, and saving life.</h2></span> 
+                        </div>
+                        <div align="right" className="person">
+                          <Image  src={person} style={{height:"700px"}}/>
+                        </div>
+                    </Col>
+                  </MediaQuery>
                   <MediaQuery query="(max-device-width: 1224px)">      
-                    <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',borderTopRightRadius:'50px'}}>
-                        <div className="mt-2" align="center">
-                          <h4>We’re all united around a common mission of</h4>
-                          <span className="mt-5"><h2 className="animated fadeIn text-dark">Touching life, changing life, and saving life.</h2></span>
+                    <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',color:'black'}}>
+                        <div className="mt-2 p-2" align="center">
+                          <h3>We’re all united around a common mission of</h3>
+                          <span className="mt-5 p-3"><h2 className="animated fadeIn">Touching life, changing life, and saving life.</h2></span>
                         </div>    
                     </Col> 
                   </MediaQuery>
                 </Row>
                 </Container>
-                <Container className="p-2 animated bounceIn delay-1s">
+                <Container className="p-2">
                 <Row className="p-3">
-                  <MediaQuery query="(min-device-width: 1224px)">    
-                      <Col sm={6} className="d-flex flex-column justify-content-center mt-5 p-4 rounded-circle" style={{height:'500px',width:'500px',backgroundImage: 'linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)'}}>
-                        <div className="mt-1 phrase" align="center">
-                          <h1 className="text1" style={{fontSize:'3em',fontFamily: "'Quicksand', sans-serif",color:'black'}}>Our Commitment to Quality</h1>
-                        </div>    
-                      </Col> 
-                  </MediaQuery>
-                    <MediaQuery query="(max-device-width: 1224px)">    
-                        <Col sm={6} className="d-flex flex-column justify-content-center mt-3 p-4 jumbotron" style={{backgroundImage: 'linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)',borderTopLeftRadius:'50px'}}>
-                         <div className="mt-2 p-3" align="center">
-                            <h1 className="animated zoomIn display-5" style={{fontFamily: "'Quicksand', sans-serif"}}>Our Commitment to Quality</h1>
-                         </div>
-                        </Col>        
-                    </MediaQuery>
-                   <Col sm={6} className="mt-3 p-5 container" style={{borderBottomRightRadius:'50px'}}>    
+                   <Col sm={10} className="p-4 container">    
                     <div>
                       <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
                         <h2 className="ml-5 mt-2 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
@@ -118,7 +113,24 @@ const Aboutus = () => {
                       <p className="mt-2" style={caption}>
                         Our Commitment to Quality honors the trust that our clients and communities place in our services, like disease management, patient support programme, health promotion and disease prevention practices and other health care facilities. It's at the core of everything we do and every decision our client make.
                       </p>                     
-                    </Col>    
+                    </Col>  
+                  <MediaQuery query="(min-device-width: 1224px)">    
+                      <Col sm={10} className="animated fadeIn slow d-flex mt-5 p-4 container rounded-circle" style={{height:'800px',width:'800px',backgroundImage: 'linear-gradient(120deg, rgba(250,208,196,0.8), rgba(255,209,255,0.4))'}}>
+                      <div className="mt-2 phrase" style={{fontFamily: "'Quicksand', sans-serif"}}>
+                             <h1 className="" style={{fontSize:'4.3em',fontFamily: "'Quicksand', sans-serif",color:'black'}}>Our Commitment to Quality</h1>
+                          </div>
+                        <div className="nurse">
+                          <Image  src={nurse} style={{height:"700px"}}/>
+                        </div>
+                        </Col>
+                  </MediaQuery>
+                    <MediaQuery query="(max-device-width: 1224px)">    
+                        <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)',}}>
+                         <div className="mt-2 p-5" align="center">
+                            <h1 className="animated zoomIn display-5" style={{fontFamily: "'Quicksand', sans-serif"}}>Our Commitment to Quality</h1>
+                         </div>
+                        </Col>        
+                    </MediaQuery>  
                 </Row>
                 </Container>                
         </Styles>

@@ -3,11 +3,17 @@ import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
 //import bgimg from './images/newss.jpg';
 import Techphlie from './images/Techphlie.jpg';
+import marketscreener from './images/marketscreener.jpg';
+import msn from './images/msn.jpg';
+import mena from './images/mena.jpg';
+import tribune from './images/tribune.jpg';
+import aninews from './images/aninews.jpg';
 import karnataka from './images/karnataka.jpg';
 import business from './images/business.jpg';
 import thar from './images/thar.jpg';
 import north from './images/north.jpg';
 import news from './images/news.jpg';
+import net from './images/net.png';
 import './imagestyles.css';
 
 const Styles = styled.div`
@@ -51,20 +57,20 @@ const NewsandAwards = () => {
                 <Row align="center">
                     <Col sm={2}>
                         <a href='https://www.aninews.in/news/business/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india20190417193514/'>
-                            <Image src='https://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/70/cb/91/70cb919a9921e6ffe72f372eb5dbde14.jpg' style={{height:'100px'}}/>
+                            <Image src={aninews} style={{height:'100px'}}/>
                         </a>
                     </Col>
                     <Col sm={2}><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src='https://www.beeingsocial.com/wp-content/uploads/2017/12/business-standard-logo.png' style={{height:'100px',width:'200px'}}/></a></Col>
                     <Col sm={2}><a href='https://in.news.yahoo.com/medapp-game-changer-healthcare-ecosystem-india-140514207.html'><Image src='https://www.selectcitywalk.com/wp-content/uploads/2018/08/Yahoo-News-Logo-1.jpg' style={{height:'100px'}}/></a></Col>
                     <Col sm={2}><a href='https://www.indiainfoline.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fwww.indiainfoline.com%2Fnewsvoir'><Image src='https://www.et-gbs.com/wp-content/uploads/2018/01/iifl-logo.jpg' style={{height:'100px'}}/></a></Col>
-                    <Col sm={2}><a href='https://www.msn.com/en-in/?ref-st=%2fen-in%2fnews%2fother%2fmedapp-a-game-changer-of-the-healthcare-ecosystem-in-india%2far-BBW2cZ4'><Image src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Msn_logo.jpg' style={{height:'100px'}}/></a></Col>
+                    <Col sm={2}><a href='https://www.msn.com/en-in/?ref-st=%2fen-in%2fnews%2fother%2fmedapp-a-game-changer-of-the-healthcare-ecosystem-in-india%2far-BBW2cZ4'><Image src={msn} style={{height:'100px'}}/></a></Col>
                     <Col sm={2}><a href='https://www.covaipost.com/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india/'><Image src='https://www.covaipost.com/wp-content/themes/newcovaipost/images/logo.png' style={{height:'100px',width:'200px'}}/></a></Col>
                 </Row>
                 </Container>
                 <Container className="p-4">
                     <Row align="center">
                         <Col sm={2}><a href="https://www.bignewsnetwork.com/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.bignewsnetwork.com/bnn2/images/big-news-network.png" style={{height:'100px',width:'160px'}}/></a></Col>
-                        <Col sm={2} ><a href="https://www.marketscreener.com/MEDAPP-SA-38028268/news/Medapp-a-game-changer-of-the-healthcare-ecosystem-in-India-28440866/"><Image  className="mt-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrqqF58gqmbzLUtbJkARMr08bVdMP1O-umoMA_A0xtOjuB2rH" style={{height:'100px',width:'200px'}}/></a></Col> 
+                        <Col sm={2} ><a href="https://www.marketscreener.com/MEDAPP-SA-38028268/news/Medapp-a-game-changer-of-the-healthcare-ecosystem-in-India-28440866/"><Image  className="mt-2" src={marketscreener} style={{height:'150px',width:'200px'}}/></a></Col> 
                         <Col sm={2} className="mb-2"><a href="https://m.dailyhunt.in/news/india/english/newsvoir-epaper-newsvoir/medapp+a+game+changer+of+the+healthcare+ecosystem+in+india-newsid-113993051"><Image src="https://store-images.s-microsoft.com/image/apps.946.9007199266244278.b038e4ac-882c-489a-91de-8967da80a093.4f59cf37-e7fd-41fe-8143-c8526fe7d0a2" style={{height:'150px',width:'200px'}}/></a></Col> 
                         <Col sm={2}><a href="https://www.htsyndication.com/newsvoir/article/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india/34171588"><Image src="https://www.htsyndication.com/themes/frontend/img/logo-transparent.png?ver=1.0" style={{height:'100px',width:'150px'}}/></a></Col> 
                         <Col sm={2}><a href="https://www.devdiscourse.com/article/business/483544-medapp-all-set-to-revolutionise-way-people-manage-health-on-day-to-day-basis"><Image src="https://www.devdiscourse.com/AdminFiles/Logo/devdiscourse_logo.svg" style={{height:'100px',width:'150px'}}/></a></Col> 
@@ -74,8 +80,8 @@ const NewsandAwards = () => {
                <Container className="p-4">
                     <Row align="center">
                         <Col sm={2}><a href="https://ohio.statenews.net/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.midwestradionetwork.com/nn_logos/ohio-state-news.png" style={{height:'100px',width:'200px'}}/></a></Col>
-                        <Col sm={2}><a href="http://www.punjabtribune.com/news/89379-medapp-a-game-changer-of-the-healthcare-ecosystem-in-india.aspx"><Image className="ml-4 mt-2" src="http://www.punjabtribune.com/images/thumb/tnl490.jpg" style={{height:'100px',width:'200px',backgroundColor:'black'}}/></a></Col>
-                        <Col sm={2}><a href="https://menafn.com/1098403365/MedappA-Game-Changer-of-the-Healthcare-Ecosystem-in-India"><Image className="ml-5 mt-2" src="https://menafn.com/includes/img/logo.jpg" style={{height:'100px',width:'150px'}}/></a></Col>
+                        <Col sm={2}><a href="http://www.punjabtribune.com/news/89379-medapp-a-game-changer-of-the-healthcare-ecosystem-in-india.aspx"><Image className="ml-4 mt-2" src={tribune} style={{height:'100px',width:'200px',backgroundColor:'black'}}/></a></Col>
+                        <Col sm={2}><a href="https://menafn.com/1098403365/MedappA-Game-Changer-of-the-Healthcare-Ecosystem-in-India"><Image className="ml-3 mt-2" src={mena} style={{height:'75px',width:'150px'}}/></a></Col>
                         <Col sm={2}><a href="http://b-live.in/newsvoir-feeds/?c_article_id=11699&c_author_id=9463"><Image className="ml-4 mt-2" src="http://b-live.in/wp-content/uploads/2018/05/Blive-Logo-1.png" style={{height:'100px',width:'180px'}}/></a></Col>
                         <Col sm={2}><a href="http://chennaiyil.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fchennaiyil.com%2Fnewsvoir"><Image src="http://www.twenty19.com/Data/internship/large/logo_503147.jpg" style={{height:'100px'}}/></a></Col>
                         <Col sm={2}><a href="https://tennews.in/corporate-news-2/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Ftennews.in%2Fen%2Fnewsvoir%2F%22"><Image className="ml-4 mt-2" src="https://tennews.in/wp-content/uploads/2019/03/TenNews-site-logo.png" style={{height:'100px',width:'200px'}}/></a></Col>
@@ -107,7 +113,7 @@ const NewsandAwards = () => {
                         <Col sm={2}><a href="http://www.estrade.in/news/newsvoir/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src="http://www.estrade.in/wp-content/uploads/server/Estrade_Logo.png" style={{height:'60px',width:'150px'}}/></a></Col>
                         <Col sm={2}><a href="http://www.theluxurychronicle.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.theluxurychronicle.com%2Fnewsvoir"><Image className="ml-3 mt-2" src="http://www.theluxurychronicle.com/wp-content/uploads/2015/10/cropped-logo2.png" style={{height:'60px',width:'150px'}}/></a></Col>
                         <Col sm={2}><a href="http://thar-savera.blogspot.com/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src={thar} style={{height:'70px',width:'150px'}}/></a></Col>
-                        <Col sm={2}><a href="http://netindian.in/corporatewire?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src="http://netindian.in/sites/default/files/indiainfostyle_logo.png" style={{height:'60px',width:'150px',backgroundColor:'black'}}/></a></Col>
+                        <Col sm={2}><a href="http://netindian.in/corporatewire?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src={net} style={{height:'60px',width:'150px',color:'black'}}/></a></Col>
                         <Col sm={2}><a href="http://firstreport.in/newsvoir/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src="http://firstreport.in/wp-content/uploads/2014/12/First-report.png" style={{height:'60px',width:'150px'}}/></a></Col>
                     </Row>
                 </Container>
@@ -134,7 +140,10 @@ const NewsandAwards = () => {
                     </h1>
                     <hr className="mb-5"/>
                     <Row className="d-flex justify-content-center">
-                        <Col sm={4} >
+                        <Col sm={6} >
+                            <p></p>
+                        </Col>
+                        <Col sm={3} >
                             <Image className="my-2" src={news} fluid/>
                             <p style={{fontFamily: "'Quicksand', sans-serif",fontSize:'25px'}}>Asia Pacific achievers award</p>
                             <hr/>

@@ -19,12 +19,16 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const Styles = styled.div`
+    /**/
+
+    const Styles = styled.div`
   .jumbo {
     background-image: url(${bgimg3});
     background-size: cover;
     color: #efefef;
-    height: 900px;
+    height: 780px;
+    box-sizing: border-box;
+    box-shadow: inset -750px 0 2500px rgba(255,255,255,0.8) ;
     position: relative;
     z-index: -2;
   }
@@ -33,6 +37,8 @@ const Styles = styled.div`
     background-size: cover;
     color: #efefef;
     height: 250px;
+    box-sizing: border-box;
+    box-shadow: inset -50px 0 2500px rgba(255,255,255,0.8) ;
     margin-top:85px;
     width:100%;
     position: relative;
@@ -63,17 +69,17 @@ const Styles = styled.div`
         <MediaQuery query="(min-device-width: 1224px)">   
             <Jumbo fluid className="jumbo">
                 <div className="overlay"></div>
-                <Container className="py-4">
-                    <div className="mt-5 mr-5 d-flex justify-content-end animated fadeInLeft">
-                        <Image src={scooterweb} style={{height: '220px'}} fluid/>      
+                <Container className="py-4" align="right">
+                    <div className="mt-5 mr-5 animated fadeInLeft">
+                        <Image className="mr-4" src={scooterweb} style={{height: '220px'}} fluid/>      
                     </div>    
-                    <div className="d-flex justify-content-end animated fadeInLeft mr-5 delay-1s">
-                        <Image src={medappslider} style={{height:'45px'}} fluid/>
+                    <div className=" animated fadeInLeft mr-5 delay-1s">
+                        <Image className="mr-4" src={medappslider} style={{height:'45px'}} fluid/>
                     </div>
-                    <p className="d-flex mt-3 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '17px',color:'black'}}>
-                      <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
-                      <span className=" animated fadeIn delay-3s"> Changing lives,</span>
-                      <span className="animated fadeInRight delay-4s"> Saving lives.</span>
+                    <p className="mt-3" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '22px',color:'black'}}>
+                      <span className="animated fadeInLeft delay-2s font-weight-bold">Touching lives,</span>
+                      <span className="animated fadeIn delay-3s font-weight-bold"> Changing lives,</span>
+                      <span className="animated fadeInRight delay-4s font-weight-bold"> Saving lives.</span>
                     </p>
                 </Container>
             </Jumbo>
@@ -88,7 +94,7 @@ const Styles = styled.div`
                     <div className="d-flex justify-content-end animated fadeInLeft mr-2 delay-1s">
                         <Image src={medappslider} style={{height:'25px'}} fluid/>
                     </div>
-                    <p className="d-flex mt-1 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '10px',color:'white'}}>
+                    <p className="d-flex mt-1 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '10px',color:'black'}}>
                       <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
                       <span className=" animated fadeIn delay-3s"> Changing lives,</span>
                       <span className="animated fadeInRight delay-4s"> Saving lives.</span>
