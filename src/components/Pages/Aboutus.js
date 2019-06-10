@@ -89,7 +89,7 @@ const Aboutus = () => {
                     </Col>
                   </MediaQuery>
                   <MediaQuery query="(max-device-width: 1224px)">      
-                    <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',color:'black'}}>
+                    <Col sm={12} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',color:'black'}}>
                         <div className="mt-2 p-2" align="center">
                           <h3>We’re all united around a common mission of</h3>
                           <span className="mt-5 p-3"><h2 className="animated fadeIn">Touching life, changing life, and saving life.</h2></span>
@@ -125,8 +125,8 @@ const Aboutus = () => {
                         </Col>
                   </MediaQuery>
                     <MediaQuery query="(max-device-width: 1224px)">    
-                        <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(250,208,196,0.8), rgba(255,209,255,0.4))',}}>
-                         <div className="mt-2 p-5" align="center">
+                        <Col sm={12} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(250,208,196,0.8), rgba(255,209,255,0.4))',}}>
+                         <div className="mt-2 p-2" align="center">
                             <h1 className="animated zoomIn display-5" style={{fontFamily: "'Quicksand', sans-serif"}}>Our Commitment to Quality</h1>
                          </div>
                         </Col>        

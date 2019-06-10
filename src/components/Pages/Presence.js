@@ -108,7 +108,7 @@ render(){
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
               <MediaQuery query="(orientation: portrait)">
-                <div className="holder-min ">
+                <div className="holder-min">
                   <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>    
                       <Button variant="dark" align="center" onClick={this.handleShow}>Our Influence</Button>
                   <Modal
