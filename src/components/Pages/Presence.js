@@ -28,7 +28,7 @@ const Styles = styled.div`
 const stylealign = {
     marginTop: '17%'
     }; 
-    
+
 class Presence extends Component {
   constructor(props, context) {
     super(props, context);
@@ -107,7 +107,8 @@ render(){
                 </div>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
-                <div className="holder-min">
+              <MediaQuery query="(orientation: portrait)">
+                <div className="holder-min ">
                   <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>    
                       <Button variant="dark" align="center" onClick={this.handleShow}>Our Influence</Button>
                   <Modal
@@ -128,6 +129,19 @@ render(){
                   </Modal.Body>
                 </Modal>
                 </div>
+                </MediaQuery>
+              <MediaQuery query="(orientation: landscape)">
+                <div className="holder d-flex justify-content-center">
+                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="575" height="400" title="Medapp Locations"></iframe>    
+                  <div className="bar-min-landscape">
+                    <p className="d-flex justify-content-start bg-white stats-min" >Patients Screened: <span className="ml-2">384594+</span></p>
+                    <p className="d-flex justify-content-start bg-white stats-min" >Camps Conducted:<span className="ml-2">814</span></p>
+                    <p className="d-flex justify-content-start bg-white stats-min" >Cities:<span className="ml-2">48+</span> </p>
+                    <p className="d-flex justify-content-start bg-white stats-min" >States:<span className="ml-2">19+</span></p>
+                    <p className="d-flex justify-content-start bg-white stats-min" >Lives Impacted:<span className="ml-2">272844+</span></p>
+                  </div>
+                </div>
+                </MediaQuery>
             </MediaQuery>
         </div>          
     </div>
