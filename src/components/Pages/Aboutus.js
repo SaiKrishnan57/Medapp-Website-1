@@ -125,7 +125,7 @@ const Aboutus = () => {
                         </Col>
                   </MediaQuery>
                     <MediaQuery query="(max-device-width: 1224px)">    
-                        <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)',}}>
+                        <Col sm={10} className="d-flex flex-column justify-content-center mt-3 p-5 jumbotron" style={{backgroundImage: 'linear-gradient(120deg, rgba(250,208,196,0.8), rgba(255,209,255,0.4))',}}>
                          <div className="mt-2 p-5" align="center">
                             <h1 className="animated zoomIn display-5" style={{fontFamily: "'Quicksand', sans-serif"}}>Our Commitment to Quality</h1>
                          </div>

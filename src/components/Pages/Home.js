@@ -94,7 +94,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     <div className="d-flex justify-content-end animated fadeInLeft mr-2 delay-1s">
                         <Image src={medappslider} style={{height:'25px'}} fluid/>
                     </div>
-                    <p className="d-flex mt-1 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '10px',color:'black'}}>
+                    <p className="d-flex mt-1 ml-2 justify-content-end" style={{fontFamily: 'Ubuntu, sans-serif',fontSize: '10px',color:'white'}}>
                       <span className=" animated fadeInLeft delay-2s">Touching lives,</span>
                       <span className=" animated fadeIn delay-3s"> Changing lives,</span>
                       <span className="animated fadeInRight delay-4s"> Saving lives.</span>

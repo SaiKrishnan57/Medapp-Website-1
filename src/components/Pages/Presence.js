@@ -1,5 +1,5 @@
-import React from 'react'
-import { Jumbotron as Jumbo, Container,Row,Col,Image,Table } from 'react-bootstrap';
+import React,{Component} from 'react'
+import { Jumbotron as Jumbo, Container,Row,Col,Image,Modal,Button } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 import map from './images/Map.png';
@@ -28,13 +28,25 @@ const Styles = styled.div`
 const stylealign = {
     marginTop: '17%'
     }; 
+    
+class Presence extends Component {
+  constructor(props, context) {
+    super(props, context);
+    console.log(props);
 
-    const styletext = {
-      fontSize:'20px'
-      }; 
+    this.state = {
+      show: false
+    };
 
-const Presence = () => {
+    this.handleShow = () => {
+      this.setState({ show: true });
+    };
 
+    this.handleHide = () => {
+      this.setState({ show: false });
+    };
+  }
+render(){
   return (
     <div>
         <Styles>
@@ -78,49 +90,49 @@ const Presence = () => {
           </Col>
         </Row>
         </div> 
-      <div className="jumbotron">
+        <div className="jumbotron">
             <h1 className="display-4 d-flex justify-content-center animated fadeIn">Hello!</h1>
             <p className="lead d-flex justify-content-center animated bounceIn">You can find our Head and Regional Offices here.</p>
             <hr className="my-4"/>
-            <Row>
-              <Col className="d-flex flex-column justify-content-center animated zoomIn" sm={4}>
-                <Row >
-                <Table className="p-4 mt-4" responsive>
-                  <tbody style={styletext}>
-                    <td>
-                      <tr>Patients Screened: </tr>
-                      <tr>Camps Conducted:</tr>
-                      <tr>Cities: </tr>
-                      <tr>States:</tr>
-                      <tr>Lives Impacted:</tr>
-                    </td>
-                    <td>
-                      <tr><span className="font-weight-bold">384594+</span></tr>
-                      <tr><span className="font-weight-bold">814</span></tr>
-                      <tr><span className="font-weight-bold">48+</span></tr>
-                      <tr><span className="font-weight-bold">19+</span></tr>
-                      <tr><span className="font-weight-bold">272844+</span></tr>
-                    </td>
-                  </tbody>
-                </Table>
-                </Row>
-
-              </Col>
-            <Col sm={8}>
             <MediaQuery query="(min-device-width: 1224px)">
-                <div align="center" className="p-0"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="900" height="600" title="Medapp Locations"></iframe></div>
-            <MediaQuery query="(min-device-width: 1824px)">
-                <div align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="900" height="540" title="Medapp Locations"></iframe></div>
-            </MediaQuery>
+                <div className="holder d-flex justify-content-center">
+                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe>
+                  <div className="bar">
+                      <p className="d-flex justify-content-start bg-white p-2 stats" >Patients Screened: <span className="ml-2">384594+</span></p>
+                      <p className="d-flex justify-content-start bg-white p-2 stats" >Camps Conducted:<span className="ml-2">814</span></p>
+                      <p className="d-flex justify-content-start bg-white p-2 stats" >Cities:<span className="ml-2">48+</span> </p>
+                      <p className="d-flex justify-content-start bg-white p-2 stats" >States:<span className="ml-2">19+</span></p>
+                      <p className="d-flex justify-content-start bg-white p-2 stats" >Lives Impacted:<span className="ml-2">272844+</span></p>
+                  </div>
+                </div>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
-            <div align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe></div>
+                <div className="holder-min">
+                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>    
+                      <Button variant="dark" align="center" onClick={this.handleShow}>Our Influence</Button>
+                  <Modal
+                    show={this.state.show}
+                    onHide={this.handleHide}
+                    size="md"
+                    dialogClassName="modal-50w"
+                    className="animated zoomIn mt-5"
+                  >
+                  <Modal.Header closeButton>
+                    </Modal.Header>
+                  <Modal.Body >
+                    <p className="d-flex justify-content-start bg-white p-2 stats" >Patients Screened: <span className="ml-2">384594+</span></p>
+                    <p className="d-flex justify-content-start bg-white p-2 stats" >Camps Conducted:<span className="ml-2">814</span></p>
+                    <p className="d-flex justify-content-start bg-white p-2 stats" >Cities:<span className="ml-2">48+</span> </p>
+                    <p className="d-flex justify-content-start bg-white p-2 stats" >States:<span className="ml-2">19+</span></p>
+                    <p className="d-flex justify-content-start bg-white p-2 stats" >Lives Impacted:<span className="ml-2">272844+</span></p>
+                  </Modal.Body>
+                </Modal>
+                </div>
             </MediaQuery>
-            </Col> 
-            </Row>
-        </div>
+        </div>          
     </div>
   )
+}
 }
 
 export default Presence;
