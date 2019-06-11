@@ -8,6 +8,8 @@ import msn from './images/msn.jpg';
 import mena from './images/mena.jpg';
 import tribune from './images/tribune.jpg';
 import aninews from './images/aninews.jpg';
+import award1 from './images/award1.jpg';
+import award3 from './images/award3.jpg';
 import karnataka from './images/karnataka.jpg';
 import business from './images/business.jpg';
 import thar from './images/thar.jpg';
@@ -32,6 +34,11 @@ const Styles = styled.div`
     bottom: 0;
     right: 0;
     z-index: -1;
+  }
+  p{
+    font-family:'Quicksand', sans-serif;
+    font-weight:bold;
+    color:black;
   }
 `;
 
@@ -139,14 +146,27 @@ const NewsandAwards = () => {
                         Awards & Accolades:
                     </h1>
                     <hr className="mb-5"/>
-                    <Row className="d-flex justify-content-center">
-                        <Col sm={6} >
-                            <p></p>
-                        </Col>
-                        <Col sm={3} >
-                            <Image className="my-2" src={news} fluid/>
-                            <p style={{fontFamily: "'Quicksand', sans-serif",fontSize:'25px'}}>Asia Pacific achievers award</p>
+                    <Row className="mb-5">
+                        <Col sm={4} align="center" className="my-3">
+                        <Image className="my-2"  style={{minHeight:'250px'}} src={award1} fluid/>
                             <hr/>
+                            <p>
+                                Awarded 'Rashtriya Nirman Ratan Puraskar' in genre of outstanding Achievement and remarkable role as the Best solutions based healthcare start-ups in India by Global Achievers Foundation in January 2018 at Goa for contributions to National and Social Development.
+                            </p>
+                        </Col>
+                        <Col sm={4} align="center" className="my-3">
+                        <Image className="my-2" style={{maxHeight:'250px'}} src={news} fluid/>
+                            <hr/>
+                            <p>
+                                Awarded 'Asia Pacific Achievers Award' for best of Paramedic and nursing services to chronic diseases, on the occasion of Asia Pacific Achiever's Summit on Globalisation of Economic Growth and Social Development in June 2018 at Tashkent (Uzbekistan)
+                            </p>
+                        </Col>
+                        <Col sm={4} align="center" className="my-3">
+                        <Image className="my-2 rounded-circle" style={{maxHeight:'250px'}} src={award3} fluid/>
+                            <hr/>
+                            <p>
+                                Awarded as 'Notable Networker Award' in recognition of outstanding performance in changing the way the world does business by BNI.
+                            </p>
                         </Col>
                     </Row>   
                 </Container>

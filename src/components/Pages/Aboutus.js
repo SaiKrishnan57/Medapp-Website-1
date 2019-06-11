@@ -46,8 +46,8 @@ const Aboutus = () => {
                       <h1 className="display-4 font-weight-bold">ABOUT US </h1>
                     </Col>
                     <Col sm={6} className="mt-3 p-4">    
-                        <p className="display-5 mt-2" style={{fontSize:'25px'}}>
-                            We’re all united around a common mission — touching life, changing life, and saving life.
+                        <p className="display-5 mt-2 font-weight-bold" style={{fontSize:'30px',fontFamily:"'Quicksand', sans-serif"}}>
+                            We’re all united around a common mission — touching lives, changing lives, and saving lives.
                         </p>
                     </Col>    
                 </Row>
@@ -61,7 +61,7 @@ const Aboutus = () => {
                       </p>
                     <div>
                       <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
-                        <h2 className="ml-5 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
+                        <h2 className="ml-5 font-weight-bold lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
                           We’re also collaborating with others to enhance healthcare solutions across the care continuum.
                         </h2>
                     </div>
@@ -72,7 +72,7 @@ const Aboutus = () => {
                       At medapp.in, we’ve had a longstanding commitment to serving our clients, patients, employees, healthcare teams and partners.
                       </p>
                       <p className="mt-2"  style={caption}>
-                      Today, we’re a leading healthcare services company working across the system to improve primary healthcare service delivery, patient support programme and healthcare outcomes.
+                      Today, we’re a leading healthcare services company working across the system to improve primary healthcare service delivery, patient support programmes and healthcare outcomes.
                       </p>
                     </Col>
                     </Row>
@@ -103,15 +103,15 @@ const Aboutus = () => {
                    <Col sm={10} className="p-4 container">    
                     <div>
                       <Image src="https://img.icons8.com/ios/50/000000/quote-left-filled.png"/>
-                        <h2 className="ml-5 mt-2 font-weight-normal lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
+                        <h2 className="ml-5 mt-2 font-weight-bold lead d-flex justify-content-center" style={{fontSize:'25px',color:'black',fontFamily: "'Quicksand', sans-serif"}}>
                           Healthcare is changing. And at medapp.in, we have a plan to lead that charge.
                         </h2>
                     </div>
                       <p className="mt-4" style={caption}>
-                        How? By making safety services, innovative technology and industry-leading clinical outcomes the cornerstones of our mission. By seeking to provide high-quality, high-value care backed by compassionate service. By giving our caregivers the tools, technologies and resources they need to deliver the best care possible. By always doing what’s right for our clients and communities.
+                        How? By making safety services, innovative technologies and industry-leading clinical outcomes the cornerstones of our mission. By seeking to provide high-quality, high-value care backed by compassionate services. By giving our caregivers the tools, technologies and resources they need to deliver the best care possible. By always doing what’s right for our clients and communities.
                       </p>
                       <p className="mt-2" style={caption}>
-                        Our Commitment to Quality honors the trust that our clients and communities place in our services, like disease management, patient support programme, health promotion and disease prevention practices and other health care facilities. It's at the core of everything we do and every decision our client make.
+                        Our Commitment to Quality honors the trust that our clients and communities place in our services, like disease management, patient support programmes, health promotion and disease prevention practices and other health care facilities. It's at the core of everything we do and every decision our client makes.
                       </p>                     
                     </Col>  
                   <MediaQuery query="(min-device-width: 1224px)">    

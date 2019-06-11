@@ -15,18 +15,21 @@ import MediaQuery from 'react-responsive';
 const Styles = styled.div`
   .jumbo {
     background-image: url(${team});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     color: #efefef;
+    margin-top:20px;
     height: 700px;
     position: relative;
     z-index: -2;
   }
   .jumbo-min{
-    background-image: url(${team});
+    background: url(${team});
     background-size: cover;
     color: #efefef;
     height: 300px;
-    margin-top:45px;
+    margin-top:95px;
     position: relative;
     z-index: -2;
   }
@@ -40,11 +43,16 @@ const Styles = styled.div`
     right: 0;
     z-index: -1;
   }
+  p{
+    font-family:'Quicksand', sans-serif;
+    font-weight:bold;
+    color:black;
+  }
 `;
 
 const caption = {
     fontFamily: 'Ubuntu, sans-serif',
-    fontSize:'12px'
+    fontSize:'13px'
 };
   
  
@@ -63,7 +71,7 @@ class Ourteam extends Component {
                       <h1 className="display-4 font-weight-bold">TEAM MEMBERS</h1>
                     </Col>
                     <Col sm={6} className="mt-3 p-4">    
-                        <p className="display-5 mt-2" style={{fontSize:'25px'}}>
+                        <p className="display-5 mt-2 text-white" style={{fontSize:'25px'}}>
                         We are professionals with exceptional background and years of expertise in business.
                         </p>
                     </Col>    
@@ -80,7 +88,7 @@ class Ourteam extends Component {
                       <h1 className="display-5 font-weight-normal">TEAM MEMBERS</h1>
                     </Col>
                     <Col sm={6} className="p-1">    
-                        <p style={{fontSize:'18px'}}>
+                        <p style={{fontSize:'18px',color:'white'}}>
                         We are professionals with exceptional background and years of expertise in business.
                         </p>
                     </Col>    

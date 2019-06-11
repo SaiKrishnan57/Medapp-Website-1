@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Jumbotron as Jumbo, Container,Image,Row,Col} from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/Medapp1.jpg';
@@ -18,12 +17,18 @@ import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
     /**/
 
     const Styles = styled.div`
   .jumbo {
     background-image: url(${bgimg3});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     color: #efefef;
     height: 780px;
@@ -61,8 +66,6 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 };
 
   const Home = () =>{
-  const [state, toggle] = useState(true)
-  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 2000 } })
   return (
     <div>
         <Styles>
@@ -142,7 +145,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                         <p align="center" style={styletext}>Our Team</p>
                     </div>
                     <div className="item m-3 mt-5"> 
-                      <Link to='/'>
+                      <Link to='/Societalimpact'>
                         <Image src={impact} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Societal Impact</p>  
@@ -192,7 +195,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                         <p align="center" style={styletext}>Our Team</p>
                     </div>
                     <div className="item m-3 mt-5">   
-                      <Link to='/'>
+                      <Link to='/Societalimpact'>
                         <Image src={impact} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Societal Impact</p>
@@ -204,48 +207,23 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                         <p align="center" style={styletext}>News and Awards</p>   
                     </div>
                 </OwlCarousel>
-              
               </MediaQuery>
                 </Col>
                 </Row>
             </Container>
-
             <Container className="mt-5 p-2" >
+            <div data-aos="fade-up" data-aos-duration="1000">
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                      <div onClick={() => toggle(!state)}>
-                        <animated.div
-                          style={{
-                            opacity: x.interpolate({ output: [1, 1] }),
-                            transform: x
-                              .interpolate({
-                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
-                              })
-                              .interpolate(x => `scale(${x})`)
-                          }}>
                           <div className="jumbotron mx-4 vision parallax">
                             <h1 className="display-4 d-flex justify-content-center text-white">Vision</h1>
                             <hr className="my-4 bg-white"/>
                             <p className="lead font-italic mt-2 text-white">
                               "Medapp.in will become the national model for the delivery of Preventive care and Primary health care at 
                               the urban & rural level by Touching life, Changing life, and saving life with out barrier of geography."</p>
-                          </div>
-                        </animated.div>
-                      </div>        
+                          </div>       
                     </Col>
                     <Col sm={6} className="mt-3 p-4">
-                    <div onClick={() => toggle(!state)}>
-                        <animated.div
-                          style={{
-                            opacity: x.interpolate({ output: [1, 1] }),
-                            transform: x
-                              .interpolate({
-                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
-                              })
-                              .interpolate(x => `scale(${x})`)
-                          }}>
                           <div className="jumbotron mission parallax">
                             <h1 className="display-4 d-flex justify-content-center text-white">Mission</h1>
                             <hr className="my-4 bg-white"/>
@@ -253,12 +231,12 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                             all that we do. Our goal is to offer quality care & services that set community standards, exceed patients 
                             expectations and are provided in a caring, convenient, cost effective in a accessible manner".</p>
                           </div>
-                      </animated.div>
-                      </div>
                     </Col>    
                 </Row>
+                </div>
             </Container>
             <MediaQuery query="(max-device-width: 1224px)">
+            <div data-aos="fade-up">
             <Container className="p-2">
                 <Row>   
                   <MediaQuery query="(orientation: portrait)">
@@ -270,19 +248,19 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     </Col>
                     <Col sm={2} className="mt-2 mr-1 ml-4 p-2 text-center" >    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}> 
-                        <CountUp end={814} duration={3} />
+                        <CountUp end={814} duration={5} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}>
-                        <CountUp end={48} suffix="+" duration={3} />
+                        <CountUp end={48} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'40px'}}>
-                        <CountUp end={19} suffix="+" duration={3} />
+                        <CountUp end={19} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
@@ -303,19 +281,19 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     </Col>
                     <Col sm={2} className="mt-2 mr-1 ml-4 p-2 text-center" >    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4.7vw',marginLeft:'3vw'}}> 
-                        <CountUp end={814} duration={3} />
+                        <CountUp end={814} duration={5} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
-                        <CountUp end={48} suffix="+" duration={2} />
+                        <CountUp end={48} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'5vw'}}>
-                        <CountUp end={19} suffix="+" duration={2} />
+                        <CountUp end={19} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
@@ -328,8 +306,10 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     </MediaQuery>       
                 </Row>
             </Container>
+            </div>
             </MediaQuery>
             <MediaQuery query="(min-device-width: 1224px)">
+            <div data-aos="fade-up">
             <Container className="p-2">
                 <Row className="d-flex">
                     <Col sm={2} className="mt-2 mr-3 ml-5 p-2 text-center" >
@@ -340,19 +320,19 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     </Col>
                     <Col sm={2} className="mt-2 mr-1 ml-5 p-2 text-center" >    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}> 
-                        <CountUp end={414} duration={3} />
+                        <CountUp end={814} duration={5} />
                       </p>
                       <p className="text-muted">Camps Conducted</p> 
                     </Col> 
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={48} suffix="+" duration={2} />
+                        <CountUp end={48} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">Cities</p> 
                     </Col>    
                     <Col sm={2} className="mt-2 mx-1 p-2 text-center">    
                       <p className="text-danger font-weight-bold" style={{fontFamily: 'Ubuntu, sans-serif',fontSize:'4vw'}}>
-                        <CountUp end={19} suffix="+" duration={2} />
+                        <CountUp end={19} suffix="+" duration={5} />
                       </p>
                       <p className="text-muted text-center">States</p> 
                     </Col>    
@@ -364,6 +344,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
                     </Col>       
                 </Row>
             </Container>
+            </div>
             </MediaQuery>
         </Styles>
     </div>  

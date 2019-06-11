@@ -13,7 +13,7 @@ import MediaQuery from 'react-responsive';
 
 const Styles = styled.div`
   .jumbo {
-    background-image: linear-gradient(135deg, #F1F2B5 0%, #3498db 100%);
+    background-image: linear-gradient(120deg, rgba(132,250,176,0.8), rgba(143,211,244,0.5));
     min-height: 700px;
     position: relative;
     z-index: -2;
@@ -22,7 +22,7 @@ const Styles = styled.div`
 export default class Members extends Component {
     state = {
         Member:[
-            {id:0,Name:'Niranjan Swamy N',Designation:'Co-Founder',Info:data[0].info,pic:niranjan},
+            {id:0,Name:'Niranjan Swamy N',Designation:'Founder and CEO',Info:data[0].info,pic:niranjan},
             {id:1,Name:'Dr. Vinod Singh',Designation:'Chief Operating Officer',Info:data[1].info,pic:vinod},
             {id:2,Name:'Sinu George',Designation:'Nurse Trainer and Director',Info:data[2].info ,pic:sinu},
             {id:3,Name:'Krishna Raghavan',Designation:'Director',Info:data[3].info,pic:krishna},
@@ -69,7 +69,7 @@ export default class Members extends Component {
                     </Row>
                     <Row>
                         <Col className="px-3 rounded">
-                            <p className="mt-2 p-4 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px'}}>
+                            <p className="mt-2 p-2 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px'}}>
                                 {this.state.Member[props].Info}
                             </p>
                         </Col>    

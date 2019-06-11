@@ -80,9 +80,11 @@ class Linking extends Component{
         
             <Container className="p-5" style={{fontFamily: 'Rubik, sans-serif'}}>
               <Row>
-                <Col sm={6} className="p-3"> 
+                <Col sm={6} className="p-3">  
+                    <Link to="/Lifeatmedapp">
                   <div className="container jumbo1 box bg-secondary d-flex flex-column justify-content-center" >   
                   </div>
+                  </Link>
                   <div className="py-2 rounded mt-4" >
                   <Typist style={styletext} avgTypingDelay={50} cursor={{hideWhenDone: true,element:" "}}>
                         <h3 className="d-flex justify-content-center mt-3" style={{fontSize:"20px",color:'black'}}>Life at MedApp.</h3>

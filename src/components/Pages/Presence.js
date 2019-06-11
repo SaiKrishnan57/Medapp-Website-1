@@ -82,7 +82,7 @@ render(){
         </div>
         <Row >
           <Col>
-              <p className="container font-weight-bold p-5" style={{fontFamily: 'Ubuntu, sans-serif',lineHeight:'2em'}}>
+              <p className="container font-weight-bold p-5" style={{fontFamily: "'Quicksand', sans-serif",lineHeight:'2em',color:'black'}}>
                 In recent times, it has become apparent that increasing health system cannot be resolved only by adding resources, but must also be addressed with far-reaching methods of service delivery. Therefore, through Medapp we endeavor to provide prompt medical attention along with the right medical equipment at your door-step. 
                 Medapp believes in addressing the impoverished areas of India by embracing new and facile ways of healthcare, by hosting health camps and motivating the underprivileged population to live an assured life. This is accomplished by providing primary health care services in remote areas of our country, where we make a run at catering health counselling as well as regular follow ups, in order to lessen the rate at which lives are jeopardized because unawareness and negligence. 
                 With Medapp we strive to ensure that the right medical resources are provided to the right people, within the right time-frame for their medical needs, thereby prioritizing health before anything else.
@@ -91,9 +91,6 @@ render(){
         </Row>
         </div> 
         <div className="jumbotron">
-            <h1 className="display-4 d-flex justify-content-center animated fadeIn">Hello!</h1>
-            <p className="lead d-flex justify-content-center animated bounceIn">You can find our Head and Regional Offices here.</p>
-            <hr className="my-4"/>
             <MediaQuery query="(min-device-width: 1224px)">
                 <div className="holder d-flex justify-content-center">
                   <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe>

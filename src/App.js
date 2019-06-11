@@ -12,6 +12,8 @@ import Ourteam from './components/Pages/Ourteam';
 import Footer from './components/layout/Footer';
 import Members from './components/Pages/Members';
 import NewsandAwards from './components/Pages/Newsandawards';
+import Lifeatmedapp from './components/Pages/Lifeatmedapp';
+import Societalimpact from './components/Pages/Societalimpact';
 
 class App extends Component {
   render(){
@@ -30,6 +32,8 @@ class App extends Component {
             <Route exact path="/Ourblogs" component = {Linking}/>
             <Route exact path="/NewsandAwards" component = {NewsandAwards}/>
             <Route exact path="/Ourteam/Members/:id" component = {Members}/>
+            <Route exact path="/lifeatmedapp" component = {Lifeatmedapp}/>
+            <Route exact path="/Societalimpact" component = {Societalimpact}/>
             </Switch>
           <Footer/> 
         </BrowserRouter>  
