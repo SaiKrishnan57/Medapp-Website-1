@@ -94,14 +94,22 @@ render(){
             <MediaQuery query="(min-device-width: 1224px)">
                 <div className="holder d-flex justify-content-center">
                   <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe>
-                  <div className="bar">
+                      <div className="bar">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Patients Screened: <span className="ml-2">384594+</span></p>
+                      </div>
+                      <div className="bar2">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Camps Conducted:<span className="ml-2">814</span></p>
+                      </div>
+                      <div className="bar3">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Cities:<span className="ml-2">48+</span> </p>
+                      </div>
+                      <div className="bar4">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >States:<span className="ml-2">19+</span></p>
+                      </div>
+                      <div className="bar5">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Lives Impacted:<span className="ml-2">272844+</span></p>
+                      </div>
                   </div>
-                </div>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
               <MediaQuery query="(orientation: portrait)">

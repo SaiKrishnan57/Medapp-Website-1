@@ -184,10 +184,38 @@
   width:400px;
   height:40px;
   }
+.bar2{
+    position:absolute;
+    top:520px;
+    left:23vw;
+    width:400px;
+    height:40px;
+  }
+.bar3{
+    position:absolute;
+    top:450px;
+    left:58vw;
+    width:400px;
+    height:40px;
+  }
+.bar4{
+    position:absolute;
+    top:540px;
+    left:53vw;
+    width:400px;
+    height:40px;
+  }
+.bar5{
+    position:absolute;
+    top:300px;
+    left:65vw;
+    width:400px;
+    height:40px;
+  }    
   .bar-min-landscape{
     position:absolute;
     top:135px;
-    left:2vw;
+    left:6vw;
     width:200px;
     height:40px;
     }
@@ -195,22 +223,26 @@
       width: 150px;
       color: black;
       font-family: 'Quicksand', sans-serif;
-      font-weight: bold;
       font-size: 2vw;
+      padding: 2px;
+      border-radius: 5px;
+      background-image: linear-gradient(45deg, #fddb92 0%, #d1fdff 100%);
     }
   .stats{
     width: 250px;
     color: black;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #fddb92 0%, #d1fdff 100%);
   }
   .stats:hover{
-    background-image: linear-gradient(120deg, rgba(250,208,196,0.8), rgba(255,209,255,0.4));
-    transition:0.2s;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
   }
   .bar-min{
     position:absolute;
-    bottom:50px;
+    bottom:500px;
     left:18vw;
     height:40px;
     }

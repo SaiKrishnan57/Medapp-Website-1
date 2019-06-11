@@ -6,6 +6,10 @@ import person from './images/person.png';
 import nurse from './images/nurse1.png';
 import './imagestyles.css';
 import MediaQuery from 'react-responsive';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const Styles = styled.div`
   .jumbo {
@@ -54,6 +58,7 @@ const Aboutus = () => {
                 </Container>
             </Jumbo>
             <Container className="p-1">
+            <div data-aos="fade-in">
                 <Row>
                     <Col sm={10} className=" p-4 container">
                       <p style={caption}>
@@ -76,6 +81,8 @@ const Aboutus = () => {
                       </p>
                     </Col>
                     </Row>
+                    </div>
+                    <div data-aos="fade-left">
                     <Row> 
                     <MediaQuery query="(min-device-width: 1224px)">      
                      <Col sm={10} className="animated fadeIn slow d-flex mt-5 p-4 container rounded-circle" style={{height:'800px',width:'800px',backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',textTransform:'uppercase',color:'black'}}>
@@ -97,8 +104,10 @@ const Aboutus = () => {
                     </Col> 
                   </MediaQuery>
                 </Row>
+                </div>  
                 </Container>
                 <Container className="p-2">
+                <div data-aos="fade-right">
                 <Row className="p-3">
                    <Col sm={10} className="p-4 container">    
                     <div>
@@ -132,6 +141,7 @@ const Aboutus = () => {
                         </Col>        
                     </MediaQuery>  
                 </Row>
+                </div>
                 </Container>                
         </Styles>
     </div>
