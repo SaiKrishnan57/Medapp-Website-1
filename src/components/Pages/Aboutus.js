@@ -2,7 +2,7 @@ import React from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import bgimg from './images/bg-4.jpg';
-import person from './images/person.png';
+import person from './images/person1.png';
 import nurse from './images/nurse1.png';
 import './imagestyles.css';
 import MediaQuery from 'react-responsive';

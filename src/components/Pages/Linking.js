@@ -104,10 +104,8 @@ class Linking extends Component{
               </Row>
               <Row className="mt-4">
                 <Col sm={6} className="p-3"> 
-                    <Link to="/Articles">
                         <div className="container jumbo3 box bg-secondary d-flex flex-column justify-content-center">
                         </div>
-                    </Link>       
                     <div className="py-2 rounded mt-4" >
                     <Typist cursor={{hideWhenDone: true,element:" "}}>
                             <h4 align="center" className="mt-3" style={{fontSize:'20px',color:'black'}}>All you need to know about Chronic diseases.</h4>

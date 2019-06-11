@@ -18,6 +18,9 @@ const Styles = styled.div`
     position: relative;
     z-index: -2;
   }
+  h1,h5{
+    font-family:'Quicksand', sans-serif;
+  }
 `;
 export default class Members extends Component {
     state = {
@@ -35,7 +38,8 @@ export default class Members extends Component {
         //console.log(this.props);
         const props = this.props.match.params.id;
         return (
-            <div><Styles>
+            <div>
+            <Styles>
             <Jumbo fluid className="jumbo">
                 <Container className="rounded mt-5 contain">
                 <Row>
@@ -65,10 +69,9 @@ export default class Members extends Component {
                         </div>    
                     </Col>
                </MediaQuery>     
-               
                     </Row>
                     <Row>
-                        <Col className="px-3 rounded">
+                        <Col align="center" className="px-3 rounded">
                             <p className="mt-2 p-2 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px'}}>
                                 {this.state.Member[props].Info}
                             </p>
