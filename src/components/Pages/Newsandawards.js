@@ -83,7 +83,7 @@ const NewsandAwards = () => {
                     autoplayTimeout='2000'
                     autoplayHoverPause
                     dotsEach
-                    item='3'
+                    items='3'
                     style={{}}
                 >
                     <div className="item mt-2" align="center">
@@ -110,6 +110,7 @@ const NewsandAwards = () => {
                     autoplayTimeout='2000'
                     autoplayHoverPause
                     dotsEach
+                    items='5'
                 >
                         <div className="item"><a href="https://www.bignewsnetwork.com/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.bignewsnetwork.com/bnn2/images/big-news-network.png" style={{height:'90px',width:'140px'}}/></a></div>
                         <div className="item"><a href="https://www.marketscreener.com/MEDAPP-SA-38028268/news/Medapp-a-game-changer-of-the-healthcare-ecosystem-in-India-28440866/"><Image  className="mt-2" src={marketscreener} style={{height:'150px',width:'200px'}}/></a></div> 
@@ -121,7 +122,7 @@ const NewsandAwards = () => {
                         <div className="item"><a href="https://menafn.com/1098403365/MedappA-Game-Changer-of-the-Healthcare-Ecosystem-in-India"><Image className="ml-3 mt-2" src={mena} style={{height:'75px',width:'150px'}}/></a></div>
                         <div className="item"><a href="http://b-live.in/newsvoir-feeds/?c_article_id=11699&c_author_id=9463"><Image className="ml-4 mt-2" src="http://b-live.in/wp-content/uploads/2018/05/Blive-Logo-1.png" style={{height:'100px',width:'180px'}}/></a></div>
                         <div className="item"><a href="http://chennaiyil.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fchennaiyil.com%2Fnewsvoir"><Image src="http://www.twenty19.com/Data/internship/large/logo_503147.jpg" style={{height:'100px'}}/></a></div>
-                        <div className="item"><a href="https://tennews.in/corporate-news-2/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Ftennews.in%2Fen%2Fnewsvoir%2F%22"><Image className="ml-4 mt-2" src="https://tennews.in/wp-content/uploads/2019/03/TenNews-site-logo.png" style={{height:'100px',width:'200px'}}/></a></div>
+                        <div className="item"><a href="https://tennews.in/corporate-news-2/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Ftennews.in%2Fen%2Fnewsvoir%2F%22"><Image className="ml-4 mt-2" src="https://tennews.in/wp-content/uploads/2019/03/TenNews-site-logo.png" style={{height:'100px',width:'165px'}}/></a></div>
                         <div className="item"><a href="https://www.indiasnews.net/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.midwestradionetwork.com/nn_logos/india's-news.png" style={{height:'90px',width:'140px'}}/></a></div>     
                     </OwlCarousel>
                 </Container>
@@ -136,13 +137,14 @@ const NewsandAwards = () => {
                     autoplayTimeout='2000'
                     autoplayHoverPause
                     dotsEach
+                    items='5'
                 >
-                        <div className="item"><a href="http://www.newscontrolroom.com/newsvoir/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.newscontrolroom.com%2Fnewsvoir"><Image className="ml-3" src="http://www.newscontrolroom.com/wp-content/uploads/2017/07/logo.png" style={{height:'120px'}}/></a></div>
-                        <div className="item d-flex flex-column justify-content-center"><a href="https://news.webindia123.com/news/newsvoir.asp?c_article_id=11699&c_author_id=9463&originurl=https://news.webindia123.com/news/newsvoir.asp"><Image className="ml-3 mt-2" src="https://www.webindia123.com/shared_files/ssl/images/logo.png" style={{height:'35px',width:'170px'}}/></a></div> 
-                        <div className="item d-flex flex-column justify-content-center"><a href="https://ibtn9.com/newsvoir/?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fibtn9.com%2Fnewsvoir%2F"><Image className="ml-3 mt-2" src="https://pbs.twimg.com/profile_images/631494681491144704/gigZhxz9_400x400.jpg" style={{height:'120px',width:'200px'}}/></a></div> 
-                        <div className="item d-flex flex-column justify-content-center"><a href="https://news.karnatakaonline.in/press-releases/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-73068"><Image className="mt-2" src={karnataka} style={{height:'60px',width:'220px'}}/></a></div> 
-                        <div className="item d-flex flex-column justify-content-center"><a href="http://www.techphlie.com/p/news-voir.html?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src={Techphlie} style={{height:'60px',width:'150px'}}/></a></div> 
-                        <div><a href="http://www.abhitaknews.com/english/news/newsvoir.aspx?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.abhitaknews.com%2Fenglish%2Fnews%2Fnewsvoir.aspx"><Image className="ml-3 mt-2" src="https://prnews.io/content/platform/755/logo.jpeg?1538494748" style={{height:'60px',width:'150px'}}/></a></div>
+                        <div className="item mt-2"><a href="http://www.newscontrolroom.com/newsvoir/?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.newscontrolroom.com%2Fnewsvoir"><Image className="ml-3" src="http://www.newscontrolroom.com/wp-content/uploads/2017/07/logo.png" style={{height:'120px'}}/></a></div>
+                        <div className="item mt-5 d-flex flex-column justify-content-center"><a href="https://news.webindia123.com/news/newsvoir.asp?c_article_id=11699&c_author_id=9463&originurl=https://news.webindia123.com/news/newsvoir.asp"><Image className="ml-3 mt-2" src="https://www.webindia123.com/shared_files/ssl/images/logo.png" style={{height:'35px',width:'170px'}}/></a></div> 
+                        <div className="item d-flex flex-column justify-content-center"><a href="https://ibtn9.com/newsvoir/?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fibtn9.com%2Fnewsvoir%2F"><Image className="ml-3 mt-2" src="https://pbs.twimg.com/profile_images/631494681491144704/gigZhxz9_400x400.jpg" style={{height:'100px',width:'175px'}}/></a></div> 
+                        <div className="item mt-4 d-flex flex-column justify-content-center"><a href="https://news.karnatakaonline.in/press-releases/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-73068"><Image className="mt-2" src={karnataka} style={{height:'70px',width:'200px'}}/></a></div> 
+                        <div className="item mt-4 d-flex flex-column justify-content-center"><a href="http://www.techphlie.com/p/news-voir.html?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src={Techphlie} style={{height:'60px',width:'150px'}}/></a></div> 
+                        <div className="mt-4 "><a href="http://www.abhitaknews.com/english/news/newsvoir.aspx?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.abhitaknews.com%2Fenglish%2Fnews%2Fnewsvoir.aspx"><Image className="ml-3 mt-2" src="https://prnews.io/content/platform/755/logo.jpeg?1538494748" style={{height:'60px',width:'150px'}}/></a></div>
                         <div className="d-flex flex-column justify-content-center"><a href="http://www.bizwireexpress.com/showstoryNewsVoir.php?storyid=8329"><Image className="ml-3 mt-2" src="http://www.bizwireexpress.com/images/BizWire-Express-logo-375x50.jpg" style={{height:'60px',width:'150px'}}/></a></div> 
                         <div className="d-flex flex-column justify-content-center"><a href="http://www.broadcast-technology.com/newsvoir?c_article_id=11699&c_author_id=9463"><Image className=" mt-2" src="http://www.broadcast-technology.com/stylesheet/images/other/logo.jpg" style={{height:'60px',width:'150px'}}/></a></div> 
                         <div className="d-flex flex-column justify-content-center"><a href="http://businessnewsthisweek.com/newsvoir/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src={business} style={{height:'50px',width:'150px'}}/></a></div> 
@@ -163,6 +165,7 @@ const NewsandAwards = () => {
                     autoplayTimeout='2000'
                     autoplayHoverPause
                     dotsEach
+                    items='5'
                     >
                         <div className="item"><a href="http://www.estrade.in/news/newsvoir/?c_article_id=11699&c_author_id=9463"><Image className="ml-3 mt-2" src="http://www.estrade.in/wp-content/uploads/server/Estrade_Logo.png" style={{height:'60px',width:'150px'}}/></a></div>
                         <div className="item"><a href="http://www.theluxurychronicle.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=http%3A%2F%2Fwww.theluxurychronicle.com%2Fnewsvoir"><Image className="ml-3 mt-2" src="http://www.theluxurychronicle.com/wp-content/uploads/2015/10/cropped-logo2.png" style={{height:'60px',width:'150px'}}/></a></div>
