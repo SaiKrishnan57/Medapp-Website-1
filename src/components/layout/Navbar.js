@@ -11,7 +11,7 @@ import logo from './logo1.png';
       <img
         alt="Medapp.in"
         src={logo}
-        width="160"
+        width="200"
         height="70"
         className="d-inline-block align-top"
       />

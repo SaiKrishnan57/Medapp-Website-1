@@ -9,7 +9,7 @@ import mena from './images/mena.jpg';
 import tribune from './images/tribune.jpg';
 import aninews from './images/aninews.jpg';
 import award1 from './images/award1.jpg';
-import award3 from './images/award3.jpg';
+import award4 from './images/award4.png';
 import karnataka from './images/karnataka.jpg';
 import business from './images/business.jpg';
 import thar from './images/thar.jpg';
@@ -69,37 +69,33 @@ const NewsandAwards = () => {
                 </Row>
                 </Container>
             </Jumbo>
-            <MediaQuery query="(min-device-width: 1224px)">   
-            <Container className="p-4">
+            <div data-aos="zoom-in" data-aos-duration="500">
+                <Container className="my-4">
                 <h1 className=" mb-1 lead text-uppercase text-white d-flex p-3 rounded" style={{fontFamily: "'Quicksand', sans-serif",background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898", backgroundBlendMode: 'multiply,multiply'}}>
                     News & Updates:
                 </h1>
-                <div data-aos="zoom-in" data-aos-duration="500">
-                <OwlCarousel
-                    className="owl-theme owl-theme-news mt-5 p-5"
-                    loop
-                    nav
-                    autoplay
-                    autoplayTimeout='2000'
-                    autoplayHoverPause
-                    dotsEach
-                    items='3'
-                    style={{}}
-                >
-                    <div className="item mt-2" align="center">
+                    <Row align="center">
+                    <Col sm={2} className="mt-2">
                         <a href='https://www.aninews.in/news/business/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india20190417193514/'>
                             <Image src={aninews} style={{height:'150px',width:'150px'}}/>
                         </a>
-                    </div>                        
-                    <div className="item pb-5" align="center"><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src='https://www.beeingsocial.com/wp-content/uploads/2017/12/business-standard-logo.png' style={{height:'215px',width:'260px'}}/></a></div>
-                    <div className="item" align="center"><a href='https://in.news.yahoo.com/medapp-game-changer-healthcare-ecosystem-india-140514207.html'><Image src='https://www.selectcitywalk.com/wp-content/uploads/2018/08/Yahoo-News-Logo-1.jpg' style={{height:'180px'}}/></a></div>
-                    <div className="item" align="center"><a href='https://www.indiainfoline.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fwww.indiainfoline.com%2Fnewsvoir'><Image src='https://www.et-gbs.com/wp-content/uploads/2018/01/iifl-logo.jpg' style={{height:'180px'}}/></a></div>   
-                    <div className="item mt-5" align="center"><a href="https://ohio.statenews.net/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.midwestradionetwork.com/nn_logos/ohio-state-news.png" style={{height:'120px',width:'260px'}}/></a></div>
-                    <div className="item mb-2 mr-3"><a href="https://m.dailyhunt.in/news/india/english/newsvoir-epaper-newsvoir/medapp+a+game+changer+of+the+healthcare+ecosystem+in+india-newsid-113993051"><Image src="https://store-images.s-microsoft.com/image/apps.946.9007199266244278.b038e4ac-882c-489a-91de-8967da80a093.4f59cf37-e7fd-41fe-8143-c8526fe7d0a2" style={{height:'250px',width:'400px'}}/></a></div> 
-                    <div className="item mt-5"><a href="https://www.newdelhitimes.com/press-release-section/?c_article_id=11699&c_author_id=9463"><Image className="mt-2" src={newdelhi} style={{height:'100px',width:'300px'}}/></a></div> 
-                </OwlCarousel>
-                </div>
+                    </Col>                        
+                    <Col sm={3}><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src='https://www.beeingsocial.com/wp-content/uploads/2017/12/business-standard-logo.png' style={{height:'215px',width:'260px'}}/></a></Col>
+                    <Col sm={4}><a href='https://in.news.yahoo.com/medapp-game-changer-healthcare-ecosystem-india-140514207.html'><Image src='https://www.selectcitywalk.com/wp-content/uploads/2018/08/Yahoo-News-Logo-1.jpg' style={{height:'180px',width:'300px'}}/></a></Col>
+                    <Col sm={3}className="mt-5"><a href="https://m.dailyhunt.in/news/india/english/newsvoir-epaper-newsvoir/medapp+a+game+changer+of+the+healthcare+ecosystem+in+india-newsid-113993051"><Image src="https://image4.owler.com/logo/dailyhunt_owler_20190522_213237_original.png" style={{height:'100px',width:'200px'}}/></a></Col> 
+                    </Row>
                 </Container>
+                <Container>
+                <Row align="center">
+                    <Col sm={4} className="" align="center"><a href='https://www.indiainfoline.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fwww.indiainfoline.com%2Fnewsvoir'><Image src='https://www.et-gbs.com/wp-content/uploads/2018/01/iifl-logo.jpg' style={{height:'180px'}}/></a></Col>   
+                    <Col sm={4} className=" mt-5" align="center"><a href="https://ohio.statenews.net/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.midwestradionetwork.com/nn_logos/ohio-state-news.png" style={{height:'100px',width:'220px'}}/></a></Col>
+                    <Col sm={4} className=" mt-5"><a href="https://www.newdelhitimes.com/press-release-section/?c_article_id=11699&c_author_id=9463"><Image className="mt-2" src={newdelhi} style={{height:'100px',width:'300px'}}/></a></Col>      
+                </Row>        
+                </Container>  
+               
+            </div>
+         
+            <MediaQuery query="(min-device-width: 1224px)">   
                 <div data-aos="zoom-in-left" data-aos-duration="500">
                 <Container className="p-4">
                 <OwlCarousel
@@ -185,35 +181,6 @@ const NewsandAwards = () => {
                 </div>
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)"> 
-                <Container className="p-4">
-                <h1 className=" mb-1 lead text-uppercase text-white d-flex p-3 rounded" style={{fontFamily: "'Quicksand', sans-serif",background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898", backgroundBlendMode: 'multiply,multiply'}}>
-                    News & Updates:
-                </h1>
-                <div data-aos="zoom-in-left" data-aos-duration="500">  
-                <OwlCarousel
-                    className="owl-theme owl-theme-news mt-5 p-5"
-                    loop
-                    nav
-                    autoplay
-                    autoplayTimeout='2000'
-                    autoplayHoverPause
-                    dotsEach
-                    items='1'
-                >
-                    <div className="item " align="center">
-                        <a href='https://www.aninews.in/news/business/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india20190417193514/'>
-                            <Image src={aninews} style={{height:'150px',width:'150px'}}/>
-                        </a>
-                    </div>                        
-                    <div className="item pb-5" align="center"><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src='https://www.beeingsocial.com/wp-content/uploads/2017/12/business-standard-logo.png' style={{height:'125px',width:'200px'}}/></a></div>
-                    <div className="item" align="center"><a href='https://in.news.yahoo.com/medapp-game-changer-healthcare-ecosystem-india-140514207.html'><Image src='https://www.selectcitywalk.com/wp-content/uploads/2018/08/Yahoo-News-Logo-1.jpg' style={{height:'180px'}}/></a></div>
-                    <div className="item" align="center"><a href='https://www.indiainfoline.com/newsvoir?c_article_id=11699&c_author_id=9463&originurl=https%3A%2F%2Fwww.indiainfoline.com%2Fnewsvoir'><Image src='https://www.et-gbs.com/wp-content/uploads/2018/01/iifl-logo.jpg' style={{height:'180px'}}/></a></div>   
-                    <div className="item mt-5"><a href="https://ohio.statenews.net/news/260537635/medapp---a-game-changer-of-the-healthcare-ecosystem-in-india"><Image src="https://static.midwestradionetwork.com/nn_logos/ohio-state-news.png" style={{height:'100px',width:'200px'}}/></a></div>
-                    <div className="item mb-2"><a href="https://m.dailyhunt.in/news/india/english/newsvoir-epaper-newsvoir/medapp+a+game+changer+of+the+healthcare+ecosystem+in+india-newsid-113993051"><Image src="https://store-images.s-microsoft.com/image/apps.946.9007199266244278.b038e4ac-882c-489a-91de-8967da80a093.4f59cf37-e7fd-41fe-8143-c8526fe7d0a2" style={{height:'180px',width:'250px'}}/></a></div> 
-                    <div className="item d-flex flex-column justify-content-center"><a href="https://www.newdelhitimes.com/press-release-section/?c_article_id=11699&c_author_id=9463"><Image className="mt-2" src={newdelhi} style={{height:'80px',width:'200px'}}/></a></div> 
-                </OwlCarousel>
-                </div>
-                </Container>
                 <div data-aos="zoom-in" data-aos-duration="500">
                 <Container className="p-4">
                 <OwlCarousel
@@ -320,7 +287,7 @@ const NewsandAwards = () => {
                             </p>
                         </Col>
                         <Col sm={4} align="center" className="my-3">
-                            <Image className="my-2 rounded-circle" style={{maxHeight:'250px'}} src={award3} fluid/>
+                            <Image className="my-2" style={{minHeight:'250px'}} src={award4} fluid/>
                             <hr/>
                             <p>
                                 Awarded as 'Notable Networker Award' in recognition of outstanding performance in changing the way the world does business by BNI.

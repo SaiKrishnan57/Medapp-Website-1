@@ -72,7 +72,7 @@ export default class Members extends Component {
                     </Row>
                     <Row>
                         <Col className="px-3 rounded">
-                            <p className="mt-2 p-2 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px'}}>
+                            <p className="mt-2 p-2 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px',textAlign:'justify'}}>
                                 {this.state.Member[props].Info}
                             </p>
                         </Col>    

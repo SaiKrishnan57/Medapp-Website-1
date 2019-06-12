@@ -57,7 +57,7 @@ const Footer = () =>{
                       <Link className="text-white" to='/'><i className="fab fa-twitter"></i></Link>
                   </li>
                   <li className="m-2">
-                      <Link className="text-white" to='/'><i className="fab fa-linkedin-in"></i></Link>
+                      <a className="text-white" href='https://www.linkedin.com/company/medapp.in'><i className="fab fa-linkedin-in"></i></a>
                   </li>
                   <li className="m-2">
                       <Link className="text-white" to='/'><i className="fab fa-instagram"></i></Link>

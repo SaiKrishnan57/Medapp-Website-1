@@ -5,7 +5,8 @@ import './imagestyles.css';
 const styletext = {
        fontSize:'18px',
        textTransform: 'uppercase',
-       fontFamily:'Rubik, sans-serif',
+       fontFamily:'Quicksand, sans-serif',
+       fontWeight:'bold'
   };
 
 class Contacts extends Component {
