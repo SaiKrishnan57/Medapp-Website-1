@@ -110,7 +110,7 @@ AOS.init();
               <Col sm={12} className="p-4">
               <MediaQuery query="(max-device-width: 1224px)">    
                 <OwlCarousel
-                    className="owl-theme my-5"
+                    className="owl-theme owl-theme-custom my-5"
                     loop
                     nav
                     autoplay
@@ -118,7 +118,6 @@ AOS.init();
                     autoplayHoverPause
                     dotsEach
                     items='1'
-                    style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
                 >
                     <div className="item m-3 mt-5">
                       <Link to='/aboutus'>
@@ -160,7 +159,7 @@ AOS.init();
               </MediaQuery>
               <MediaQuery query="(min-device-width: 1224px)">
               <OwlCarousel
-                    className="owl-theme my-5"
+                    className="owl-theme owl-theme-custom my-5"
                     loop
                     nav
                     autoplay
@@ -168,7 +167,7 @@ AOS.init();
                     autoplayHoverPause
                     dotsEach
                     items='3'
-                    style={{ backgroundImage: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'}}
+                    style={{ }}
                 >
                     <div className="item m-3 mt-5">
                       <Link to='/aboutus'>

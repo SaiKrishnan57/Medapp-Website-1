@@ -69,16 +69,14 @@
   transition: 0.5s;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.owl-theme{
+.owl-theme-custom{
   border: 5px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   border-radius: 20px;
   width: 100%;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
-.owl-theme:hover{
-  transition: 0.5s;
-  transform: scale(1.04);
-}
+.owl-theme-custom:hover{}
 .item{
   height: auto;
 }

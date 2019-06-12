@@ -71,7 +71,7 @@ export default class Members extends Component {
                </MediaQuery>     
                     </Row>
                     <Row>
-                        <Col align="center" className="px-3 rounded">
+                        <Col className="px-3 rounded">
                             <p className="mt-2 p-2 animated fadeIn font-weight-bold" style={{fontFamily:"'Rubik', sans-serif",lineHeight:'2em',fontSize:'18px'}}>
                                 {this.state.Member[props].Info}
                             </p>

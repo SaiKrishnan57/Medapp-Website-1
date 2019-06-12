@@ -88,7 +88,7 @@ const Aboutus = () => {
                      <Col sm={10} className="animated fadeIn slow d-flex mt-5 p-4 container rounded-circle" style={{height:'800px',width:'800px',backgroundImage: 'linear-gradient(120deg, rgba(161,196,253,0.8), rgba(194,233,251,0))',textTransform:'uppercase',color:'black'}}>
                         <div className="mt-2" align="left" style={{fontFamily: "'Quicksand', sans-serif"}}>
                             <h1 className="mt-5 p-2" style={{fontSize:'50px',}}>We’re all united around a common mission of</h1>
-                            <span className="mt-5 p-5"><h2 className="animated fadeIn display-5 font-weight-bold" style={{textTransform:'uppercase'}}>Touching life, changing life, and saving life.</h2></span> 
+                            <span className="mt-5 p-5"><h2 className="animated fadeIn display-5 font-weight-bold" style={{textTransform:'uppercase'}}>Touching lives, changing lives, and saving lives.</h2></span> 
                         </div>
                         <div align="right" className="person">
                           <Image  src={person} style={{height:"700px"}}/>
