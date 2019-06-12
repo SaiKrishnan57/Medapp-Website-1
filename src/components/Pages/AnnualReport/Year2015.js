@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import { Image,Button,Modal} from 'react-bootstrap';
+import { Button,Modal} from 'react-bootstrap';
 import year2015 from '../images/year2015.jpg'
 import styled from 'styled-components';
-
-const stylecontent={
-    fontSize:'20px',
-    lineHeight:'1.8em'
-}
 
 const textstyle ={
     fontFamily:"'Quicksand', sans-serif",

@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import { Jumbotron as Jumbo, Container,Row,Col,Image,Modal,Button } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
+
 import map from './images/Map.png';
 
 const Styles = styled.div`

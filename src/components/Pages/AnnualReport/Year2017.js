@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image,Button,Modal} from 'react-bootstrap';
+import { Button,Modal} from 'react-bootstrap';
 import styled from 'styled-components';
 import year2017 from '../images/year2017.jpg'
 
