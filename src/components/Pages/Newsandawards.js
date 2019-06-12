@@ -51,7 +51,8 @@ const Styles = styled.div`
   }
   .owl-theme-news{
     border-radius: 10px;
-    box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(50, 30, 23, 0.5);
+    border-bottom: 5px solid black;
+    box-shadow: 4px 4px 4px 4px #ffffff, 2px 2px 2px 2px rgba(50, 50, 50, 0.5);
   }
 `;
 

@@ -37,7 +37,7 @@ const Footer = () =>{
                     <Link className="text-white" to="/aboutus">Who we are</Link>
                   </li>
                   <li className="m-2">
-                    <Link className="text-white" to="#!">Life at MedApp</Link>
+                    <Link className="text-white" to="/lifeatmedapp">Life at MedApp</Link>
                   </li>
                   <li className="m-2">
                     <Link className="text-white"  to="/ourblogs">Our Blog</Link>
