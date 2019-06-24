@@ -21,6 +21,7 @@ const Styles = styled.div`
   height: 300px;
   box-sizing: border-box;
   box-shadow: inset -50px 0 250px rgba(255,255,255,0.4) ;
+  cursor: pointer;
 }
 `;
 
@@ -47,8 +48,8 @@ export default class Year2017 extends Component {
         return (
             <div>
               <Styles>
-                  <div className="container jumbo2017 rounded box bg-secondary d-flex flex-column justify-content-end" >   
-                    <Button variant="dark" className="p-3" style={{borderRadius:'0',opacity:'0.8'}} onClick={this.handleShow}>
+                  <div className="container jumbo2017 rounded box bg-secondary d-flex flex-column justify-content-end" onClick={this.handleShow}>   
+                    <Button variant="dark" className="p-3" style={{borderRadius:'0',opacity:'0.8'}}>
                       <h5 className="text-white" style={textstyle}>Year 2017</h5>
                      </Button>
                    </div>

@@ -12,7 +12,8 @@ import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
 import MediaQuery from 'react-responsive';
 import presence from './images/Map.png';
-import bgimg3 from './images/Medapp3.jpg';
+// import bgimg3 from './images/Medapp3.jpg';
+import teambg from './images/team.jpg';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -26,7 +27,7 @@ AOS.init();
 
     const Styles = styled.div`
   .jumbo {
-    background-image: url(${bgimg3});
+    background-image: url(${teambg});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -38,7 +39,7 @@ AOS.init();
     z-index: -2;
   }
   .jumbo-min{
-    background-image: url(${bgimg3});
+    background-image: url(${teambg});
     background-size: cover;
     color: #efefef;
     height: 250px;
@@ -214,7 +215,7 @@ AOS.init();
             <div data-aos="fade-up" data-aos-duration="1000">
                 <Row>
                     <Col sm={6} className="mt-3 p-4">
-                          <div className="jumbotron mx-4 vision parallax">
+                          <div className="jumbotron vision parallax">
                             <h1 className="display-4 d-flex justify-content-center text-white">Vision</h1>
                             <hr className="my-4 bg-white"/>
                             <p className="lead font-italic mt-2 text-white">

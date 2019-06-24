@@ -9,7 +9,6 @@ import mena from './images/mena.jpg';
 import tribune from './images/tribune.jpg';
 import aninews from './images/aninews.jpg';
 import award1 from './images/award1.jpg';
-import award4 from './images/award4.png';
 import karnataka from './images/karnataka.jpg';
 import business from './images/business.jpg';
 import thar from './images/thar.jpg';
@@ -17,6 +16,7 @@ import north from './images/north.jpg';
 import news from './images/news.jpg';
 import newdelhi from './images/newdelhi.png';
 import net from './images/net.png';
+import businessstandard from './images/business-standard-logo.png';
 import MediaQuery from 'react-responsive';
 import './imagestyles.css';
 import OwlCarousel from 'react-owl-carousel';
@@ -81,7 +81,7 @@ const NewsandAwards = () => {
                             <Image src={aninews} style={{height:'150px',width:'150px'}}/>
                         </a>
                     </Col>                        
-                    <Col sm={3}><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src='https://www.beeingsocial.com/wp-content/uploads/2017/12/business-standard-logo.png' style={{height:'215px',width:'260px'}}/></a></Col>
+                    <Col sm={3}><a href='https://www.business-standard.com/article/news-ani/medapp-a-game-changer-of-the-healthcare-ecosystem-in-india-119041700997_1.html'><Image src={businessstandard} style={{height:'215px',width:'260px'}}/></a></Col>
                     <Col sm={4}><a href='https://in.news.yahoo.com/medapp-game-changer-healthcare-ecosystem-india-140514207.html'><Image src='https://www.selectcitywalk.com/wp-content/uploads/2018/08/Yahoo-News-Logo-1.jpg' style={{height:'180px',width:'300px'}}/></a></Col>
                     <Col sm={3}className="mt-5"><a href="https://m.dailyhunt.in/news/india/english/newsvoir-epaper-newsvoir/medapp+a+game+changer+of+the+healthcare+ecosystem+in+india-newsid-113993051"><Image src="https://image4.owler.com/logo/dailyhunt_owler_20190522_213237_original.png" style={{height:'100px',width:'200px'}}/></a></Col> 
                     </Row>
@@ -273,25 +273,18 @@ const NewsandAwards = () => {
                     <hr className="mb-5"/>
                     <div data-aos="fade-in" data-aos-duration="500">
                     <Row className="mb-5">
-                        <Col sm={4} align="center" className="my-3">
+                        <Col sm={6} align="center" className="my-3">
                         <Image className="my-2"  style={{minHeight:'250px'}} src={award1} fluid/>
                             <hr/>
                             <p>
                                 Awarded 'Rashtriya Nirman Ratan Puraskar' in genre of outstanding Achievement and remarkable role as the Best solutions based healthcare start-ups in India by Global Achievers Foundation in January 2018 at Goa for contributions to National and Social Development.
                             </p>
                         </Col>
-                        <Col sm={4} align="center" className="my-3">
+                        <Col sm={6} align="center" className="my-3">
                         <Image className="my-2" style={{maxHeight:'250px'}} src={news} fluid/>
                             <hr/>
                             <p>
                                 Awarded 'Asia Pacific Achievers Award' for best of Paramedic and nursing services to chronic diseases, on the occasion of Asia Pacific Achiever's Summit on Globalisation of Economic Growth and Social Development in June 2018 at Tashkent (Uzbekistan)
-                            </p>
-                        </Col>
-                        <Col sm={4} align="center" className="my-3">
-                            <Image className="my-2" style={{minHeight:'250px'}} src={award4} fluid/>
-                            <hr/>
-                            <p>
-                                Awarded as 'Notable Networker Award' in recognition of outstanding performance in changing the way the world does business by BNI.
                             </p>
                         </Col>
                     </Row>   

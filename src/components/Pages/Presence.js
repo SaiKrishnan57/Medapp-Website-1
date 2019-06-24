@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
 import map from './images/Map.png';
+import worldmap from './images/world-map.png';
 
 const Styles = styled.div`
   .jumbo {
@@ -94,7 +95,8 @@ render(){
         <div className="jumbotron">
             <MediaQuery query="(min-device-width: 1224px)">
                 <div className="holder d-flex justify-content-center">
-                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe>
+                  {/* <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe> */}
+                      <Image src={worldmap} />
                       <div className="bar">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Patients Screened: <span className="ml-2">384594+</span></p>
                       </div>
@@ -115,7 +117,8 @@ render(){
             <MediaQuery query="(max-device-width: 1224px)">
               <MediaQuery query="(orientation: portrait)">
                 <div className="holder-min">
-                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>    
+                  {/* <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>     */}
+                  <Image src={worldmap} />
                       <Button variant="dark" align="center" onClick={this.handleShow}>Our Influence</Button>
                   <Modal
                     show={this.state.show}
