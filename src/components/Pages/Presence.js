@@ -96,7 +96,7 @@ render(){
             <MediaQuery query="(min-device-width: 1224px)">
                 <div className="holder d-flex justify-content-center">
                   {/* <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="1000" height="750" title="Medapp Locations"></iframe> */}
-                      <Image src={worldmap} />
+                      <Image src={worldmap} height="100%" />
                       <div className="bar">
                       <p className="d-flex justify-content-start bg-white p-2 stats" >Patients Screened: <span className="ml-2">384594+</span></p>
                       </div>
@@ -118,7 +118,7 @@ render(){
               <MediaQuery query="(orientation: portrait)">
                 <div className="holder-min">
                   {/* <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="330" height="600" title="Medapp Locations"></iframe>     */}
-                  <Image src={worldmap} />
+                  <Image src={worldmap} height="100%"/>
                       <Button variant="dark" align="center" onClick={this.handleShow}>Our Influence</Button>
                   <Modal
                     show={this.state.show}
@@ -141,7 +141,8 @@ render(){
                 </MediaQuery>
               <MediaQuery query="(orientation: landscape)">
                 <div className="holder d-flex justify-content-center">
-                  <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="575" height="400" title="Medapp Locations"></iframe>    
+                  {/* <iframe className="frame" src="https://www.google.com/maps/d/embed?mid=1h_onhN_Wm04naqwLIs9-LfQICD1LLgoX" width="575" height="400" title="Medapp Locations"></iframe>     */}
+                  <Image src={worldmap}/>
                   <div className="bar-min-landscape">
                     <p className="d-flex justify-content-start bg-white stats-min" >Patients Screened: <span className="ml-2">384594+</span></p>
                     <p className="d-flex justify-content-start bg-white stats-min" >Camps Conducted:<span className="ml-2">814</span></p>
