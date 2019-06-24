@@ -3,16 +3,17 @@ import { Jumbotron as Jumbo, Container,Image,Row,Col} from 'react-bootstrap';
 import './imagestyles.css';
 import styled from 'styled-components';
 import bgimg from './images/Medapp1.jpg';
-import services from './images/services.jpg';
+// import services from './images/services.jpg';
 import impact from './images/societal.jpg';
-import team from './images/ourteam.jpg';
+// import team from './images/ourteam.jpg';
+import ourservices from './images/our_services.png';
 import naa from './images/newsawards.jpg';
 import scooterweb from './images/scooter-web.png';
 import medappslider from './images/medapp-slider-logo.png';
 import CountUp from 'react-countup';
 import MediaQuery from 'react-responsive';
 import presence from './images/Map.png';
-// import bgimg3 from './images/Medapp3.jpg';
+import bgimg3 from './images/Medapp3.jpg';
 import teambg from './images/team.jpg';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
@@ -27,7 +28,7 @@ AOS.init();
 
     const Styles = styled.div`
   .jumbo {
-    background-image: url(${teambg});
+    background-image: url(${bgimg3});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -39,7 +40,7 @@ AOS.init();
     z-index: -2;
   }
   .jumbo-min{
-    background-image: url(${teambg});
+    background-image: url(${bgimg3});
     background-size: cover;
     color: #efefef;
     height: 250px;
@@ -128,7 +129,7 @@ AOS.init();
                     </div>
                     <div className="item m-4 mt-5">
                       <Link to='/services'> 
-                        <Image src={services} style={{height:'235px'}} fluid/>
+                        <Image src={ourservices} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Our Services</p>  
                     </div>
@@ -140,7 +141,7 @@ AOS.init();
                     </div>
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
-                          <Image src={team} style={{height:'235px'}} fluid/>
+                          <Image src={teambg} style={{height:'235px'}} fluid/>
                         </Link>
                         <p align="center" style={styletext}>Our Team</p>
                     </div>
@@ -178,7 +179,7 @@ AOS.init();
                     </div>
                     <div className="item m-3 mt-5">
                       <Link to='/services'> 
-                        <Image src={services} style={{height:'235px'}} fluid/>
+                        <Image src={ourservices} style={{height:'235px'}} fluid/>
                       </Link>
                         <p align="center" style={styletext}>Our Services</p>
                     </div>
@@ -190,7 +191,7 @@ AOS.init();
                     </div>
                     <div className="item m-3 mt-5">
                         <Link to='/Ourteam'>
-                          <Image src={team} style={{height:'235px'}} fluid/>
+                          <Image src={teambg} style={{height:'235px'}} fluid/>
                         </Link>
                         <p align="center" style={styletext}>Our Team</p>
                     </div>
